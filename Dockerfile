@@ -1,20 +1,22 @@
 FROM node:lts
 
+
 # Install and run the uploader tool
 RUN mkdir -p /uploader-tool
 RUN mkdir -p /uploader-tool/dist
 COPY package.json yarn.lock .yarnclean /uploader-tool/
 WORKDIR /uploader-tool/
 
+RUN yarn install
+RUN ls -l
+COPY . .
+RUN yarn build:prod
 RUN yarn install --prod
 RUN yarn autoclean --force
-COPY dist/ dist/
-
+RUN rm -rf src/ scripts/ Dockerfile
 
 # Back to node directory
 WORKDIR /home/node/
-
-RUN yarn global add pm2 --prefix /usr/local
 RUN mkdir -p /scripts
 COPY scripts/run.sh /home/node/run.sh
 
@@ -38,4 +40,6 @@ EXPOSE ${APPLICATION_PORT}
 
 WORKDIR ${DATA_DIR}
 
+# Install pm2 for later use.
+RUN yarn global add pm2 --prefix /usr/local
 ENTRYPOINT ["/home/node/run.sh"]
