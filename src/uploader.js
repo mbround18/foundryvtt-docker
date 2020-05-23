@@ -1,14 +1,9 @@
-import express from 'express';
 import fs from 'fs';
 import path from 'path';
-const fileUpload = require('express-fileupload');
-
-
-function deleteFiles(files) {
-    files.forEach(({ tempFilePath }) => {
-        fs.unlinkSync(tempFilePath);
-    });
-}
+import express from 'express';
+import fileUpload from 'express-fileupload';
+import { downloadTimedUrl } from './utils/downloadTimedUrl';
+import { deleteFiles } from './utils/deleteFiles';
 
 const app = express();
 const port = 4444;
@@ -23,18 +18,33 @@ app.use(fileUpload({
 
 
 app.get('/uploader', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
-app.post('/uploader', (req, res) => {
+app.post('/uploader', async (req, res) => {
     const savedSecret = fs.readFileSync(adminPasswdPath, {encoding: 'utf-8'});
-    if (req.body && req.body['admin-secret'] && req.body['admin-secret'] === savedSecret) {
-        fs.copyFileSync(req.files.foundryvtt.tempFilePath, foundryvttZipPath)
+    const sentSecret = req.body && req.body['admin-secret'];
+    const timedLink = req.body && req.body['foundryvtt-link'];
+    const foundryvttUpload = req.files && req.files['foundryvtt-file'] && req.files['foundryvtt-file'].tempFilePath;
+
+    if (sentSecret !== savedSecret) {
+        if (req.files && req.files['foundryvtt-link']) {
+            deleteFiles(Object.values(req.files));
+        }
+        return res.status(403).send('Unauthorized');    
+    }
+
+    if (timedLink) {
+        await downloadTimedUrl({
+            url: timedLink, 
+            destinationPath: foundryvttZipPath
+        });
         res.send('Completed');
         return process.exit(0);
     }
-    else {
-        if (req.files && req.files.length > 0) {
-            deleteFiles(req.files);
-        }
-        return res.status(403).send('Unauthorized');    
+
+    if (foundryvttUpload) {
+        fs.copyFileSync(foundryvttUpload, foundryvttZipPath)
+        deleteFiles(Object.values(req.files));
+        res.send('Completed!!!');
+        return process.exit(0);
     }   
 })
 app.listen(port, "0.0.0.0", () => {

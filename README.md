@@ -45,23 +45,15 @@ TBD
 
 ## Post Installation
 
-1. Navigate to your URL ex http://localhost:4444/uploader and upload the zip file from https://foundryvtt.com/
-You should be greeted with this screen when you access the uploader screen: 
-![](./public/images/upload-process.png)
-
-
-2. Click browse and navigate to the foundry file. 
-
-
-3. Open command prompt and execute the command 
+1. Navigate to your URL http://localhost:4444/uploader 
+2. In another tab open up your Purchased Licenses page on https://foundryvtt.com/
+3. Now either download the NodeJS zip file or click the link icon to get a timed link.
+4. Tab back over to http://localhost:4444/uploader 
+5. Paste the timed url into the input field or browse to the zip file with the uploader section.
+6. Open command prompt and execute the command 
 ```sh 
 docker exec -it <CONTAINER-NAME> cat /foundrydata/.admin-password
 ```
 Or if you are running in kubernetes please find a way to get the text from that file. 
-
-
-4. Click the submit button on the page and wach the logs. If all goes well...
-![](./public/images/completed.png)
-
-
-5. Navigate to http://localhost:4444/ and just setup foundry how you normally do :) 
+7. Click the submit button on the page and watch the logs.
+8. If all goes well, navigate to the base url http://localhost:4444/ and you should be greeted with the FoundryVTT setup screen :)

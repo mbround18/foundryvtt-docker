@@ -3,4 +3,3 @@ tmp/
 .github
 *.log*
 node_modules
-public/images

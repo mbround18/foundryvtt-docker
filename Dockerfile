@@ -14,7 +14,7 @@ RUN yarn build:prod
 RUN rm -rf node_modules/
 RUN yarn install --prod
 RUN yarn autoclean --force
-RUN rm -rf src/ scripts/ Dockerfile
+RUN rm -rf src/ scripts/ Dockerfile public/
 
 # Back to node directory
 WORKDIR /home/node/

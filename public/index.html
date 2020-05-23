@@ -12,21 +12,46 @@
     </style>
 </head>
 <body>
-    <a href="https://foundryvtt.com/releases/download?version=0.6.0&platform=linux">Download Version 0.6.0</a>
-    <form action="/uploader" method="POST" enctype=multipart/form-data class="uploader">
-        <hr>
-        <div>
-            <label for="admin-secret">Admin Secret</label>
-            <input type="password" name="admin-secret" id="admin-secret">
-        </div>
-        <div>
-            <label for="foundryvtt">Foundry VTT Zip Upload</label>
-            <input type="file" name="foundryvtt" id="foundryvtt">
-        </div>
-        <hr>
-        <div>
-            <button type="submit">Upload</button>
-        </div>
-    </form>
+    <h1>FoundryVTT Installer</h1>
+    <hr>
+    <div>
+        <h2>How to use this tool</h2>
+        <ol>
+            <li>Open <a href="https://foundryvtt.com/" target="_blank">https://foundryvtt.com/</a></li>
+            <li>Log into your account.</li>
+            <li>Click on your profile.</li>
+            <li>Click the Purchased Licenses button.</li>
+            <li>Then copy/paste the admin secret into the admin secret field. It can be found at /foundrydata/.admin-password</li>
+            <li>Either download the nodejs zip or click the link icon next to the download link.</li>
+            <li>Finally, either paste in the timed link or upload the zip file and click Submit.</li>
+        </ol>
+    </div>    
+    <div>
+        <form action="/uploader" method="POST" enctype=multipart/form-data class="uploader">
+            <hr>
+            <div>
+                <h2>Authroization</h2>
+                <label for="admin-secret">Admin Secret:</label>
+                <input required type="password" name="admin-secret" id="admin-secret">
+                <p>This secret can be found at /foundrydata/.admin-password</p>
+            </div>
+            <hr>
+            <div>
+                <h2>Timed Link</h2>
+                <label for="foundryvtt-link">Foundry VTT Timed Link:</label>
+                <input type="text" name="foundryvtt-link" id="foundryvtt-link">
+            </div>
+            <hr>          
+            <div>
+                <h2>Upload Version</h2>
+                <label for="foundryvtt-file">Foundry VTT Zip Upload:</label>
+                <input type="file" name="foundryvtt-file" id="foundryvtt-file">
+            </div>
+            <hr>
+            <div>
+                <button type="submit" class="submit-form">Submit</button>
+            </div>
+        </form>
+    </div>    
 </body>
 </html>

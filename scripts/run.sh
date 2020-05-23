@@ -40,7 +40,7 @@ fi
 
 echo "Building arguments..."
 FOUNDRYVTT_ARGS=("--dataPath=${DATA_DIR}" "--port=4444" "--hostname=${APPLICATION_HOST}" "--noupnp")
-["${SSL_PROXY,,}" = "true"] && FOUNDRYVTT_ARGS+=("--proxySSL")
+[[ "${SSL_PROXY,,}" -eq "true" ]] && FOUNDRYVTT_ARGS+=("--proxySSL")
 
 echo "Launching FoundryVTT with: ${FOUNDRYVTT_ARGS[@]}"
 trap stop INT

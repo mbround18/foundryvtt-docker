@@ -5,7 +5,6 @@
   "repository": "git@github.com:mbround18/foundryvtt-docker.git",
   "license": "MIT",
   "scripts": {
-    "start:vtt": "bash ./scripts/launch_vtt.sh",
     "build": "rimraf -rf ./dist && webpack -c ./webpack.config.js --mode development",
     "build:prod": "rimraf -rf ./dist && webpack -c ./webpack.config.js --mode production",
     "prestart": "yarn build",
@@ -16,14 +15,19 @@
     "docker:admin": "docker exec -it foundry cat /foundrydata/.admin-password"
   },
   "dependencies": {
-    "rimraf": "^3.0.2",
+    "@babel/runtime": "^7.9.6",
+    "axios": "^0.19.2",
     "express": "^4.17.1",
-    "express-fileupload": "^1.1.7-alpha.3"
+    "express-fileupload": "^1.1.7-alpha.3",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.4"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "babel-loader": "^8.1.0",
+    "base64-inline-loader": "^1.1.1",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "webpack": "^4.43.0",
