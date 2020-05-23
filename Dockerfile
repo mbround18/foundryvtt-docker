@@ -11,6 +11,7 @@ RUN yarn install
 RUN ls -l
 COPY . .
 RUN yarn build:prod
+RUN rm -rf node_modules/
 RUN yarn install --prod
 RUN yarn autoclean --force
 RUN rm -rf src/ scripts/ Dockerfile
