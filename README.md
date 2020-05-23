@@ -51,9 +51,9 @@ TBD
 4. Tab back over to http://localhost:4444/uploader 
 5. Paste the timed url into the input field or browse to the zip file with the uploader section.
 6. Open command prompt and execute the command 
-```sh 
-docker exec -it <CONTAINER-NAME> cat /foundrydata/.admin-password
-```
-Or if you are running in kubernetes please find a way to get the text from that file. 
+   ```sh 
+   docker exec -it <CONTAINER-NAME> cat /foundrydata/.admin-password
+   ```
+   Or if you are running in kubernetes please find a way to get the text from that file. 
 7. Click the submit button on the page and watch the logs.
 8. If all goes well, navigate to the base url http://localhost:4444/ and you should be greeted with the FoundryVTT setup screen :)
