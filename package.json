@@ -1,0 +1,35 @@
+{
+  "name": "foundryvtt-docker",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "repository": "git@github.com:mbround18/foundryvtt-docker.git",
+  "license": "MIT",
+  "scripts": {
+    "start:vtt": "bash ./scripts/launch_vtt.sh",
+    "build": "rimraf -rf ./dist && webpack -c ./webpack.config.js --mode development",
+    "build:prod": "rimraf -rf ./dist && webpack -c ./webpack.config.js --mode production",
+    "prestart": "yarn build",
+    "start": "node ./dist/server.js",
+    "prebuild:docker": "yarn build:prod",
+    "build:docker": "docker build . --tag mbround18/foundryvtt-docker:latest",
+    "start:docker": "docker run --rm --name foundary -p 4444:4444 mbround18/foundryvtt-docker:latest",
+    "publish:docker": "docker push mbround18/foundryvtt-docker:latest",
+    "docker:admin": "docker exec -it foundary cat /foundrydata/.admin-password"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoundryVTT Uploader</title>
+    <style>
+        .uploader {
+            vertical-align : middle;
+            display: table-cell;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://foundryvtt.com/releases/download?version=0.6.0&platform=linux">Download Version 0.6.0</a>
+    <form action="/uploader" method="POST" enctype=multipart/form-data class="uploader">
+        <hr>
+        <div>
+            <label for="admin-secret">Admin Secret</label>
+            <input type="password" name="admin-secret" id="admin-secret">
+        </div>
+        <div>
+            <label for="foundryvtt">Foundry VTT Zip Upload</label>
+            <input type="file" name="foundryvtt" id="foundryvtt">
+        </div>
+        <hr>
+        <div>
+            <button type="submit">Upload</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,7 @@
+tmp/
+.env
+.github
+*.log*
+node_modules
+src/
+public/images
