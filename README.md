@@ -51,16 +51,16 @@ See [Post Installation](###-Post-Installation)
 ### Installation Steps
 
 1. Add a namespace
-  > ${PWD}/00-namespace.yml
-  ```yaml
-  ---
-  apiVersion: v1
-  kind: Namespace
-  metadata:
-    name: foundryvtt
-    labels:
-      name: foundryvtt
-  ```
+   > ${PWD}/00-namespace.yml
+   ```yaml
+   ---
+   apiVersion: v1
+   kind: Namespace
+   metadata:
+     name: foundryvtt
+     labels:
+       name: foundryvtt
+   ```
 
 2. Set up a persisted volume claim. 
    Note: You must already have a persisted volume storage configuration setup. In this example I am using https://k3s.io which already has a local storage persisted volume claim setup.
