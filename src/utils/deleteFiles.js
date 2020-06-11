@@ -1,6 +1,6 @@
-import fs from 'fs';
+import fs from "fs";
 export function deleteFiles(files) {
-    files.forEach(({ tempFilePath }) => {
-        fs.unlinkSync(tempFilePath);
-    });
+  files.forEach(({ tempFilePath }) => {
+    fs.unlinkSync(tempFilePath);
+  });
 }

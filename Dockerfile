@@ -20,6 +20,8 @@ RUN rm -rf src/ scripts/ Dockerfile public/
 WORKDIR /home/node/
 RUN mkdir -p /scripts
 COPY scripts/run.sh /home/node/run.sh
+RUN chown node:node /home/node/run.sh
+RUN chmod +x /home/node/run.sh
 
 RUN apt-get update &&\
     apt-get install -y unzip
@@ -28,8 +30,8 @@ RUN apt-get update &&\
 ENV APPLICATION_HOST "foundry.vtt"
 ENV APPLICATION_PORT "4444"
 
-# Whether or not you are putting this behind SSL. 
-ENV SSL_PROXY "true"                
+# Whether or not you are putting this behind SSL.
+ENV SSL_PROXY "true"
 
 # Directory setup
 ENV APPLICATION_DIR "/foundryvtt"

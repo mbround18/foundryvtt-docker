@@ -29,7 +29,7 @@ function launchUploader() {
 # echo -e "Downloading ${VTT_VERION}..."
 # wget "https://foundryvtt.s3.amazonaws.com/releases/${VTT_VERSION}/foundryvtt-${VTT_VERSION}.zip?&AWSAccessKeyId=${AWS_ACCESS_KEY_ID}&Signature=${AWS_SIGNATURE}&Expires=${EXPIRES}" -O /tmp/foundryvtt.zip
 if [[ ! -f "${DATA_DIR}/.uploaded" ]]; then
-    launchUploader    
+    launchUploader
 fi
 
 echo "Checking for application executable..."
