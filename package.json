@@ -11,8 +11,7 @@
     "start": "node ./dist/server.js",
     "build:docker": "docker build . --tag mbround18/foundryvtt-docker:latest",
     "start:docker": "docker run --rm --name foundry -p 4444:4444 mbround18/foundryvtt-docker:latest",
-    "publish:docker": "docker push mbround18/foundryvtt-docker:latest",
-    "docker:admin": "docker exec -it foundry cat /foundrydata/.admin-password"
+    "publish:docker": "docker push mbround18/foundryvtt-docker:latest"
   },
   "dependencies": {
     "@babel/runtime": "^7.9.6",
