@@ -1,5 +1,7 @@
 tmp/
 .env
-.github
+.github/
 *.log*
-node_modules
+node_modules/
+.vscode/
+dist/

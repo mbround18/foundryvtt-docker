@@ -30,29 +30,21 @@ docker run --rm  \
     mbround18/foundryvtt-docker:latest
 ```
 
-Then navigate to http://127.0.0.1:4444
+Then navigate to `http://127.0.0.1:4444`
 
 ## Post Installation (Docker)
 
 1. Navigate to your URL [localhost:4444/uploader](http://localhost:4444/uploader)
 2. In another tab open up your Purchased Licenses page on [foundryvtt.com](https://foundryvtt.com/)
-3. Now either download the NodeJS zip file or click the link icon to get a timed link.
+3. Now click the link icon to get a timed link.
 4. Tab back over to [localhost:4444/uploader](http://localhost:4444/uploader)
-5. Paste the timed url into the input field or browse to the zip file with the uploader section.
-6. Open command prompt and execute the command
-
-   ```sh
-   docker exec -it <CONTAINER-NAME> cat /foundrydata/.admin-password
-   ```
-
-   Or if you are running in kubernetes please find a way to get the text from that file.
-
-7. Click the submit button on the page and watch the logs.
-8. If all goes well, navigate to the base url http://localhost:4444/ and you should be greeted with the FoundryVTT setup screen :)
+5. Paste the timed url into the input field.
+6. Click the submit button on the page and watch the logs.
+7. If all goes well, navigate to the base url `http://localhost:4444/` and you should be greeted with the FoundryVTT setup screen :)
 
 ## Installation on Kubernetes
 
-> I built my setup on a k3s stack. Please take a look at https://k3s.io for details on setting up k3s. Otherwise you may have to tweak your configuration a bit.
+> I built my setup on a k3s stack. Please take a look at [k3s.io](https://k3s.io) for details on setting up k3s. Otherwise you may have to tweak your configuration a bit.
 
 ### Installation Steps
 
@@ -295,17 +287,10 @@ Then navigate to http://127.0.0.1:4444
 
 Much like the post installation of a local setup, you will still have to upload the initial package. This can be accomplished by the following steps.
 
-1. Navigate to https://your.domain/uploader
+1. Navigate to `https://your.domain/uploader`
 2. Open your profile on FoundryVTT
 3. Navigate to your Purchased Licenses page
-4. Download the zip file for NodeJS or click the link icon to get a timed link.
-5. Paste that link or browse to the zip file in the uploader screen.
-6. Get the admin secret from the server by running the following command:
-
-   ```sh
-   kubectl exec -i -t -n foundryvtt foundryvtt-<CONTAINER-ID> -c foundryvtt-web "--" sh -c "clear; (cat .admin-password)"
-   ```
-
-7. Copy that password into your clipboard and paste it into the admin password input field.
-8. CLick the submit button.
-9. If you get a Completed!! message, navigate to https://your.domain/ and setup foundry as your normally would.
+4. Click the link icon to get a timed link.
+5. Paste that link on the uploader screen.
+6. CLick the submit button.
+7. If you get a Completed!! message, navigate to `https://your.domain/` and setup foundry as your normally would.
