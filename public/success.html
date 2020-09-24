@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success!</title>
+  </head>
+  <body onload="main()">
+    <h1>Upload Successful!!</h1>
+    <div id="messages"></div>
+  </body>
+
+  <script>
+    function main() {
+      const messagesToDisplay = [
+        "Checking on Llamas",
+        "Starting Services",
+        "Querying the Universe",
+        "Facilitating training of the teenage mutant ninja turtles",
+        "Completed! Redirecting in %s",
+      ];
+      const size = messagesToDisplay.length;
+      const messages = document.getElementById("messages");
+      if (messages) {
+        const interval = setInterval(() => {
+          size--;
+          messages.append(
+            `<p>${messagesToDisplay[size].replace("%s", size)}...</p>`
+          );
+          if (size === 0) {
+            clearInterval(interval);
+            document.location.href = "/";
+          }
+        }, 1000);
+      }
+    }
+  </script>
+</html>

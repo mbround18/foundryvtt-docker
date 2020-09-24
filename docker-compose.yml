@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  foundryvtt:
+    build: .
+    image: mbround18/foundryvtt-docker:latest
+    ports:
+      - "4444:4444"
+    volumes:
+      - $PWD/tmp:/foundrydata
