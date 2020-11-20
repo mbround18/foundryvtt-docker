@@ -6,6 +6,7 @@
 This is based on the FoundryVTT application, pleaase check them out over on Patreon! :)
 This docker container requires an active license to their beta.
 
+[You can obtain a license from here](https://foundryvtt.com/purchase/)
 Please check them out here: [FoundryVTT Patreon](https://www.patreon.com/foundryvtt/posts)
 
 ## Installation Locally
