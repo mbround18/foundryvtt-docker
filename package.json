@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.9.6",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "express-fileupload": "^1.1.7-alpha.3",
     "rimraf": "^3.0.2",
