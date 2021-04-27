@@ -3,10 +3,10 @@
 > THEY HAVE RELEASED!!! You will need to have an active license in order to use this docker.
 > You also need to pay attention to post installation section below.
 
-This is based on the FoundryVTT application, pleaase check them out over on Patreon! :)
-This docker container requires an active license to their beta.
+**This docker container requires an active license.**
 
-Please check them out here: [FoundryVTT Patreon](https://www.patreon.com/foundryvtt/posts)
+- [You can obtain a license from here](https://foundryvtt.com/purchase/)
+- Check out their patreon over at: [FoundryVTT Patreon](https://www.patreon.com/foundryvtt/posts)
 
 ## Installation Locally
 
