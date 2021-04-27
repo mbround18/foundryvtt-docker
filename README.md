@@ -25,7 +25,6 @@ docker run --rm  \
     -p 4444:4444 \
     -e HOSTNAME="127.0.0.1" \
     -e SSL_PROXY="false" \
-    -e VTT_VERSION="0.6.0"  \
     -v ${PWD}/data:/foundrydata \
     mbround18/foundryvtt-docker:latest
 ```
