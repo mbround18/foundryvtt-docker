@@ -3,7 +3,6 @@ import path from "path";
 import express from "express";
 import fileUpload from "express-fileupload";
 import { downloadTimedUrl } from "./utils/downloadTimedUrl";
-import { deleteFiles } from "./utils/deleteFiles";
 import rateLimit from "express-rate-limit";
 import shelljs from 'shelljs';
 
@@ -20,8 +19,6 @@ const limiter = rateLimit({
   windowMs: 15 * 60 * 100, // 15 minutes
   max: 1000 // limit each IP to 100 requests per windowMs
 });
-
-import successHtml from '../../public/success.html'
 
 
 shelljs.mkdir('-p', data_dir)
