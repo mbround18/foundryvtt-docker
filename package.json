@@ -10,10 +10,8 @@
     "build:client": "nuxt generate",
     "build": "yarn build:server && yarn build:client",
     "start": "node ./dist/server/server.js",
-    "dev": "nodemon",
-    "build:docker": "docker build . --tag mbround18/foundryvtt-docker:latest",
-    "start:docker": "docker run --rm --name foundry -p 4444:4444 mbround18/foundryvtt-docker:latest",
-    "publish:docker": "docker push mbround18/foundryvtt-docker:latest"
+    "dev": "nuxt",
+    "release": "auto shipit"
   },
   "nodemonConfig": {
     "exec": "yarn start",
