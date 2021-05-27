@@ -4,15 +4,21 @@
 
 - [You can obtain a license from here](https://foundryvtt.com/purchase/)
 
+While there are many docker containers which can serve up FoundryVTT, this container was created with simplicity in mind. 
+There are no additional credentials you need to supply, web driver, or web automation required. The installation process is simplified 
+by presenting you with an easy-to-use web interface to install the application by using a timed url provided by Foundry. 
+
 ## Installation Locally
 
 ### Running locally
 
 ```sh
-docker run -rm  -p 4444:4444 \
+docker run --rm -it \
+  -p 4444:4444 \
   -e HOSTNAME="127.0.0.1" \
   -e SSL_PROXY="false" \
-  -v ${PWD}/data:/foundrydata \
+  -v ${PWD}/foundry/data:/foundrydata \
+  -v ${PWD}/foundry/app:/foundryvtt \
   mbround18/foundryvtt-docker:latest
 ```
 
