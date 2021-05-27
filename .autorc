@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    ".auto/plugins/release.js"
+  ],
+  "owner": "mbround18",
+  "repo": "foundryvtt-docker",
+  "name": "mbround18",
+  "email": "12646562+mbround18@users.noreply.github.com",
+  "onlyPublishWithReleaseLabel": true
+}

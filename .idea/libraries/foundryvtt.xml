@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="foundryvtt">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/tmp/foundryvtt.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
