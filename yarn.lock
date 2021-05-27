@@ -6581,7 +6581,7 @@ __metadata:
     nuxt: 2.15.6
     rimraf: 3.0.2
     sass: 1.32.13
-    sass-loader: 10.2.0
+    sass-loader: 11.1.1
     semver: 7.3.5
     shelljs: 0.8.4
     supports-color: 9.0.0
@@ -12247,7 +12247,29 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:10.2.0, sass-loader@npm:^10.1.1":
+"sass-loader@npm:11.1.1":
+  version: 11.1.1
+  resolution: "sass-loader@npm:11.1.1"
+  dependencies:
+    klona: ^2.0.4
+    neo-async: ^2.6.2
+  peerDependencies:
+    fibers: ">= 3.1.0"
+    node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0
+    sass: ^1.3.0
+    webpack: ^5.0.0
+  peerDependenciesMeta:
+    fibers:
+      optional: true
+    node-sass:
+      optional: true
+    sass:
+      optional: true
+  checksum: 6d8ded8e2a0742f6b62dddc577324b74a7a0781f5405574d3af4ee34c9a6189debff1b90e3acd65a62ebbf6dc52c47a9a2be6c1786ac2435bd39c91c2ebe7367
+  languageName: node
+  linkType: hard
+
+"sass-loader@npm:^10.1.1":
   version: 10.2.0
   resolution: "sass-loader@npm:10.2.0"
   dependencies:
