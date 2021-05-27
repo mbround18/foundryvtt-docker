@@ -1,25 +1,25 @@
 #!/usr/bin/env bash
 export TERM=linux
 
-: ${APPLICATION_DIR?"APPLICATION_DIR is a required environment variable!"}
-: ${DATA_DIR?"DATA_DIR is a required environment variable!"}
-: ${APPLICATION_HOST?"APPLICATION_HOST is a required environment variable!"}
+: "${APPLICATION_DIR?"APPLICATION_DIR is a required environment variable!"}"
+: "${DATA_DIR?"DATA_DIR is a required environment variable!"}"
+: "${APPLICATION_HOST?"APPLICATION_HOST is a required environment variable!"}"
 
 echo "###########################################################################"
-echo "# FoundryVTT - " `date`
+echo "# FoundryVTT -  $(date)"
 echo "###########################################################################"
 
 
 # Change working directory to ${DATA_DIR} to allow relative path
-mkdir -p ${APPLICATION_DIR}
-mkdir -p ${DATA_DIR}
+mkdir -p "${APPLICATION_DIR}"
+mkdir -p "${DATA_DIR}"
 
 
 function launchUploader() {
     echo "Launching the uploader tool..."
-    node /uploader-tool/dist/server
-    [[ -f "/tmp/foundryvtt.zip" ]] && unzip -q /tmp/foundryvtt.zip -d ${APPLICATION_DIR}
-    echo "foundary was uploaded recently" >> "${DATA_DIR}/.uploaded"
+    node /uploader-tool/dist/server/server.js
+    [[ -f "/tmp/foundryvtt.zip" ]] && 7z x -aoa -O"${APPLICATION_DIR}" /tmp/foundryvtt.zip
+    echo "foundry was uploaded recently" >> "${DATA_DIR}/.uploaded"
 }
 
 
@@ -39,10 +39,12 @@ if [[ ! -f "${APPLICATION_DIR}/resources/app/main.js" ]]; then
 fi
 
 echo "Building arguments..."
-FOUNDRYVTT_ARGS=("--dataPath=${DATA_DIR}" "--port=4444" "--hostname=${APPLICATION_HOST}" "--noupnp")
-[[ "${SSL_PROXY,,}" -eq "true" ]] && FOUNDRYVTT_ARGS+=("--proxySSL")
+FOUNDRY_VTT_ARGS=("--dataPath=${DATA_DIR}" "--port=4444" "--hostname=${APPLICATION_HOST}" "--noupnp")
+# shellcheck disable=SC2154
+[[ "${SSL_PROXY,,}" -eq "true" ]] && FOUNDRY_VTT_ARGS+=("--proxySSL")
 
-echo "Launching FoundryVTT with: ${FOUNDRYVTT_ARGS[@]}"
+# shellcheck disable=SC2145
+echo "Launching FoundryVTT with: ${FOUNDRY_VTT_ARGS[@]}"
 trap stop INT
 trap stop TERM
-pm2-runtime -i 1 ${APPLICATION_DIR}/resources/app/main.js -- "${FOUNDRYVTT_ARGS[@]}"
+pm2-runtime -i 1 "${APPLICATION_DIR}/resources/app/main.js" -- "${FOUNDRY_VTT_ARGS[@]}"
