@@ -41,7 +41,7 @@
     "@auto-it/core": "10.29.2",
     "@babel/core": "7.14.3",
     "@babel/plugin-transform-runtime": "7.14.3",
-    "@babel/preset-env": "7.14.2",
+    "@babel/preset-env": "7.14.4",
     "@nuxtjs/vuetify": "1.11.3",
     "@yarnpkg/pnpify": "3.0.0-rc.3",
     "auto": "10.29.2",
