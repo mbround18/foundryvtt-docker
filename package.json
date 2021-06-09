@@ -30,7 +30,7 @@
     "lodash": "4.17.21",
     "nuxt": "2.15.6",
     "shelljs": "0.8.4",
-    "vue": "2.6.12",
+    "vue": "2.6.14",
     "vuetify": "2.5.3",
     "vuex": "3.6.2"
   },
@@ -56,7 +56,7 @@
     "sass-loader": "10.2.0",
     "semver": "7.3.5",
     "supports-color": "9.0.1",
-    "vue-template-compiler": "2.6.12",
+    "vue-template-compiler": "2.6.14",
     "webpack": "5.38.1",
     "webpack-cli": "4.7.2",
     "webpack-dev-server": "3.11.2",
