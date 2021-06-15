@@ -28,7 +28,7 @@
     "express-rate-limit": "5.2.6",
     "follow-redirects": "1.14.1",
     "lodash": "4.17.21",
-    "nuxt": "2.15.6",
+    "nuxt": "2.15.7",
     "shelljs": "0.8.4",
     "vue": "2.6.12",
     "vuetify": "2.5.3",
