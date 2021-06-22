@@ -7022,10 +7022,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-module-lexer@npm:^0.4.0":
-  version: 0.4.1
-  resolution: "es-module-lexer@npm:0.4.1"
-  checksum: 0c634ce62d3a77b04aa56b9ca2af2b58ff73a834afc76ac6747b25173e97d9050a28451b6ed39b54b84b8498d887ac8bd5bcf2c9aa9ba948ca0aee0acd613618
+"es-module-lexer@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "es-module-lexer@npm:0.6.0"
+  checksum: 6c7c64adab628ee53a9d90d65db13e574e1132db808d43d9a9f912944c97d36dc05d5bafed79245c8e9880cf2bcf0fef54663364fd08c8d59053717a4a69db7f
   languageName: node
   linkType: hard
 
@@ -7669,7 +7669,7 @@ __metadata:
     vue-template-compiler: 2.6.12
     vuetify: 2.5.4
     vuex: 3.6.2
-    webpack: 5.39.0
+    webpack: 5.40.0
     webpack-cli: 4.7.2
     webpack-dev-server: 3.11.2
     webpack-node-externals: 3.0.0
@@ -9445,7 +9445,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"jest-worker@npm:^26.2.1, jest-worker@npm:^26.5.0, jest-worker@npm:^26.6.2":
+"jest-worker@npm:^26.2.1, jest-worker@npm:^26.5.0":
   version: 26.6.2
   resolution: "jest-worker@npm:26.6.2"
   dependencies:
@@ -9453,6 +9453,17 @@ fsevents@~2.3.1:
     merge-stream: ^2.0.0
     supports-color: ^7.0.0
   checksum: 5eb349833b5e9750ce8700388961dfd5d5e207c913122221e418e48b9cda3c17b0fb418f6a90f1614cfdc3ca836158b720c5dc1de82cb1e708266b4d76e31a38
+  languageName: node
+  linkType: hard
+
+"jest-worker@npm:^27.0.2":
+  version: 27.0.2
+  resolution: "jest-worker@npm:27.0.2"
+  dependencies:
+    "@types/node": "*"
+    merge-stream: ^2.0.0
+    supports-color: ^8.0.0
+  checksum: bfbfd3d0af94a5505e841719bba4f57823305a3333b3dcecad333eea517c18ee3ba528e8fab017444ad93666ca15b73f1969b71fe0ba9f9abec8843a74b081e7
   languageName: node
   linkType: hard
 
@@ -14391,6 +14402,15 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
+"supports-color@npm:^8.0.0":
+  version: 8.1.1
+  resolution: "supports-color@npm:8.1.1"
+  dependencies:
+    has-flag: ^4.0.0
+  checksum: 0219f5c91753fea8dc8046cd4b18d39458b5dc0c6421c67c1072209faae9ba93b89283252e3b05d5c18901fd9f8b95001e3247fb93e2265f66d584a676522c75
+  languageName: node
+  linkType: hard
+
 "supports-hyperlinks@npm:^2.0.0":
   version: 2.2.0
   resolution: "supports-hyperlinks@npm:2.2.0"
@@ -14545,11 +14565,11 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"terser-webpack-plugin@npm:^5.1.1":
-  version: 5.1.2
-  resolution: "terser-webpack-plugin@npm:5.1.2"
+"terser-webpack-plugin@npm:^5.1.3":
+  version: 5.1.3
+  resolution: "terser-webpack-plugin@npm:5.1.3"
   dependencies:
-    jest-worker: ^26.6.2
+    jest-worker: ^27.0.2
     p-limit: ^3.1.0
     schema-utils: ^3.0.0
     serialize-javascript: ^5.0.1
@@ -14557,7 +14577,7 @@ resolve@~1.7.1:
     terser: ^5.7.0
   peerDependencies:
     webpack: ^5.1.0
-  checksum: f65229fc603a23b550283da3344adf23a81526e55c830ff437c8e8769fc64f4d48dbc6a7845b3aa85b5ce37eb00834829341d00cad9fa4a65186ebeda6ce61de
+  checksum: 4f3bc6c949fe14a55783cb488cc8e8c736329547cfcf0f80b139aa9bed571ac921684add0dd0647b05d737f1427806f669d6ba89c56651d91c2d1dce88be6eba
   languageName: node
   linkType: hard
 
@@ -15729,9 +15749,9 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.39.0":
-  version: 5.39.0
-  resolution: "webpack@npm:5.39.0"
+"webpack@npm:5.40.0":
+  version: 5.40.0
+  resolution: "webpack@npm:5.40.0"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.47
@@ -15742,7 +15762,7 @@ resolve@~1.7.1:
     browserslist: ^4.14.5
     chrome-trace-event: ^1.0.2
     enhanced-resolve: ^5.8.0
-    es-module-lexer: ^0.4.0
+    es-module-lexer: ^0.6.0
     eslint-scope: 5.1.1
     events: ^3.2.0
     glob-to-regexp: ^0.4.1
@@ -15753,7 +15773,7 @@ resolve@~1.7.1:
     neo-async: ^2.6.2
     schema-utils: ^3.0.0
     tapable: ^2.1.1
-    terser-webpack-plugin: ^5.1.1
+    terser-webpack-plugin: ^5.1.3
     watchpack: ^2.2.0
     webpack-sources: ^2.3.0
   peerDependenciesMeta:
@@ -15761,7 +15781,7 @@ resolve@~1.7.1:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 2a2170f421c78f32d6662411912a9d4dededf8923cf7708d69f9781f6b197856404d7d4c8b90ec0284ce12d4b8161ba2d234a87d1352c47f7383230ef9b9eee4
+  checksum: 1d13fff8f7fb0c5ca6b52162882e13fb6c46e3950443d48f3a4357c5b7d71117183d1afee79521469796ce5a2a0d55717436c50c2d83165606b0313da2f9b0fe
   languageName: node
   linkType: hard
 
