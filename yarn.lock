@@ -7695,7 +7695,7 @@ __metadata:
     html-loader: 2.1.2
     html-webpack-plugin: 5.3.2
     lodash: 4.17.21
-    nodemon: 2.0.7
+    nodemon: 2.0.8
     nuxt: 2.15.7
     rimraf: 3.0.2
     sass: 1.35.1
@@ -10755,9 +10755,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"nodemon@npm:2.0.7":
-  version: 2.0.7
-  resolution: "nodemon@npm:2.0.7"
+"nodemon@npm:2.0.8":
+  version: 2.0.8
+  resolution: "nodemon@npm:2.0.8"
   dependencies:
     chokidar: ^3.2.2
     debug: ^3.2.6
@@ -10771,7 +10771,7 @@ fsevents@~2.3.1:
     update-notifier: ^4.1.0
   bin:
     nodemon: bin/nodemon.js
-  checksum: e1e8acb584120579714c29d7e12b4efca2188b73ea537a560b1a66ec995dccbd8c0742af2c25f1a18df7e7bb8448477e80063824708466cda491dfc52ab6e233
+  checksum: 4eb57aac4f2590fbf005fb7c8456109b7b6065172ad8161e43f2538a711536507799c342a081f3a3b0e3f5c2d397b84f08252c0105e92aecc6ff8f09be0784c1
   languageName: node
   linkType: hard
 
