@@ -4126,15 +4126,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn-import-assertions@npm:1.7.1":
-  version: 1.7.1
-  resolution: "acorn-import-assertions@npm:1.7.1"
-  peerDependencies:
-    acorn: ^8
-  checksum: 66d914df7932cecbf3f77098ffb83c6c037646ca17e3b89e9f15ddf295610910b673f2530f3e9348a1ba07c96729870d9625137dba6a64d962d7d2bfc5fbd3e4
-  languageName: node
-  linkType: hard
-
 "acorn-walk@npm:^8.0.0":
   version: 8.1.0
   resolution: "acorn-walk@npm:8.1.0"
@@ -7732,7 +7723,7 @@ __metadata:
     vue-template-compiler: 2.6.12
     vuetify: 2.5.6
     vuex: 3.6.2
-    webpack: 5.45.0
+    webpack: 5.45.1
     webpack-cli: 4.7.2
     webpack-dev-server: 3.11.2
     webpack-node-externals: 3.0.0
@@ -15858,9 +15849,9 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.45.0":
-  version: 5.45.0
-  resolution: "webpack@npm:5.45.0"
+"webpack@npm:5.45.1":
+  version: 5.45.1
+  resolution: "webpack@npm:5.45.1"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -15868,7 +15859,6 @@ resolve@~1.7.1:
     "@webassemblyjs/wasm-edit": 1.11.1
     "@webassemblyjs/wasm-parser": 1.11.1
     acorn: ^8.4.1
-    acorn-import-assertions: 1.7.1
     browserslist: ^4.14.5
     chrome-trace-event: ^1.0.2
     enhanced-resolve: ^5.8.0
@@ -15891,7 +15881,7 @@ resolve@~1.7.1:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 3d6a23f69e3f9cac7b3eef7125282ac72cfe6cc82424f7a446052c197062ba3660c477f6d4ac07aca55505206d7cc153f6c33f9632185d01945d84694c2ad39d
+  checksum: f25a1c1db231d5a0773af2d8fa312e8915c9592ddae708c058be9abaa483d21051955fab69859671bd104ac49d3c21b74086cd258b4057477b5d017cd697cf87
   languageName: node
   linkType: hard
 
