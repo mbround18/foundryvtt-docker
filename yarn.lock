@@ -7718,7 +7718,7 @@ __metadata:
     sass-loader: 10.2.0
     semver: 7.3.5
     shelljs: 0.8.4
-    supports-color: 9.0.1
+    supports-color: 9.0.2
     vue: 2.6.12
     vue-template-compiler: 2.6.12
     vuetify: 2.5.6
@@ -14459,12 +14459,12 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"supports-color@npm:9.0.1":
-  version: 9.0.1
-  resolution: "supports-color@npm:9.0.1"
+"supports-color@npm:9.0.2":
+  version: 9.0.2
+  resolution: "supports-color@npm:9.0.2"
   dependencies:
     has-flag: ^5.0.0
-  checksum: 34eebb1f2be64939eb73b08089413b395797cc18a7e4272f92faba7ba9e88746fba3edfd6ad3051ce2b4d959ea1c440155e83bb6d0ad6622ed310f163ed9dcef
+  checksum: 641a982f9b36d4d3a5eff68456910f84e24a9272c6f70fecc83c79af2dfa9b0b6e68bc4c929cef79b3dab55e8b3a5aff10e80112fcd220eb04c498eb1f98614d
   languageName: node
   linkType: hard
 
