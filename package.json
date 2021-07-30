@@ -31,7 +31,7 @@
     "nuxt": "2.15.7",
     "shelljs": "0.8.4",
     "vue": "2.6.12",
-    "vuetify": "2.5.7",
+    "vuetify": "2.5.8",
     "vuex": "3.6.2"
   },
   "optionalDependencies": {
