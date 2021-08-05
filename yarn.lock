@@ -5,6 +5,19 @@ __metadata:
   version: 4
   cacheKey: 7
 
+"@apideck/better-ajv-errors@npm:^0.2.4":
+  version: 0.2.5
+  resolution: "@apideck/better-ajv-errors@npm:0.2.5"
+  dependencies:
+    json-schema: ^0.3.0
+    jsonpointer: ^4.1.0
+    leven: ^3.1.0
+  peerDependencies:
+    ajv: ">=8"
+  checksum: f5b173527f84e3251c1e57125e13af218d9c277baeb927784ab715e951d71defeb7b41c6818df089e99d4632909da44a0c5591db05f99db2ed3028420832ac16
+  languageName: node
+  linkType: hard
+
 "@arcanis/slice-ansi@npm:^1.0.2":
   version: 1.0.2
   resolution: "@arcanis/slice-ansi@npm:1.0.2"
@@ -2640,56 +2653,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hapi/address@npm:^2.1.2":
-  version: 2.1.4
-  resolution: "@hapi/address@npm:2.1.4"
-  checksum: 5dc5d0d3d6aad953bef59c5f24af704ae349dce626460eb2df93bd1e4b560136e354f92ce1c573292dfc7edce84189859794d28381711b50f738e67042081278
-  languageName: node
-  linkType: hard
-
-"@hapi/formula@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@hapi/formula@npm:1.2.0"
-  checksum: 555cbfe844e459d6872982c9ba9a14920a25b9860f459d33ce07a458c986895fdd859f57ea02e4bce08499a1a3357eb6d31bb637cf1c91ec7a9c78c59f29291b
-  languageName: node
-  linkType: hard
-
-"@hapi/hoek@npm:^8.2.4, @hapi/hoek@npm:^8.3.0":
-  version: 8.5.1
-  resolution: "@hapi/hoek@npm:8.5.1"
-  checksum: 17bf9a0b6f2f9ecb248824dab838c66c50b16b00b1d3785233fafd5abacb06cc6cdcbd6f4c7be87babb227fc02fff46ad1c23de3f5b6f48ffe36b6aac829d82c
-  languageName: node
-  linkType: hard
-
-"@hapi/joi@npm:^16.1.8":
-  version: 16.1.8
-  resolution: "@hapi/joi@npm:16.1.8"
-  dependencies:
-    "@hapi/address": ^2.1.2
-    "@hapi/formula": ^1.2.0
-    "@hapi/hoek": ^8.2.4
-    "@hapi/pinpoint": ^1.0.2
-    "@hapi/topo": ^3.1.3
-  checksum: d0f024d5a858623efe376490000e5c6880fa8d86098c3ca0fbe547aea907067705fbe57d7f3e0f95d0e4c21ced72b9163c5850e5bede48ef552c0677c749dca7
-  languageName: node
-  linkType: hard
-
-"@hapi/pinpoint@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@hapi/pinpoint@npm:1.0.2"
-  checksum: 716c01d1d32946525b2885b98eb95d996c91998a4bb7fd78e0c4756d75fe103d9bddd883679d2991de99bd6b98852fcca2e7a9fa7fcc941b2d4d7f97191fc8dc
-  languageName: node
-  linkType: hard
-
-"@hapi/topo@npm:^3.1.3":
-  version: 3.1.6
-  resolution: "@hapi/topo@npm:3.1.6"
-  dependencies:
-    "@hapi/hoek": ^8.3.0
-  checksum: 4550d3d7498a203ce5c0e53753eb9f510aa2b74c08bfaf7d7c4676a0943b27d72f22297ff006e8396eb74e6b73154ebf98feab19c199b0768a084a777d024a50
-  languageName: node
-  linkType: hard
-
 "@nodelib/fs.scandir@npm:2.1.4":
   version: 2.1.4
   resolution: "@nodelib/fs.scandir@npm:2.1.4"
@@ -4392,6 +4355,18 @@ __metadata:
     json-schema-traverse: ^0.4.1
     uri-js: ^4.2.2
   checksum: 19a8f3b0a06001eb68e6268f4f9f04424b32baadd5df6ba8292cd473e22e5f4019ed9ab17c3e3510394178ed8bef9b42ad0bdb5c675d65f042421a774780ce1a
+  languageName: node
+  linkType: hard
+
+"ajv@npm:^8.6.0":
+  version: 8.6.2
+  resolution: "ajv@npm:8.6.2"
+  dependencies:
+    fast-deep-equal: ^3.1.1
+    json-schema-traverse: ^1.0.0
+    require-from-string: ^2.0.2
+    uri-js: ^4.2.2
+  checksum: 9969d6c0e6b601c4a1254d01acf1ccd419e5dabeb4651f2fbe7269d4ae5e30c281af758839a0cbf6f2bf4830600fa8bc909232af634b97c4ceb798f9a2b65cb4
   languageName: node
   linkType: hard
 
@@ -7890,7 +7865,7 @@ __metadata:
     webpack-cli: 4.7.2
     webpack-dev-server: 3.11.2
     webpack-node-externals: 3.0.0
-    workbox-webpack-plugin: 6.1.5
+    workbox-webpack-plugin: 6.2.0
   dependenciesMeta:
     fibers:
       optional: true
@@ -8861,6 +8836,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"idb@npm:^6.0.0":
+  version: 6.1.2
+  resolution: "idb@npm:6.1.2"
+  checksum: cdb643981a63a3f476f77639b0aa0b42a17bb8108dd57e7cba2a71449625533c78c0d0cd0136fa093ec19d8d7279eec91324b04a9fa26e20686af5d6f2566d76
+  languageName: node
+  linkType: hard
+
 "ieee754@npm:^1.1.13, ieee754@npm:^1.1.4":
   version: 1.2.1
   resolution: "ieee754@npm:1.2.1"
@@ -9783,6 +9765,20 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"json-schema-traverse@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "json-schema-traverse@npm:1.0.0"
+  checksum: 7a230bcd927f5bf41b33a822121730a225ac287e14d7e8abc94f4cbc36743f6e09455549abaada7029844f7e88a9fd693a023ec76296df17488746acb1e5a388
+  languageName: node
+  linkType: hard
+
+"json-schema@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "json-schema@npm:0.3.0"
+  checksum: 1d0895cca1b01e3a290de6b7cae5d5cf7bb2764f6a032bc85f0bc0dd50d1820c0d8bd71159ba921e4c1c6e47f909b5d2308f6bbbf191e1b47ac7b6adc526fb5b
+  languageName: node
+  linkType: hard
+
 "json3@npm:^3.3.3":
   version: 3.3.3
   resolution: "json3@npm:3.3.3"
@@ -9834,6 +9830,13 @@ fsevents@~2.3.1:
     graceful-fs:
       optional: true
   checksum: 9419c886abc6f8a5088cbb222b7bc17c76e8ee9f6c0e5c38781a4e09488166084f25247bc0b58e025b08c43064c82ae860ad89a992e35fc8cfae639323b7edbc
+  languageName: node
+  linkType: hard
+
+"jsonpointer@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "jsonpointer@npm:4.1.0"
+  checksum: 90724d8a84ce4493980f474c59298a8c39b379e8163c648408a53143baf7f3818189102c45d860905447da2ff79c9152bbda58d1339c5564b1bb8748e3adbb81
   languageName: node
   linkType: hard
 
@@ -9936,6 +9939,13 @@ fsevents@~2.3.1:
     chalk: ^2.3.0
     shell-quote: ^1.6.1
   checksum: ee8039d472ca53af507be59a3e8ed1044bfe27a7880770295c6c4d46765fc25a63060ab0a8456b31b55397e4932f4d617821985aa59eb56ef36225f28e37c4c4
+  languageName: node
+  linkType: hard
+
+"leven@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "leven@npm:3.1.0"
+  checksum: 6ebca7529809b8d099ab8793091b1ee8712a87932fae14c7d0c2693b0fcc0640aea72141a6539c03b9dae53a34f15a43dc151bb5c04eded0d1d38b277bfd206a
   languageName: node
   linkType: hard
 
@@ -13292,6 +13302,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"require-from-string@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "require-from-string@npm:2.0.2"
+  checksum: 74fc30353e5d526879b28d480c3f25ca95e9c22dfe7ac10ca0650e03407b3aeed352ff8ca706ea145617b6482a582e4a3bd65a884fc50133ebe586d47fa085c6
+  languageName: node
+  linkType: hard
+
 "require-main-filename@npm:^2.0.0":
   version: 2.0.0
   resolution: "require-main-filename@npm:2.0.0"
@@ -16201,36 +16218,38 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"workbox-background-sync@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "workbox-background-sync@npm:6.1.5"
+"workbox-background-sync@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "workbox-background-sync@npm:6.2.0"
   dependencies:
-    workbox-core: ^6.1.5
-  checksum: ddd36cf93580da2742c4a5c464ca60ba1d10c679cb28910bcfff61cb90463ce21da231fb49da36d47a87b72c1bb1fa17ee1db9dd34ac13179a0a48474c33c273
+    idb: ^6.0.0
+    workbox-core: ^6.2.0
+  checksum: 2bb29fc45237e6f922d69cbae25225b5cc704930fc4d5046766523acd6727fb2880fc5d61607b2aeee6ee4743dcf455bf7f50e19c6df119999e2cf2bcf2a7e78
   languageName: node
   linkType: hard
 
-"workbox-broadcast-update@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "workbox-broadcast-update@npm:6.1.5"
+"workbox-broadcast-update@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "workbox-broadcast-update@npm:6.2.0"
   dependencies:
-    workbox-core: ^6.1.5
-  checksum: e1567feb17ff3ef087fa8e529a8a63af7e4d7dc14e23e38718e9c7fde748e06b577ce603a0d30c436e5f18c4a0631451f4734e40fd898f2523e62451e7ee066e
+    workbox-core: ^6.2.0
+  checksum: 8176da9ae8427c1c30b395a9ad5a9e46d0c71041437015ce9e79a108203b4aa07ae5aee51a93d1af9895c290a570fa735979b72a4da18284089270ecc5129d24
   languageName: node
   linkType: hard
 
-"workbox-build@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "workbox-build@npm:6.1.5"
+"workbox-build@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "workbox-build@npm:6.2.0"
   dependencies:
+    "@apideck/better-ajv-errors": ^0.2.4
     "@babel/core": ^7.11.1
     "@babel/preset-env": ^7.11.0
     "@babel/runtime": ^7.11.2
-    "@hapi/joi": ^16.1.8
     "@rollup/plugin-babel": ^5.2.0
     "@rollup/plugin-node-resolve": ^11.2.1
     "@rollup/plugin-replace": ^2.4.1
     "@surma/rollup-plugin-off-main-thread": ^1.4.1
+    ajv: ^8.6.0
     common-tags: ^1.8.0
     fast-json-stable-stringify: ^2.1.0
     fs-extra: ^9.0.1
@@ -16245,162 +16264,163 @@ resolve@~1.7.1:
     strip-comments: ^2.0.1
     tempy: ^0.6.0
     upath: ^1.2.0
-    workbox-background-sync: ^6.1.5
-    workbox-broadcast-update: ^6.1.5
-    workbox-cacheable-response: ^6.1.5
-    workbox-core: ^6.1.5
-    workbox-expiration: ^6.1.5
-    workbox-google-analytics: ^6.1.5
-    workbox-navigation-preload: ^6.1.5
-    workbox-precaching: ^6.1.5
-    workbox-range-requests: ^6.1.5
-    workbox-recipes: ^6.1.5
-    workbox-routing: ^6.1.5
-    workbox-strategies: ^6.1.5
-    workbox-streams: ^6.1.5
-    workbox-sw: ^6.1.5
-    workbox-window: ^6.1.5
-  checksum: b6ab71af17a21c7286116f5ddbaff542bd21c98cab989cbc0182f83b96a2c592fea54455cf2b402048f73c746ae95add63b638886f898c59ca6623609aa8f6c9
+    workbox-background-sync: ^6.2.0
+    workbox-broadcast-update: ^6.2.0
+    workbox-cacheable-response: ^6.2.0
+    workbox-core: ^6.2.0
+    workbox-expiration: ^6.2.0
+    workbox-google-analytics: ^6.2.0
+    workbox-navigation-preload: ^6.2.0
+    workbox-precaching: ^6.2.0
+    workbox-range-requests: ^6.2.0
+    workbox-recipes: ^6.2.0
+    workbox-routing: ^6.2.0
+    workbox-strategies: ^6.2.0
+    workbox-streams: ^6.2.0
+    workbox-sw: ^6.2.0
+    workbox-window: ^6.2.0
+  checksum: 26072c452d922ad6bbc2f73e1c54fa1fe93734ea8e08e7ff1f4268697b30d0d1e5ec6d40dfeadc53d25180e255847b8f508a79f6b321aec47ad282ce582f91db
   languageName: node
   linkType: hard
 
-"workbox-cacheable-response@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "workbox-cacheable-response@npm:6.1.5"
+"workbox-cacheable-response@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "workbox-cacheable-response@npm:6.2.0"
   dependencies:
-    workbox-core: ^6.1.5
-  checksum: feeff4a1ec51fc9a6f8ca9f45357d22dd4202d5f6229713e14bad843eda5821142c088628acbe083b0c200d675151a62dd49d96ec9c2f94e48bc106e1162f162
+    workbox-core: ^6.2.0
+  checksum: 8c49375530b9a01cf88d108efa08680463b1bd5d4fe7d0bf877de24ea523630ee59480ec88c6bf65546e84c25fbbd36e7220d8a84adf60f04ba03ff5f0ca285a
   languageName: node
   linkType: hard
 
-"workbox-core@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "workbox-core@npm:6.1.5"
-  checksum: 46657ad47d159b90af8c0c34837487babff0a1b03ad23bac0830f7fa5aa3cefdb4c9bb26abd4617a2c7624dd059972ae288ccc890b7b36e0de4792a1de6faf66
+"workbox-core@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "workbox-core@npm:6.2.0"
+  checksum: 6c9314bd2904c45f7a4b089cd16c9591437ca4515e930d2e828027a108ed41d1353793e9fca2673a2db44c933f114ce964dd0922174ef15cbf729a6a24486f88
   languageName: node
   linkType: hard
 
-"workbox-expiration@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "workbox-expiration@npm:6.1.5"
+"workbox-expiration@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "workbox-expiration@npm:6.2.0"
   dependencies:
-    workbox-core: ^6.1.5
-  checksum: fc702ae031077bf51f71128a59db619c9b1b8a73c444f98c37cd306d7f95c31ef4b48f1a3d6b8ce03e34c679d696a8a9111a5b982a5eb7be2816aabe58433bbe
+    idb: ^6.0.0
+    workbox-core: ^6.2.0
+  checksum: 74d14e65bca5b0e29dca14f570bbb3ddc38ce7059b8f69bf8a5d48f66f199ce908fe2dfa1644fb7bede92ac9da914e70a399dd2df668bdd4a1db86dadf05a428
   languageName: node
   linkType: hard
 
-"workbox-google-analytics@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "workbox-google-analytics@npm:6.1.5"
+"workbox-google-analytics@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "workbox-google-analytics@npm:6.2.0"
   dependencies:
-    workbox-background-sync: ^6.1.5
-    workbox-core: ^6.1.5
-    workbox-routing: ^6.1.5
-    workbox-strategies: ^6.1.5
-  checksum: 1da04758fc9d82ce688700870390a8e27f76466dde200b2a4c0206af9a38001c2c1213522020e6749422b908f24774abd7f1cbc50565cb5732cc0fed2fff6fae
+    workbox-background-sync: ^6.2.0
+    workbox-core: ^6.2.0
+    workbox-routing: ^6.2.0
+    workbox-strategies: ^6.2.0
+  checksum: 97145896f33852847136145049c474f238c13532825e94b49745d4caa4f83e51b673e0f5724d825d8c69b73748211493c05e58e7ccef05c56df646385fa9415b
   languageName: node
   linkType: hard
 
-"workbox-navigation-preload@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "workbox-navigation-preload@npm:6.1.5"
+"workbox-navigation-preload@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "workbox-navigation-preload@npm:6.2.0"
   dependencies:
-    workbox-core: ^6.1.5
-  checksum: 6656d01c5aef2f0cb1900587ad567875e8f768adf9b3baf229c12b3360a84bd49fbfc99d20de6c9d4fdc2f250c3e9beff471a31fa87bbca61be5a8757a12187b
+    workbox-core: ^6.2.0
+  checksum: b8a3d4119a9345fb077a0d4db576cdeb1b1489a52f411318bb13f222d70cdea118863172530bd75eb97a5919ddb36780ef2d5478032f440babcd43b21d63695e
   languageName: node
   linkType: hard
 
-"workbox-precaching@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "workbox-precaching@npm:6.1.5"
+"workbox-precaching@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "workbox-precaching@npm:6.2.0"
   dependencies:
-    workbox-core: ^6.1.5
-    workbox-routing: ^6.1.5
-    workbox-strategies: ^6.1.5
-  checksum: 7326e1be53e463c1c79149336c63df43103abf5e627c9deec284723abf9d2ccf4410e21b58a2a4e7fadc6285bd4e4f77d394de01100e3a8d7c8b020e8c8e8be3
+    workbox-core: ^6.2.0
+    workbox-routing: ^6.2.0
+    workbox-strategies: ^6.2.0
+  checksum: ea1085ba2e428a4e613824fdf3bd68bcd5b06c10308c5a17d2fef5807c631fa26e22fb99029ae867173ab7bc0724914de924ca4656c00e69824ec29e656ca43e
   languageName: node
   linkType: hard
 
-"workbox-range-requests@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "workbox-range-requests@npm:6.1.5"
+"workbox-range-requests@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "workbox-range-requests@npm:6.2.0"
   dependencies:
-    workbox-core: ^6.1.5
-  checksum: f6492f549b2b22843ff5ecc933ea86ac283d5e3b585f127af7c78c40338d9b109a45793059823e84163840267786335ae09871b9ef609415aa54b748413af6fd
+    workbox-core: ^6.2.0
+  checksum: 21010c442cc25a57af0263822b9c0665b3173ac783db76be528b66cff518a065e0ff3c6b499a3b5e6e078092cb4faddd34b0bacb72cee04f154b72537babba55
   languageName: node
   linkType: hard
 
-"workbox-recipes@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "workbox-recipes@npm:6.1.5"
+"workbox-recipes@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "workbox-recipes@npm:6.2.0"
   dependencies:
-    workbox-cacheable-response: ^6.1.5
-    workbox-core: ^6.1.5
-    workbox-expiration: ^6.1.5
-    workbox-precaching: ^6.1.5
-    workbox-routing: ^6.1.5
-    workbox-strategies: ^6.1.5
-  checksum: cf88d4442ed67b78494f02a55fcf2e79e9d58ab3fd9298ef8cda977a932d86740a0bc51c6f0dd910ab8c528db518e5fbcccea2e5e9d43a52c91089c7453576c2
+    workbox-cacheable-response: ^6.2.0
+    workbox-core: ^6.2.0
+    workbox-expiration: ^6.2.0
+    workbox-precaching: ^6.2.0
+    workbox-routing: ^6.2.0
+    workbox-strategies: ^6.2.0
+  checksum: 1ae105b7f4cf0ca78a2f08fd87c98ac954a31cddab03e6c69c1a3231dce4908d5ace6aee8b7df8f549cc852facb0a7e1110d5c20c95330df277cc70a61ae30ea
   languageName: node
   linkType: hard
 
-"workbox-routing@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "workbox-routing@npm:6.1.5"
+"workbox-routing@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "workbox-routing@npm:6.2.0"
   dependencies:
-    workbox-core: ^6.1.5
-  checksum: fe7caa590cb99c35f34b4b3125d2d518a603ecf04a14bc62edeca3b731a0fc2d53c08ef1384f21e8cfa6237bba0bcc8bff1994cdf2397ff23a9dc687380777e0
+    workbox-core: ^6.2.0
+  checksum: 2e36c9f84026c88f652a0fc1bc2b1b999f9034942de0bbeb2f669e775ad8f570d71c2913d6c995447cda620d21beba73890befab85101944e3f09c45e376851c
   languageName: node
   linkType: hard
 
-"workbox-strategies@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "workbox-strategies@npm:6.1.5"
+"workbox-strategies@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "workbox-strategies@npm:6.2.0"
   dependencies:
-    workbox-core: ^6.1.5
-  checksum: ba1902aa5b426c44cd294b4f07c0a924d1327f8f755d88dfd5f67db9c32022cdb625a92190937db84e1b7cb111116179c688feb726bb3e13cdb4df1d4c220afa
+    workbox-core: ^6.2.0
+  checksum: c18e72f8f2d05cf0b5632c1821c7d72302093174075872edf40533441dc3f561ac54b42f38ee407a7897ed6eea264b9209842e700594b4d3edfeaef90dddc67c
   languageName: node
   linkType: hard
 
-"workbox-streams@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "workbox-streams@npm:6.1.5"
+"workbox-streams@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "workbox-streams@npm:6.2.0"
   dependencies:
-    workbox-core: ^6.1.5
-    workbox-routing: ^6.1.5
-  checksum: 700d81d922acfbd9e99ebedeefcfa500a45e40fbd347a458a755d0e76dc373a79337712f12760b4e69fe3de60f945290d31fac90719422f882eebf01bf5412d5
+    workbox-core: ^6.2.0
+    workbox-routing: ^6.2.0
+  checksum: 55741ea7e88d1371106cefe269f4051de83603ee842c7203f64af98a08faea24042ee7aec5eff154195b11e9d8724b665c5a3ffa144f29b8228dd60bc8a88c04
   languageName: node
   linkType: hard
 
-"workbox-sw@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "workbox-sw@npm:6.1.5"
-  checksum: e5eade3c2de60994df4ceb1d302ae66eb1e9f27682ff9123c8cbe6c175d18ab84eaee45b82e034d3d11697fc25b39f2d6ee8ff5f2542ae0de258fe3945747121
+"workbox-sw@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "workbox-sw@npm:6.2.0"
+  checksum: 07dfae0a8fcf11fc6e297a835b11ada2ebcd8642fb53dec08a319bb806e6c81d18ced1c9ae9d2af9291700dcbc7ef07d591eaeaa2234d861e2efd5da311f0d3e
   languageName: node
   linkType: hard
 
-"workbox-webpack-plugin@npm:6.1.5":
-  version: 6.1.5
-  resolution: "workbox-webpack-plugin@npm:6.1.5"
+"workbox-webpack-plugin@npm:6.2.0":
+  version: 6.2.0
+  resolution: "workbox-webpack-plugin@npm:6.2.0"
   dependencies:
     fast-json-stable-stringify: ^2.1.0
     pretty-bytes: ^5.4.1
     source-map-url: ^0.4.0
     upath: ^1.2.0
     webpack-sources: ^1.4.3
-    workbox-build: ^6.1.5
+    workbox-build: ^6.2.0
   peerDependencies:
     webpack: ^4.4.0 || ^5.9.0
-  checksum: 2e5e6eaefdc8393a33625c8ba9185f2c47f08e58d642582a508fafe64a158dbbb30b419c296724bc48b9938f5cee536017da6c1e93c21885b11ed1a1bdd51165
+  checksum: 72b693f62f22da7e6b849b874efb28a270e91b53511caef5df40a1a99a0054461a131f4683cdb4ae6ea156c5cd5169246358568edeabe6e53f9ac871fe2ef1da
   languageName: node
   linkType: hard
 
-"workbox-window@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "workbox-window@npm:6.1.5"
+"workbox-window@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "workbox-window@npm:6.2.0"
   dependencies:
-    workbox-core: ^6.1.5
-  checksum: 814b8d89346fa9285c9df3ec7f67ce7f45aed3cc265ccf29856614d1ccb5f026e76beb058fcbdbbd45e148e03d4d09f9f15b2f5df15f6bab0c28cd00b92e784a
+    workbox-core: ^6.2.0
+  checksum: 2f820bb426898a3c14b84edea312b1a5c313fe44301a57741afa12e57b845e444af9666a79875d340d3919236e58f15d953c368a127b456927643588f4f618fc
   languageName: node
   linkType: hard
 
