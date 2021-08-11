@@ -21,7 +21,7 @@
     ]
   },
   "dependencies": {
-    "@babel/runtime": "7.14.8",
+    "@babel/runtime": "7.15.3",
     "axios": "0.21.1",
     "express": "4.17.1",
     "express-fileupload": "1.2.1",
