@@ -4158,6 +4158,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@yarnpkg/fslib@npm:^2.5.1":
+  version: 2.5.1
+  resolution: "@yarnpkg/fslib@npm:2.5.1"
+  dependencies:
+    "@yarnpkg/libzip": ^2.2.2
+    tslib: ^1.13.0
+  checksum: 05c8c6f6fa53ffdc2569373449fe1bef19fd0cc65f924e73cb4eb7aabc4c26697734ff831bae8ed3ada723ba2e3d99327929de7149bb72d1757e682338d71f2a
+  languageName: node
+  linkType: hard
+
 "@yarnpkg/json-proxy@npm:^2.1.1":
   version: 2.1.1
   resolution: "@yarnpkg/json-proxy@npm:2.1.1"
@@ -4210,19 +4220,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/pnpify@npm:3.0.0":
-  version: 3.0.0
-  resolution: "@yarnpkg/pnpify@npm:3.0.0"
+"@yarnpkg/pnpify@npm:3.0.1":
+  version: 3.0.1
+  resolution: "@yarnpkg/pnpify@npm:3.0.1"
   dependencies:
     "@yarnpkg/core": ^3.0.0
-    "@yarnpkg/fslib": ^2.5.0
+    "@yarnpkg/fslib": ^2.5.1
     "@yarnpkg/nm": ^2.4.1
     clipanion: ^3.0.1
     cross-spawn: 7.0.3
     tslib: ^1.13.0
   bin:
     pnpify: ./lib/cli.js
-  checksum: e43277a81b9106cb59844fc8b3ded56985432398e0af6e32e2fe96de9c39ca028daae9b25c4dc3074b7878d1549ec0c474c257d4ba84397a84987413c37bab2c
+  checksum: e898044bcbbcccaaac4776101510dc68faf19e02645df11608f12e7c5e71ae6f9ce2b22e74c78d65fddf9ed394c18c39a8d3872835eb8a9653e162a6efdfb7e0
   languageName: node
   linkType: hard
 
@@ -7842,7 +7852,7 @@ __metadata:
     "@babel/preset-env": 7.15.0
     "@babel/runtime": 7.15.3
     "@nuxtjs/vuetify": 1.12.1
-    "@yarnpkg/pnpify": 3.0.0
+    "@yarnpkg/pnpify": 3.0.1
     auto: 10.30.0
     axios: 0.21.1
     babel-loader: 8.2.2
