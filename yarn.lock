@@ -7818,7 +7818,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:1.14.1, follow-redirects@npm:^1.0.0, follow-redirects@npm:^1.10.0":
+"follow-redirects@npm:1.14.2":
+  version: 1.14.2
+  resolution: "follow-redirects@npm:1.14.2"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 5bc2beb11b166b085f140e2fa211aa2243899ba2886c7ad9477ec5c59ad36059b4bcda0356c4af8c90dc25fa3f6f0c280741b2a01de9b5ff331669e25e76b8e4
+  languageName: node
+  linkType: hard
+
+"follow-redirects@npm:^1.0.0, follow-redirects@npm:^1.10.0":
   version: 1.14.1
   resolution: "follow-redirects@npm:1.14.1"
   peerDependenciesMeta:
@@ -7862,7 +7872,7 @@ __metadata:
     express-fileupload: 1.2.1
     express-rate-limit: 5.3.0
     fibers: ^5.0.0
-    follow-redirects: 1.14.1
+    follow-redirects: 1.14.2
     html-loader: 2.1.2
     html-webpack-plugin: 5.3.2
     lodash: 4.17.21
