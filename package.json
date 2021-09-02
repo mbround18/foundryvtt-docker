@@ -21,7 +21,7 @@
     ]
   },
   "dependencies": {
-    "@babel/runtime": "7.15.3",
+    "@babel/runtime": "7.15.4",
     "axios": "0.21.1",
     "express": "4.17.1",
     "express-fileupload": "1.2.1",
@@ -39,9 +39,9 @@
   },
   "devDependencies": {
     "@auto-it/core": "10.31.0",
-    "@babel/core": "7.15.0",
+    "@babel/core": "7.15.4",
     "@babel/plugin-transform-runtime": "7.15.0",
-    "@babel/preset-env": "7.15.0",
+    "@babel/preset-env": "7.15.4",
     "@nuxtjs/vuetify": "1.12.1",
     "@yarnpkg/pnpify": "3.0.1",
     "auto": "10.31.0",
