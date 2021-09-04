@@ -4843,12 +4843,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:0.21.2":
-  version: 0.21.2
-  resolution: "axios@npm:0.21.2"
+"axios@npm:0.21.3":
+  version: 0.21.3
+  resolution: "axios@npm:0.21.3"
   dependencies:
     follow-redirects: ^1.14.0
-  checksum: dc0341a1f23470f13fffd2f04ed7ad064f2d1190d8204df5f25eb58a71e075d3e49b86dcea10e59e7dd09510997976a695b1b6ea803525aecec8e31bfca5947f
+  checksum: 3d231925b322899b00a4cf231ab470635bbb979e7f76985e929ab33da334e252955305932ad034fc80d9a6c73112bf64286bb4b5e7faecb04586dd2755093957
   languageName: node
   linkType: hard
 
@@ -7898,7 +7898,7 @@ __metadata:
     "@nuxtjs/vuetify": 1.12.1
     "@yarnpkg/pnpify": 3.0.1
     auto: 10.31.0
-    axios: 0.21.2
+    axios: 0.21.3
     babel-loader: 8.2.2
     consola: 2.15.3
     debug: 4.3.2
