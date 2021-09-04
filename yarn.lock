@@ -199,16 +199,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.15.4":
-  version: 7.15.4
-  resolution: "@babel/core@npm:7.15.4"
+"@babel/core@npm:7.15.5":
+  version: 7.15.5
+  resolution: "@babel/core@npm:7.15.5"
   dependencies:
     "@babel/code-frame": ^7.14.5
     "@babel/generator": ^7.15.4
     "@babel/helper-compilation-targets": ^7.15.4
     "@babel/helper-module-transforms": ^7.15.4
     "@babel/helpers": ^7.15.4
-    "@babel/parser": ^7.15.4
+    "@babel/parser": ^7.15.5
     "@babel/template": ^7.15.4
     "@babel/traverse": ^7.15.4
     "@babel/types": ^7.15.4
@@ -218,7 +218,7 @@ __metadata:
     json5: ^2.1.2
     semver: ^6.3.0
     source-map: ^0.5.0
-  checksum: 23264e1a797f8d6886694ff29d705a9803731b4c7dc82aa76d1c5f38705655ca3d522c1c9e45f51600ca2ab777e818aa7c8a6c0264b90c3674a921ec1c6f5f96
+  checksum: 84c787c8215f722598eed9f7b07e434df0a109520fa752c2a63f6ab4e9dd3b2ff08c31b3a030b329845fb6c1c771dba0180ecdf5b73b949ef173117bbb861bb8
   languageName: node
   linkType: hard
 
@@ -972,6 +972,15 @@ __metadata:
   bin:
     parser: ./bin/babel-parser.js
   checksum: e5447d6919c5312dffc56f37e12670c4f87995c842c26d784c14f47f81133476d354b8ea0235f1b367741074db9ee7961f9721f3fa9bcefe11a079b1b418aeaf
+  languageName: node
+  linkType: hard
+
+"@babel/parser@npm:^7.15.5":
+  version: 7.15.5
+  resolution: "@babel/parser@npm:7.15.5"
+  bin:
+    parser: ./bin/babel-parser.js
+  checksum: d473057859fb9642bf9072c1f53d3619185e28e918e494ecae659c962c53713a31a186a6bc874851716b96b0da75d7f0d6992349af2c666252d5abf968bbff79
   languageName: node
   linkType: hard
 
@@ -7882,7 +7891,7 @@ __metadata:
   resolution: "foundryvtt-docker@workspace:."
   dependencies:
     "@auto-it/core": 10.31.0
-    "@babel/core": 7.15.4
+    "@babel/core": 7.15.5
     "@babel/plugin-transform-runtime": 7.15.0
     "@babel/preset-env": 7.15.4
     "@babel/runtime": 7.15.4
