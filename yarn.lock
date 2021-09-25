@@ -5816,6 +5816,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"colorette@npm:^2.0.10":
+  version: 2.0.10
+  resolution: "colorette@npm:2.0.10"
+  checksum: 096023232b9d6cf3608f4d088455665337b7bfb4674a12804a8208ee3ba279846a461e031d8d445b979171edf183deae90c7133e49b0047d7c5558178dbeebfb
+  languageName: node
+  linkType: hard
+
 "command-line-application@npm:^0.10.1":
   version: 0.10.1
   resolution: "command-line-application@npm:0.10.1"
@@ -7921,7 +7928,7 @@ __metadata:
     vuex: 3.6.2
     webpack: 5.54.0
     webpack-cli: 4.8.0
-    webpack-dev-server: 4.2.1
+    webpack-dev-server: 4.3.0
     webpack-node-externals: 3.0.0
     workbox-webpack-plugin: 6.3.0
   dependenciesMeta:
@@ -15827,29 +15834,29 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"webpack-dev-middleware@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "webpack-dev-middleware@npm:5.1.0"
+"webpack-dev-middleware@npm:^5.2.1":
+  version: 5.2.1
+  resolution: "webpack-dev-middleware@npm:5.2.1"
   dependencies:
-    colorette: ^1.2.2
+    colorette: ^2.0.10
     memfs: ^3.2.2
     mime-types: ^2.1.31
     range-parser: ^1.2.1
     schema-utils: ^3.1.0
   peerDependencies:
     webpack: ^4.0.0 || ^5.0.0
-  checksum: 6b3e0872bc1312c203e1a5dce50b6f01a307cb532356bb4949aee8677cd94f64586358678d107815518a3b737013251b529ee24b718957aa3228767aa84665e5
+  checksum: dfefbd33613537ea55f8ccbe3afbd945b4c09da3b5890c19e34433e49aebc3afd7f76ee355d5915d49bb8db209844687cd121a8a8a8013b29226d833a8b47602
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:4.2.1":
-  version: 4.2.1
-  resolution: "webpack-dev-server@npm:4.2.1"
+"webpack-dev-server@npm:4.3.0":
+  version: 4.3.0
+  resolution: "webpack-dev-server@npm:4.3.0"
   dependencies:
     ansi-html-community: ^0.0.8
     bonjour: ^3.5.0
     chokidar: ^3.5.1
-    colorette: ^1.2.2
+    colorette: ^2.0.10
     compression: ^1.7.4
     connect-history-api-fallback: ^1.6.0
     del: ^6.0.0
@@ -15869,7 +15876,7 @@ resolve@~1.7.1:
     spdy: ^4.0.2
     strip-ansi: ^7.0.0
     url: ^0.11.0
-    webpack-dev-middleware: ^5.1.0
+    webpack-dev-middleware: ^5.2.1
     ws: ^8.1.0
   peerDependencies:
     webpack: ^4.37.0 || ^5.0.0
@@ -15878,7 +15885,7 @@ resolve@~1.7.1:
       optional: true
   bin:
     webpack-dev-server: bin/webpack-dev-server.js
-  checksum: dad0e741aeaa14187d462773bea354a66b62f6a92f45f4b1ea586a366841f0d202378feff64c8042766d1656d460a2229c7460f36701244398d0f482ab757ef0
+  checksum: d99575fd560e8709c3e4e207eddf211443f4c2a6dae04033f74c3ea80adfda6e9d3d8fe6b803e7b18824a205c072d56b838a942a31cad83a20142240275b9e86
   languageName: node
   linkType: hard
 
