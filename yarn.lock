@@ -7924,7 +7924,7 @@ __metadata:
     supports-color: 9.0.2
     vue: 2.6.12
     vue-template-compiler: 2.6.12
-    vuetify: 2.5.8
+    vuetify: 2.5.9
     vuex: 3.6.2
     webpack: 5.55.0
     webpack-cli: 4.8.0
@@ -15686,12 +15686,12 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"vuetify@npm:2.5.8":
-  version: 2.5.8
-  resolution: "vuetify@npm:2.5.8"
+"vuetify@npm:2.5.9":
+  version: 2.5.9
+  resolution: "vuetify@npm:2.5.9"
   peerDependencies:
     vue: ^2.6.4
-  checksum: 1cc82a266000f755953b318bf30e5ffd4c6eb1ac72a1660d747ee473d3e02c56b3d7e704fa418e9cc9f8f58afdfcc58f2fda47af019766b96a3f8b2763002247
+  checksum: 1cd6303fe7c826962b3a389be8d9c9951070a84ebced49da108838d7945e6576191abbc5b1ad52df4332680a3875ffacc2486b76f903965ef17073d40b7f7009
   languageName: node
   linkType: hard
 
