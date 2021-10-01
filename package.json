@@ -38,7 +38,7 @@
     "fibers": "^5.0.0"
   },
   "devDependencies": {
-    "@auto-it/core": "10.32.0",
+    "@auto-it/core": "10.32.1",
     "@babel/core": "7.15.5",
     "@babel/plugin-transform-runtime": "7.15.0",
     "@babel/preset-env": "7.15.6",
