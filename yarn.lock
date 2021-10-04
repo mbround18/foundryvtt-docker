@@ -7918,7 +7918,7 @@ __metadata:
     vuex: 3.6.2
     webpack: 5.56.1
     webpack-cli: 4.8.0
-    webpack-dev-server: 4.3.0
+    webpack-dev-server: 4.3.1
     webpack-node-externals: 3.0.0
     workbox-webpack-plugin: 6.3.0
   dependenciesMeta:
@@ -15839,9 +15839,9 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:4.3.0":
-  version: 4.3.0
-  resolution: "webpack-dev-server@npm:4.3.0"
+"webpack-dev-server@npm:4.3.1":
+  version: 4.3.1
+  resolution: "webpack-dev-server@npm:4.3.1"
   dependencies:
     ansi-html-community: ^0.0.8
     bonjour: ^3.5.0
@@ -15875,7 +15875,7 @@ resolve@~1.7.1:
       optional: true
   bin:
     webpack-dev-server: bin/webpack-dev-server.js
-  checksum: d99575fd560e8709c3e4e207eddf211443f4c2a6dae04033f74c3ea80adfda6e9d3d8fe6b803e7b18824a205c072d56b838a942a31cad83a20142240275b9e86
+  checksum: 4f1bc71135447eee76d3044379e25904bd478818f14ea013a3eeb8719f05db1c87ccfc715e3bea2b6a5d4bef656554598b4ba1f57595eb57cfe5c7516b55555a
   languageName: node
   linkType: hard
 
