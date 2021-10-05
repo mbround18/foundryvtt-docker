@@ -25,7 +25,7 @@
     "axios": "0.22.0",
     "express": "4.17.1",
     "express-fileupload": "1.2.1",
-    "express-rate-limit": "5.4.0",
+    "express-rate-limit": "5.4.1",
     "follow-redirects": "1.14.4",
     "lodash": "4.17.21",
     "nuxt": "2.15.7",
