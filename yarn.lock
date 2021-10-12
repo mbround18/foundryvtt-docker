@@ -7601,10 +7601,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express-rate-limit@npm:5.4.1":
-  version: 5.4.1
-  resolution: "express-rate-limit@npm:5.4.1"
-  checksum: 2299f28baca9dd05ee0d36e4beb81c308ce7138706db765191ba1850cbf23b2022d67d200c991ce554b07adee5df580847c6c18cf9f1536f7fa3bee4a852c181
+"express-rate-limit@npm:5.5.0":
+  version: 5.5.0
+  resolution: "express-rate-limit@npm:5.5.0"
+  checksum: 6081c310d59bd7ffccd9ab933cdd9e7fe7d0d75952941e885fb3fb219667100449e1a09ecd1bbf40e22dd2c1231519b94cb3d906dc995215377d9093f49a21c0
   languageName: node
   linkType: hard
 
@@ -7999,7 +7999,7 @@ __metadata:
     debug: 4.3.2
     express: 4.17.1
     express-fileupload: 1.2.1
-    express-rate-limit: 5.4.1
+    express-rate-limit: 5.5.0
     fibers: ^5.0.0
     follow-redirects: 1.14.4
     html-loader: 2.1.2
