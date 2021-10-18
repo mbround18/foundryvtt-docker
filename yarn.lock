@@ -8041,7 +8041,7 @@ __metadata:
     vuetify: 2.5.10
     vuex: 3.6.2
     webpack: 5.58.2
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 4.3.1
     webpack-node-externals: 3.0.0
     workbox-webpack-plugin: 6.3.0
@@ -15703,13 +15703,6 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"v8-compile-cache@npm:^2.2.0":
-  version: 2.3.0
-  resolution: "v8-compile-cache@npm:2.3.0"
-  checksum: b56f83d9ff14187562badc4955dadeef53ff3abde478ce60759539dd8d5472a91fce9db6083fc2450e54cef6f2110c1a28d8c12162dbf575a6cfcb846986904b
-  languageName: node
-  linkType: hard
-
 "vary@npm:^1.1.2, vary@npm:~1.1.2":
   version: 1.1.2
   resolution: "vary@npm:1.1.2"
@@ -15952,9 +15945,9 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"webpack-cli@npm:4.9.0":
-  version: 4.9.0
-  resolution: "webpack-cli@npm:4.9.0"
+"webpack-cli@npm:4.9.1":
+  version: 4.9.1
+  resolution: "webpack-cli@npm:4.9.1"
   dependencies:
     "@discoveryjs/json-ext": ^0.5.0
     "@webpack-cli/configtest": ^1.1.0
@@ -15967,7 +15960,6 @@ resolve@~1.7.1:
     import-local: ^3.0.2
     interpret: ^2.2.0
     rechoir: ^0.7.0
-    v8-compile-cache: ^2.2.0
     webpack-merge: ^5.7.3
   peerDependencies:
     webpack: 4.x.x || 5.x.x
@@ -15982,7 +15974,7 @@ resolve@~1.7.1:
       optional: true
   bin:
     webpack-cli: bin/cli.js
-  checksum: 538b6b86e3b01de96e41a9c9d75aa0d51f5aa1b86eebae62c9caf87c1ceeb31a27c7c18232950a855de067bd1e3c0d9129ff19fd947ca0c3aee85688eb0ad1b6
+  checksum: ea0e539879ad2db3fe25dd2abebd54d2ae8ee6eace6499bec87f4a174c37124e54d19b419b46603bc5fe4679d6feef331b647b903d4ca8857a4c18a9d3c2b964
   languageName: node
   linkType: hard
 
