@@ -45,7 +45,7 @@
     "@nuxtjs/vuetify": "1.12.1",
     "@yarnpkg/pnpify": "3.0.1",
     "auto": "10.32.1",
-    "babel-loader": "8.2.2",
+    "babel-loader": "8.2.3",
     "consola": "2.15.3",
     "debug": "4.3.2",
     "html-loader": "2.1.2",
