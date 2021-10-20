@@ -8055,7 +8055,7 @@ __metadata:
     vue-template-compiler: 2.6.12
     vuetify: 2.5.10
     vuex: 3.6.2
-    webpack: 5.59.0
+    webpack: 5.59.1
     webpack-cli: 4.9.1
     webpack-dev-server: 4.3.1
     webpack-node-externals: 3.0.0
@@ -16110,9 +16110,9 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.59.0":
-  version: 5.59.0
-  resolution: "webpack@npm:5.59.0"
+"webpack@npm:5.59.1":
+  version: 5.59.1
+  resolution: "webpack@npm:5.59.1"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -16143,7 +16143,7 @@ resolve@~1.7.1:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 4e6dfbf49588068e8388c77b210ef5303acb84f4ae21a16800a1f0d2fbc457b09088c63d37ae59d842dcb8ad7144538ba081ab64d20b30fa6e2f76f8a9c9a404
+  checksum: 76cfd00f7ecaa376f0c1674347f8b59d2bac0cf4c760974711ae2215002e22e239010b45f7db7329e796d2a30a1085891b6757fcff77f7c5e2470c1fc434d583
   languageName: node
   linkType: hard
 
