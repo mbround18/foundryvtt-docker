@@ -49,7 +49,7 @@
     "consola": "2.15.3",
     "debug": "4.3.2",
     "html-loader": "3.0.0",
-    "html-webpack-plugin": "5.4.0",
+    "html-webpack-plugin": "5.5.0",
     "nodemon": "2.0.14",
     "rimraf": "3.0.2",
     "sass": "1.43.3",
