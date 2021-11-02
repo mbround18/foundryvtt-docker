@@ -7868,7 +7868,7 @@ __metadata:
     express-rate-limit: 5.5.0
     fibers: ^5.0.0
     follow-redirects: 1.14.5
-    html-loader: 3.0.0
+    html-loader: 3.0.1
     html-webpack-plugin: 5.5.0
     lodash: 4.17.21
     nodemon: 2.0.14
@@ -8562,15 +8562,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"html-loader@npm:3.0.0":
-  version: 3.0.0
-  resolution: "html-loader@npm:3.0.0"
+"html-loader@npm:3.0.1":
+  version: 3.0.1
+  resolution: "html-loader@npm:3.0.1"
   dependencies:
     html-minifier-terser: ^6.0.2
     parse5: ^6.0.1
   peerDependencies:
     webpack: ^5.0.0
-  checksum: 3f8af899bf76d3e8085cfd04c8fbae16d3bb8466babf2f45c055ff0941705fb3643e6aa70e7c61d28202c4224376587248f613037e93063111f2195781cc6139
+  checksum: 1ef72c2d1722d2d679fd1dbdfec3449f16dce0746e66e40880d09a58f5aeedbff246c27f2d292927c49bd5db31cb35ad723aff972bc39226f74d7ec43f6e65c7
   languageName: node
   linkType: hard
 
