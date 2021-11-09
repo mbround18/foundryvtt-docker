@@ -2395,12 +2395,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.16.0":
-  version: 7.16.0
-  resolution: "@babel/runtime@npm:7.16.0"
+"@babel/runtime@npm:7.16.3":
+  version: 7.16.3
+  resolution: "@babel/runtime@npm:7.16.3"
   dependencies:
     regenerator-runtime: ^0.13.4
-  checksum: 336e7f3ff6e7ecda749683c794eb5215410a2de1ec2845a39cbbd5eec870400aa68b9cc21dc44bf74d62e47682d0d0fb0600f263d218a23ba39f9cf6f1b7b54c
+  checksum: ee47a2b6edf56ec25437b34407a98439eb0b71149675e7b2781e5d1b2b6d858772120f590349fd9adbb0f2a186d2eb584b2b3a1819ca673b60dd5959bb02839f
   languageName: node
   linkType: hard
 
@@ -7855,7 +7855,7 @@ __metadata:
     "@babel/core": 7.16.0
     "@babel/plugin-transform-runtime": 7.16.0
     "@babel/preset-env": 7.16.0
-    "@babel/runtime": 7.16.0
+    "@babel/runtime": 7.16.3
     "@nuxtjs/vuetify": 1.12.1
     "@yarnpkg/pnpify": 3.1.0
     auto: 10.32.2
