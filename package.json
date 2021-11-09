@@ -50,7 +50,7 @@
     "debug": "4.3.2",
     "html-loader": "3.0.1",
     "html-webpack-plugin": "5.5.0",
-    "nodemon": "2.0.14",
+    "nodemon": "2.0.15",
     "rimraf": "3.0.2",
     "sass": "1.43.4",
     "sass-loader": "10.2.0",

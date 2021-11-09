@@ -5468,7 +5468,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chokidar@npm:>=3.0.0 <4.0.0, chokidar@npm:^3.2.2, chokidar@npm:^3.4.1, chokidar@npm:^3.5.1":
+"chokidar@npm:>=3.0.0 <4.0.0, chokidar@npm:^3.4.1, chokidar@npm:^3.5.1":
   version: 3.5.1
   resolution: "chokidar@npm:3.5.1"
   dependencies:
@@ -6506,7 +6506,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^3.1.1, debug@npm:^3.2.6":
+"debug@npm:^3.1.1, debug@npm:^3.2.7":
   version: 3.2.7
   resolution: "debug@npm:3.2.7"
   dependencies:
@@ -7871,7 +7871,7 @@ __metadata:
     html-loader: 3.0.1
     html-webpack-plugin: 5.5.0
     lodash: 4.17.21
-    nodemon: 2.0.14
+    nodemon: 2.0.15
     nuxt: 2.15.7
     rimraf: 3.0.2
     sass: 1.43.4
@@ -10949,23 +10949,23 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"nodemon@npm:2.0.14":
-  version: 2.0.14
-  resolution: "nodemon@npm:2.0.14"
+"nodemon@npm:2.0.15":
+  version: 2.0.15
+  resolution: "nodemon@npm:2.0.15"
   dependencies:
-    chokidar: ^3.2.2
-    debug: ^3.2.6
+    chokidar: ^3.5.2
+    debug: ^3.2.7
     ignore-by-default: ^1.0.1
     minimatch: ^3.0.4
-    pstree.remy: ^1.1.7
+    pstree.remy: ^1.1.8
     semver: ^5.7.1
     supports-color: ^5.5.0
     touch: ^3.1.0
-    undefsafe: ^2.0.3
+    undefsafe: ^2.0.5
     update-notifier: ^5.1.0
   bin:
     nodemon: bin/nodemon.js
-  checksum: b6ea4f97792f90cac40abda93a81ef582a5ef4eaf2695a77044ec18473eac831d6d49f2dab2f7a2230e05d044163ba967d7a022666f47497255e6c4a0d50e2a9
+  checksum: c5b5f1b909fd0ebec9a32a950bb827e2323ac911787574b6f6709e6493ae698224de8dc5ab3e0126874a8f8d3e7fd2f4e975fb78ff72e9c047cdebc1ae39339c
   languageName: node
   linkType: hard
 
@@ -12796,7 +12796,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"pstree.remy@npm:^1.1.7":
+"pstree.remy@npm:^1.1.8":
   version: 1.1.8
   resolution: "pstree.remy@npm:1.1.8"
   checksum: 44bad8f697d546234a7ea253c672e8120be2572f153aff77c5b73f751164e4b49c923c535fe2bfc530d6041a7b879bc108818d88653673161c2c8678b4cdb3fc
@@ -15238,12 +15238,10 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"undefsafe@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "undefsafe@npm:2.0.3"
-  dependencies:
-    debug: ^2.2.0
-  checksum: 0974f82a8750c3c247d5a9cf7fe91279d1fad0069dda7b717937e7960addddedf2ddabe3ffb1f504929acd0c924ef654c5c85185aee4c514a0fbf2e2a4efcf39
+"undefsafe@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "undefsafe@npm:2.0.5"
+  checksum: 25dece24e2fff8d1d5938467f85906e58e80a3ef6bcbf38effa9e9fe67a21b313a7dec438425b620cb839b187f35cff513fc550ba32bfdb85d089c591770d230
   languageName: node
   linkType: hard
 
