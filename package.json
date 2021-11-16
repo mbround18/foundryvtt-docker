@@ -40,8 +40,8 @@
   "devDependencies": {
     "@auto-it/core": "10.32.2",
     "@babel/core": "7.16.0",
-    "@babel/plugin-transform-runtime": "7.16.0",
-    "@babel/preset-env": "7.16.0",
+    "@babel/plugin-transform-runtime": "7.16.4",
+    "@babel/preset-env": "7.16.4",
     "@nuxtjs/vuetify": "1.12.1",
     "@yarnpkg/pnpify": "3.1.0",
     "auto": "10.32.2",
