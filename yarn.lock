@@ -8010,7 +8010,7 @@ __metadata:
     sass-loader: 10.2.0
     semver: 7.3.5
     shelljs: 0.8.4
-    supports-color: 9.0.2
+    supports-color: 9.1.0
     vue: 2.6.12
     vue-template-compiler: 2.6.12
     vuetify: 2.6.0
@@ -8523,13 +8523,6 @@ fsevents@^1.2.7:
   version: 4.0.0
   resolution: "has-flag@npm:4.0.0"
   checksum: 2e5391139d3d287231ccb58659702392f6e3abeac3296fb4721afaff46493f3d9b99a9329ae015dfe973aa206ed5c75f43e86aec0267dce79aa5c2b6e811b3ad
-  languageName: node
-  linkType: hard
-
-"has-flag@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "has-flag@npm:5.0.0"
-  checksum: 6d3be1873675a1b3a63d27f6670d46f685f8fd0d2133c9bafbcad10aedd0069db4b540b8097af3754f374c33f19c70a171ecc5d77f899c04087d9498cf56d2b6
   languageName: node
   linkType: hard
 
@@ -14844,12 +14837,10 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"supports-color@npm:9.0.2":
-  version: 9.0.2
-  resolution: "supports-color@npm:9.0.2"
-  dependencies:
-    has-flag: ^5.0.0
-  checksum: 641a982f9b36d4d3a5eff68456910f84e24a9272c6f70fecc83c79af2dfa9b0b6e68bc4c929cef79b3dab55e8b3a5aff10e80112fcd220eb04c498eb1f98614d
+"supports-color@npm:9.1.0":
+  version: 9.1.0
+  resolution: "supports-color@npm:9.1.0"
+  checksum: b4d04718435140a748390661dc8b186264cd24fb7d330d9cacdc4751bcde213e84197e94c5459851ccbf3ea7995e1202a164ee86d09bc470a52e36b317aaf889
   languageName: node
   linkType: hard
 
