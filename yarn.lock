@@ -8015,7 +8015,7 @@ __metadata:
     vue-template-compiler: 2.6.12
     vuetify: 2.6.0
     vuex: 3.6.2
-    webpack: 5.64.3
+    webpack: 5.64.4
     webpack-cli: 4.9.1
     webpack-dev-server: 4.5.0
     webpack-node-externals: 3.0.0
@@ -15998,13 +15998,13 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"watchpack@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "watchpack@npm:2.2.0"
+"watchpack@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "watchpack@npm:2.3.0"
   dependencies:
     glob-to-regexp: ^0.4.1
     graceful-fs: ^4.1.2
-  checksum: 5d02acd83644d5b9df6cf0e213868afc10e1fd71b0dd372c505b0c8967c4812e57ee92420edb967e475c88360c9341b8949368aeaa65eb0331e6872fde792394
+  checksum: 93a355fa42a593c78383700cc6ec0e410567f6b2be76b190b6b00ad460d07f50c8043dd6eafc6e6a1ce0ebde21e3410e17118a0f1d31068fb1a9b62463f72409
   languageName: node
   linkType: hard
 
@@ -16193,9 +16193,9 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.64.3":
-  version: 5.64.3
-  resolution: "webpack@npm:5.64.3"
+"webpack@npm:5.64.4":
+  version: 5.64.4
+  resolution: "webpack@npm:5.64.4"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -16219,14 +16219,14 @@ resolve@~1.7.1:
     schema-utils: ^3.1.0
     tapable: ^2.1.1
     terser-webpack-plugin: ^5.1.3
-    watchpack: ^2.2.0
+    watchpack: ^2.3.0
     webpack-sources: ^3.2.2
   peerDependenciesMeta:
     webpack-cli:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: c1229275ecbbd1c8cf550aa0d154bd82048b3430c2640de7e40fa23d37f8e0689a485c8d48008c29bb66b44c4f9b7065f55ecdc836c1e4ed2dc5ffc05d149598
+  checksum: 65f4a88ab341a67bc17c4df6f17f4f6ceedb5d10f0a48869b36c9739fe90a1a3c523fc7831baef26d06237f5b8f84746c286fd978ba5afbba7a6b29f0a7a18e9
   languageName: node
   linkType: hard
 
