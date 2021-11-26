@@ -55,7 +55,7 @@
     "sass": "1.43.5",
     "sass-loader": "10.2.0",
     "semver": "7.3.5",
-    "supports-color": "9.1.0",
+    "supports-color": "9.2.1",
     "vue-template-compiler": "2.6.12",
     "webpack": "5.64.4",
     "webpack-cli": "4.9.1",
