@@ -47,7 +47,7 @@
     "auto": "10.32.3",
     "babel-loader": "8.2.3",
     "consola": "2.15.3",
-    "debug": "4.3.2",
+    "debug": "4.3.3",
     "html-loader": "3.0.1",
     "html-webpack-plugin": "5.5.0",
     "nodemon": "2.0.15",
