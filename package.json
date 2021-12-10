@@ -44,7 +44,7 @@
     "@babel/preset-env": "7.16.4",
     "@nuxtjs/vuetify": "1.12.2",
     "@yarnpkg/pnpify": "3.1.0",
-    "auto": "10.32.3",
+    "auto": "10.32.4",
     "babel-loader": "8.2.3",
     "consola": "2.15.3",
     "debug": "4.3.3",
