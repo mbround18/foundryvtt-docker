@@ -8062,7 +8062,7 @@ __metadata:
     nodemon: 2.0.15
     nuxt: 2.15.7
     rimraf: 3.0.2
-    sass: 1.44.0
+    sass: 1.45.0
     sass-loader: 10.2.0
     semver: 7.3.5
     shelljs: 0.8.4
@@ -13879,15 +13879,16 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"sass@npm:1.44.0":
-  version: 1.44.0
-  resolution: "sass@npm:1.44.0"
+"sass@npm:1.45.0":
+  version: 1.45.0
+  resolution: "sass@npm:1.45.0"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
+    source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 7638e94e7f6d39d755fdc9719d04f7522800c7e2085ddee3136780257487ea646ad6771660772cbc3896a7276834ad1e20286725bf7b3472a93ca6700ee6806c
+  checksum: 2155f5c5e9515a701ff6fc8be6601a44778cbed43cc88fd271a2092771e0cf16b06d7073c50baf2e7f3a0f98023ad170e751ec4133a3573957aebfedc63125d8
   languageName: node
   linkType: hard
 
@@ -14383,6 +14384,13 @@ resolve@~1.7.1:
   version: 2.0.1
   resolution: "source-list-map@npm:2.0.1"
   checksum: d8d45f29987d00d995ccda308dcc78b710031a9958fdb5d26674d32220c952eb7a8562062638d91896628ae4eef30e1cd112a6a547563dfda0b013024c2a9bf7
+  languageName: node
+  linkType: hard
+
+"source-map-js@npm:>=0.6.2 <2.0.0":
+  version: 1.0.1
+  resolution: "source-map-js@npm:1.0.1"
+  checksum: 8096794b7d64f9bc74738f6b8731cbd9f32d81384b16d3bea55ac8bc69fd80e1b8cfb99d638b4c6df5c111ce363c55b4b51a8abd9e609357460c82305ee59471
   languageName: node
   linkType: hard
 
