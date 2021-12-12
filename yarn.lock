@@ -2971,16 +2971,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxtjs/vuetify@npm:1.12.2":
-  version: 1.12.2
-  resolution: "@nuxtjs/vuetify@npm:1.12.2"
+"@nuxtjs/vuetify@npm:1.12.3":
+  version: 1.12.3
+  resolution: "@nuxtjs/vuetify@npm:1.12.3"
   dependencies:
     deepmerge: ^4.2.2
     sass: ~1.32.13
-    sass-loader: ^12.3.0
+    sass-loader: ^10.2.0
     vuetify: ^2.6
     vuetify-loader: ^1.7.3
-  checksum: 190acf8bcabe1466501a7e4fbe2c5d7b5d95826290710645d18e25f408813e11cb90dae84a2cd2c62cab34110c9fdc64b301ad83b63f13258ab47841e87dff11
+  checksum: a251c12b87f5e53889610a43700d281b26f3fcc9f8f29194abc969c2d2f43c36aca40940e441a59dc7047877e65950094cd50a7cd71174e0008411b6d9fcdfce
   languageName: node
   linkType: hard
 
@@ -8044,7 +8044,7 @@ __metadata:
     "@babel/plugin-transform-runtime": 7.16.4
     "@babel/preset-env": 7.16.4
     "@babel/runtime": 7.16.3
-    "@nuxtjs/vuetify": 1.12.2
+    "@nuxtjs/vuetify": 1.12.3
     "@yarnpkg/pnpify": 3.1.0
     auto: 10.32.5
     axios: 0.24.0
@@ -13832,7 +13832,7 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:10.2.0":
+"sass-loader@npm:10.2.0, sass-loader@npm:^10.2.0":
   version: 10.2.0
   resolution: "sass-loader@npm:10.2.0"
   dependencies:
@@ -13854,28 +13854,6 @@ resolve@~1.7.1:
     sass:
       optional: true
   checksum: 1c8914920749f2e2e404e4663c9cce6ef4d38dc7fb30117c722c25b76257ebee444c90d20e174adf621036e1afefaadc8f89b69fd912347f4618b7401afae53c
-  languageName: node
-  linkType: hard
-
-"sass-loader@npm:^12.3.0":
-  version: 12.3.0
-  resolution: "sass-loader@npm:12.3.0"
-  dependencies:
-    klona: ^2.0.4
-    neo-async: ^2.6.2
-  peerDependencies:
-    fibers: ">= 3.1.0"
-    node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0
-    sass: ^1.3.0
-    webpack: ^5.0.0
-  peerDependenciesMeta:
-    fibers:
-      optional: true
-    node-sass:
-      optional: true
-    sass:
-      optional: true
-  checksum: 705afa8c73e600257bf06dda9ccd178ff7a972ce38d43064d9d3a410db0b912d114efde7e3e72d667663a9c63745cd4be14ef97fc9d0f09ac8ee2d02afbffd82
   languageName: node
   linkType: hard
 
