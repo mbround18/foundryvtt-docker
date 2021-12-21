@@ -8154,7 +8154,7 @@ __metadata:
     nodemon: 2.0.15
     nuxt: 2.15.7
     rimraf: 3.0.2
-    sass: 1.45.0
+    sass: 1.45.1
     sass-loader: 10.2.0
     semver: 7.3.5
     shelljs: 0.8.4
@@ -13991,16 +13991,16 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"sass@npm:1.45.0":
-  version: 1.45.0
-  resolution: "sass@npm:1.45.0"
+"sass@npm:1.45.1":
+  version: 1.45.1
+  resolution: "sass@npm:1.45.1"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 2155f5c5e9515a701ff6fc8be6601a44778cbed43cc88fd271a2092771e0cf16b06d7073c50baf2e7f3a0f98023ad170e751ec4133a3573957aebfedc63125d8
+  checksum: 2c44fd3e71bcbd7678d3a1b5d08d5f58b933f35a5352db22c2c31ef0be846956cfe4e13546df4b3b949828a93cea6c11b2205787c7344906b1946168f554b7e5
   languageName: node
   linkType: hard
 
