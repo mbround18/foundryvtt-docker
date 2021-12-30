@@ -7802,12 +7802,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express-rate-limit@npm:6.0.2":
-  version: 6.0.2
-  resolution: "express-rate-limit@npm:6.0.2"
+"express-rate-limit@npm:6.0.3":
+  version: 6.0.3
+  resolution: "express-rate-limit@npm:6.0.3"
   peerDependencies:
     express: ^4
-  checksum: 0365b1755d4b1d56a934ff6915fd963459ace9c0a750d621dd2e3255d83fbb94b81d2eb657344a259f6a17e6a7f9215e8a2c73ef4cb46f7ac35d2920e64d0c3d
+  checksum: 53c4ed1df8f49d9724970ae55c729934dc644265b2f0397aacaaffe5a8f9b67ee14e7fd7dd4620d159f6425d73d00ee28b99b2beb11202483a9eb2a6a4ed7c39
   languageName: node
   linkType: hard
 
@@ -8266,7 +8266,7 @@ __metadata:
     debug: 4.3.3
     express: 4.17.2
     express-fileupload: 1.2.1
-    express-rate-limit: 6.0.2
+    express-rate-limit: 6.0.3
     fibers: ^5.0.0
     follow-redirects: 1.14.6
     html-loader: 3.0.1
