@@ -29,7 +29,7 @@
     "follow-redirects": "1.14.6",
     "lodash": "4.17.21",
     "nuxt": "2.15.7",
-    "shelljs": "0.8.4",
+    "shelljs": "0.8.5",
     "vue": "2.6.12",
     "vuetify": "2.6.2",
     "vuex": "3.6.2"
