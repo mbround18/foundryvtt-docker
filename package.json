@@ -52,7 +52,7 @@
     "html-webpack-plugin": "5.5.0",
     "nodemon": "2.0.15",
     "rimraf": "3.0.2",
-    "sass": "1.46.0",
+    "sass": "1.47.0",
     "sass-loader": "10.2.0",
     "semver": "7.3.5",
     "supports-color": "9.2.1",
