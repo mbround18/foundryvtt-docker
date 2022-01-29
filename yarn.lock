@@ -34,6 +34,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@auto-it/bot-list@npm:10.32.6":
+  version: 10.32.6
+  resolution: "@auto-it/bot-list@npm:10.32.6"
+  checksum: 5b664f2b91d6a343459f4b90453ecfa6a863ab2b8dccc71a1c59acfb2a88fa081667bb498d476c42cefb928b8c7dd4f66f5d8ea903d84814a7de44884119e7e2
+  languageName: node
+  linkType: hard
+
 "@auto-it/core@npm:10.32.5":
   version: 10.32.5
   resolution: "@auto-it/core@npm:10.32.5"
@@ -81,6 +88,56 @@ __metadata:
     typescript:
       optional: true
   checksum: 40907245e89a9ac4ad245cb904dbe5257229c37bc625d1f111b86af0a5a39020e1e33680e5fced3be6bffba16d04c8a714fb5ffa69f9e11ee350f0f9ab0a789d
+  languageName: node
+  linkType: hard
+
+"@auto-it/core@npm:10.32.6":
+  version: 10.32.6
+  resolution: "@auto-it/core@npm:10.32.6"
+  dependencies:
+    "@auto-it/bot-list": 10.32.6
+    "@endemolshinegroup/cosmiconfig-typescript-loader": ^3.0.2
+    "@octokit/plugin-enterprise-compatibility": ^1.2.2
+    "@octokit/plugin-retry": ^3.0.1
+    "@octokit/plugin-throttling": ^3.2.0
+    "@octokit/rest": ^18.0.0
+    await-to-js: ^3.0.0
+    chalk: ^4.0.0
+    cosmiconfig: 7.0.0
+    deepmerge: ^4.0.0
+    dotenv: ^8.0.0
+    endent: ^2.0.1
+    enquirer: ^2.3.4
+    env-ci: ^5.0.1
+    fast-glob: ^3.1.1
+    fp-ts: ^2.5.3
+    fromentries: ^1.2.0
+    gitlog: ^4.0.3
+    https-proxy-agent: ^5.0.0
+    import-cwd: ^3.0.0
+    import-from: ^3.0.0
+    io-ts: ^2.1.2
+    lodash.chunk: ^4.2.0
+    log-symbols: ^4.0.0
+    node-fetch: 2.6.1
+    parse-author: ^2.0.0
+    parse-github-url: 1.0.2
+    pretty-ms: ^7.0.0
+    requireg: ^0.2.2
+    semver: ^7.0.0
+    signale: ^1.4.0
+    tapable: ^2.2.0
+    terminal-link: ^2.1.1
+    tinycolor2: ^1.4.1
+    ts-node: ^9.1.1
+    tslib: 2.1.0
+    type-fest: ^0.21.1
+    typescript-memoize: ^1.0.0-alpha.3
+    url-join: ^4.0.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 50cad2e3d0033796ea3e92436cdeecbad8b7977422ef1ef20cc87e4ea65d6094d885934b56e3b15c4e15d2a440e22cd0bd1ce03d02f3fc1e9e45695897aefe52
   languageName: node
   linkType: hard
 
@@ -8321,7 +8378,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "foundryvtt-docker@workspace:."
   dependencies:
-    "@auto-it/core": 10.32.5
+    "@auto-it/core": 10.32.6
     "@babel/core": 7.16.12
     "@babel/plugin-transform-runtime": 7.16.10
     "@babel/preset-env": 7.16.11
