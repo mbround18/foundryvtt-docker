@@ -4200,36 +4200,36 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@webpack-cli/configtest@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@webpack-cli/configtest@npm:1.1.0"
+"@webpack-cli/configtest@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@webpack-cli/configtest@npm:1.1.1"
   peerDependencies:
     webpack: 4.x.x || 5.x.x
     webpack-cli: 4.x.x
-  checksum: bc8b6201457ec5bd6ef05f9839209d2922921278522b067b384d719c347fe8a7c43655e1c33733cfa20b74bbcc1d0f7faa2973bae712ed1c6d215a948b4cd353
+  checksum: 2977bcaaa23598cf4716c99da9a00f2bcf1a2b09364c4ceae384caeebd2b852be76eb07db8be347dbc209d27b0fdb19e0e0cc2f2c79c7a41a37a05f1b51611e2
   languageName: node
   linkType: hard
 
-"@webpack-cli/info@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "@webpack-cli/info@npm:1.4.0"
+"@webpack-cli/info@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "@webpack-cli/info@npm:1.4.1"
   dependencies:
     envinfo: ^7.7.3
   peerDependencies:
     webpack-cli: 4.x.x
-  checksum: 845bfc634ee04a607fb0b99c355654c1a973c0b101aa5e13436a567c3a16fa50fb2f0e61a26d6d8810d19b11e1c3b1ac5c0a163b67202392d4e45890c1878f0f
+  checksum: f94a3469f5c21c08f188f5605e8c7cfc89e3b95f101c5c422a59a829968bd5c0c453dd570d59e97348407ad6a62f3757b8a47edea2f8f3daadb3c16b9f5b8588
   languageName: node
   linkType: hard
 
-"@webpack-cli/serve@npm:^1.6.0":
-  version: 1.6.0
-  resolution: "@webpack-cli/serve@npm:1.6.0"
+"@webpack-cli/serve@npm:^1.6.1":
+  version: 1.6.1
+  resolution: "@webpack-cli/serve@npm:1.6.1"
   peerDependencies:
     webpack-cli: 4.x.x
   peerDependenciesMeta:
     webpack-dev-server:
       optional: true
-  checksum: c998bf09cfaa413a5f0beaaeaec6f03f7c0d4780e4b088c99ed5d949b8cfd0570c8ff404f8ce6a922f896a4809fce3011e3d8d33849f385a5bec5e9cfc6b47a7
+  checksum: 1a2f42d9c4c31fbc5ea77a0ab6689a681e6bd47e027f45b5a82dce754199fd1b072215b88ae1bfbd65e2d852748ff1bc34f2b81dcd5f63d081d4a649d4d7bbe5
   languageName: node
   linkType: hard
 
@@ -8354,7 +8354,7 @@ __metadata:
     vuetify: 2.6.3
     vuex: 3.6.2
     webpack: 5.65.0
-    webpack-cli: 4.9.1
+    webpack-cli: 4.9.2
     webpack-dev-server: 4.7.2
     webpack-node-externals: 3.0.0
     workbox-webpack-plugin: 6.4.2
@@ -16486,14 +16486,14 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"webpack-cli@npm:4.9.1":
-  version: 4.9.1
-  resolution: "webpack-cli@npm:4.9.1"
+"webpack-cli@npm:4.9.2":
+  version: 4.9.2
+  resolution: "webpack-cli@npm:4.9.2"
   dependencies:
     "@discoveryjs/json-ext": ^0.5.0
-    "@webpack-cli/configtest": ^1.1.0
-    "@webpack-cli/info": ^1.4.0
-    "@webpack-cli/serve": ^1.6.0
+    "@webpack-cli/configtest": ^1.1.1
+    "@webpack-cli/info": ^1.4.1
+    "@webpack-cli/serve": ^1.6.1
     colorette: ^2.0.14
     commander: ^7.0.0
     execa: ^5.0.0
@@ -16515,7 +16515,7 @@ resolve@~1.7.1:
       optional: true
   bin:
     webpack-cli: bin/cli.js
-  checksum: ea0e539879ad2db3fe25dd2abebd54d2ae8ee6eace6499bec87f4a174c37124e54d19b419b46603bc5fe4679d6feef331b647b903d4ca8857a4c18a9d3c2b964
+  checksum: efcb9aab27f0b5ed836e240a5ba56eaf87bd7d5092070845b286177110a6a2c28aa404dd877f5a876a3ae888aeb9d38c199c2a90d725dc96a2727334bf979da5
   languageName: node
   linkType: hard
 
