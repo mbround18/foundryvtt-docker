@@ -3482,7 +3482,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express@npm:*":
+"@types/express@npm:*, @types/express@npm:^4.17.13":
   version: 4.17.13
   resolution: "@types/express@npm:4.17.13"
   dependencies:
@@ -5873,6 +5873,25 @@ __metadata:
     fsevents:
       optional: true
   checksum: 52fbff3acebf06ec0125872110f6c8403e66cd3d613264c83405496e199554d99380342d9b3a7ffd7910c53c5865e242ed7dd72fcb2e883d8e3ad3f3883aee6c
+  languageName: node
+  linkType: hard
+
+"chokidar@npm:^3.5.3":
+  version: 3.5.3
+  resolution: "chokidar@npm:3.5.3"
+  dependencies:
+    anymatch: ~3.1.2
+    braces: ~3.0.2
+    fsevents: ~2.3.2
+    glob-parent: ~5.1.2
+    is-binary-path: ~2.1.0
+    is-glob: ~4.0.1
+    normalize-path: ~3.0.0
+    readdirp: ~3.6.0
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  checksum: ea6636f22ddc08555794d72435876dea95ff90d8f00e5d3755022d6c7613dc8947056c36f4d76be8e246e539994f71772d8c6cec339db3767f2d5523cd51a9c0
   languageName: node
   linkType: hard
 
@@ -8345,7 +8364,7 @@ __metadata:
     vuex: 3.6.2
     webpack: 5.65.0
     webpack-cli: 4.9.2
-    webpack-dev-server: 4.7.3
+    webpack-dev-server: 4.7.4
     webpack-node-externals: 3.0.0
     workbox-webpack-plugin: 6.4.2
   dependenciesMeta:
@@ -10871,6 +10890,15 @@ fsevents@^1.2.7:
   dependencies:
     fs-monkey: 1.0.3
   checksum: 3d58b59fd574723d072f25f541c5d1080212129d49669a41f5f6b6da814cda040d7f47ddd8c623550d49c01c24853c7e07f798a00db6510236b724ed476a9025
+  languageName: node
+  linkType: hard
+
+"memfs@npm:^3.4.1":
+  version: 3.4.1
+  resolution: "memfs@npm:3.4.1"
+  dependencies:
+    fs-monkey: 1.0.3
+  checksum: e8324ced9a823d3adde48e1303b3bc0c696527ff8a46af409f3e7c91db21c1e28fc99e95f57ad2fb765bbb06a0b1da89d8c352eec8a723a67a9867be16500970
   languageName: node
   linkType: hard
 
@@ -16525,33 +16553,34 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"webpack-dev-middleware@npm:^5.3.0":
-  version: 5.3.0
-  resolution: "webpack-dev-middleware@npm:5.3.0"
+"webpack-dev-middleware@npm:^5.3.1":
+  version: 5.3.1
+  resolution: "webpack-dev-middleware@npm:5.3.1"
   dependencies:
     colorette: ^2.0.10
-    memfs: ^3.2.2
+    memfs: ^3.4.1
     mime-types: ^2.1.31
     range-parser: ^1.2.1
     schema-utils: ^4.0.0
   peerDependencies:
     webpack: ^4.0.0 || ^5.0.0
-  checksum: 1364ee55b5858edb4d6d7c1c43a390260f65108b0b3bcc5db53f1d735f6526cba656fc4c272f019f22b18bcfb272cdd687929cd8a0cdbc178bd4e6b7f0067c26
+  checksum: 72b415fe499fa9456b49c98eaba70ef8e25209b408c72a0c3d5ab4b9d2ebd532d6b3be3047a851c7b62c95a8812560932c2ccdccb9fa513f5bf9318d6c930275
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:4.7.3":
-  version: 4.7.3
-  resolution: "webpack-dev-server@npm:4.7.3"
+"webpack-dev-server@npm:4.7.4":
+  version: 4.7.4
+  resolution: "webpack-dev-server@npm:4.7.4"
   dependencies:
     "@types/bonjour": ^3.5.9
     "@types/connect-history-api-fallback": ^1.3.5
+    "@types/express": ^4.17.13
     "@types/serve-index": ^1.9.1
     "@types/sockjs": ^0.3.33
     "@types/ws": ^8.2.2
     ansi-html-community: ^0.0.8
     bonjour: ^3.5.0
-    chokidar: ^3.5.2
+    chokidar: ^3.5.3
     colorette: ^2.0.10
     compression: ^1.7.4
     connect-history-api-fallback: ^1.6.0
@@ -16571,8 +16600,8 @@ resolve@~1.7.1:
     sockjs: ^0.3.21
     spdy: ^4.0.2
     strip-ansi: ^7.0.0
-    webpack-dev-middleware: ^5.3.0
-    ws: ^8.1.0
+    webpack-dev-middleware: ^5.3.1
+    ws: ^8.4.2
   peerDependencies:
     webpack: ^4.37.0 || ^5.0.0
   peerDependenciesMeta:
@@ -16580,7 +16609,7 @@ resolve@~1.7.1:
       optional: true
   bin:
     webpack-dev-server: bin/webpack-dev-server.js
-  checksum: 573e15853db95d43f9b1bc7f41dc8c277a3a8a3c7dc92fd42235b57ceffadf3fe336c5800578c7e5214cd58dffbfb5731db3c20b29ab1aa9c1295048a9bda7a4
+  checksum: 0bbcb6a898436b5d919a7d46f056296170c0616f5d2479bccc7341f95fe00ce112b7c4b749e64596bf4ca97a0bf3abe54f840e621be2147dc4e26113164d7fe7
   languageName: node
   linkType: hard
 
@@ -17108,9 +17137,9 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.1.0":
-  version: 8.2.0
-  resolution: "ws@npm:8.2.0"
+"ws@npm:^8.4.2":
+  version: 8.4.2
+  resolution: "ws@npm:8.4.2"
   peerDependencies:
     bufferutil: ^4.0.1
     utf-8-validate: ^5.0.2
@@ -17119,7 +17148,7 @@ resolve@~1.7.1:
       optional: true
     utf-8-validate:
       optional: true
-  checksum: c99f19c50a66c017cd9176b53d86401cd9cfc5b1230b98b65cde879d89de8715d28959e0c03de5dbe0a0f36335a3f60ec930f4330feef5d678145ef5c4dcabda
+  checksum: db6d213f2ad5eb4b7ecb68229a204350fe7421e457b6d136ec7d44bb177c5ae35111cfc31dc053e6e4415653d95899cf2c0284745e4783a6d9df53e03d8254cf
   languageName: node
   linkType: hard
 
