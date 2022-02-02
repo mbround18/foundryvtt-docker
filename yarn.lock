@@ -7881,12 +7881,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express-fileupload@npm:1.2.1":
-  version: 1.2.1
-  resolution: "express-fileupload@npm:1.2.1"
+"express-fileupload@npm:1.3.1":
+  version: 1.3.1
+  resolution: "express-fileupload@npm:1.3.1"
   dependencies:
     busboy: ^0.3.1
-  checksum: 3255e35a2851247b3eb99a60050ef4810e69f1125ab4888528df4defed61896b49b3ee4c2efd99781d39518efc7f65ec4fb8e8e63a4c508c6ece5328add7fcbf
+  checksum: 5c0912dd0218eb0eb13f07ee29c6de060b54f144ab3259482f72a379b7921ff0dd98877674330155f74ad0fdd94005eeafa354d0c2a6964afe15bae4ff0650b0
   languageName: node
   linkType: hard
 
@@ -8343,7 +8343,7 @@ __metadata:
     consola: 2.15.3
     debug: 4.3.3
     express: 4.17.2
-    express-fileupload: 1.2.1
+    express-fileupload: 1.3.1
     express-rate-limit: 6.2.0
     fibers: ^5.0.0
     follow-redirects: 1.14.7
