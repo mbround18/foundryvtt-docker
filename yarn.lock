@@ -203,16 +203,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.17.0":
-  version: 7.17.0
-  resolution: "@babel/core@npm:7.17.0"
+"@babel/core@npm:7.17.2":
+  version: 7.17.2
+  resolution: "@babel/core@npm:7.17.2"
   dependencies:
     "@ampproject/remapping": ^2.0.0
     "@babel/code-frame": ^7.16.7
     "@babel/generator": ^7.17.0
     "@babel/helper-compilation-targets": ^7.16.7
     "@babel/helper-module-transforms": ^7.16.7
-    "@babel/helpers": ^7.17.0
+    "@babel/helpers": ^7.17.2
     "@babel/parser": ^7.17.0
     "@babel/template": ^7.16.7
     "@babel/traverse": ^7.17.0
@@ -222,7 +222,7 @@ __metadata:
     gensync: ^1.0.0-beta.2
     json5: ^2.1.2
     semver: ^6.3.0
-  checksum: c47a1ffe8638837ffeb956f7922dc679c39f2bc33fd9e87c2fcba4c8af0ef4914dead10c8084e5382f7fd7528c049a741030db4a01c7f06da8399645a5990ea9
+  checksum: 65a193e6de2223c4f87bee57df7112cfc49de9c667b232a39fd00f632181398a28111d9cec9bc067f60fa8e6407bb1f854cf2b68d427202582e3c1a05010bf8b
   languageName: node
   linkType: hard
 
@@ -828,14 +828,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helpers@npm:^7.17.0":
-  version: 7.17.0
-  resolution: "@babel/helpers@npm:7.17.0"
+"@babel/helpers@npm:^7.17.2":
+  version: 7.17.2
+  resolution: "@babel/helpers@npm:7.17.2"
   dependencies:
     "@babel/template": ^7.16.7
     "@babel/traverse": ^7.17.0
     "@babel/types": ^7.17.0
-  checksum: d3410bd2a101c5dfb1d3580e5297958b814e11063ffc611b836f836f1a2afff282743edf2ab979fac36b5170f692106469138d24377d3495fc5985a8c9d6b639
+  checksum: f18091a62a71edd34ecb95d122902228f02912854e37fc40d3bc69159652ddab0594786bbd24ce2f407fbb8e6979b9fd7cec4feab5e2ae1d8722fefa57fa6373
   languageName: node
   linkType: hard
 
@@ -2515,12 +2515,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.17.0":
-  version: 7.17.0
-  resolution: "@babel/runtime@npm:7.17.0"
+"@babel/runtime@npm:7.17.2":
+  version: 7.17.2
+  resolution: "@babel/runtime@npm:7.17.2"
   dependencies:
     regenerator-runtime: ^0.13.4
-  checksum: bdca0120617d7f6aed1a2dcb567893ae805f33c8ea0c8fc96fad5156d9651f1a90254ec6b123a843fcb84df2bbf731d4419528b3e3c8664726314f61b0f2c494
+  checksum: 40a24ffea416acffc8ee7956ea587bcf4de7d5e980085cf73827fb346304d4aedb3e33340ba1b63ce3ca35c5bb72983f342c22384d8dd1b4219c0ab10d8231eb
   languageName: node
   linkType: hard
 
@@ -8417,10 +8417,10 @@ __metadata:
   resolution: "foundryvtt-docker@workspace:."
   dependencies:
     "@auto-it/core": 10.32.6
-    "@babel/core": 7.17.0
+    "@babel/core": 7.17.2
     "@babel/plugin-transform-runtime": 7.17.0
     "@babel/preset-env": 7.16.11
-    "@babel/runtime": 7.17.0
+    "@babel/runtime": 7.17.2
     "@nuxtjs/vuetify": 1.12.3
     "@yarnpkg/pnpify": 3.1.0
     auto: 10.32.6
