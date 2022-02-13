@@ -6,11 +6,9 @@
 
     <!-- Sizes your content based upon application components -->
     <v-main>
-
       <!-- Provides the application the proper gutter -->
       <v-container fluid>
-
-        <Nuxt />
+        <slot />
       </v-container>
     </v-main>
 
@@ -22,10 +20,9 @@
 <script>
 import Welcome from "../components/welcome";
 export default {
-  components: {Welcome}
-}
+  components: { Welcome },
+};
 </script>
 
 <style>
-
 </style>

@@ -1,18 +1,21 @@
-export default {
-    target: 'static',
-    buildModules: [
-        ['@nuxtjs/vuetify', {dark: true}]
-    ],
-    dir: {
-        // Rename `pages` directory to `routes`
-        pages: 'src/client/pages',
-        components: 'src/client/components',
-        assets: 'src/client/assets',
-        static: 'src/client/static',
-        layouts: 'src/client/layouts',
-        store: 'src/client/store'
+import path from "path"
+import { defineNuxtConfig } from 'nuxt3'
+// https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
+export default defineNuxtConfig({
+    typescript: {
+        shim: false
     },
-    generate: {
-        dir: 'dist/client'
+    target: 'static',
+    ssr: false,
+    buildDir: path.join(__dirname, "./dist/"),
+    css: ['vuetify/lib/styles/main.sass'],
+    build: {
+        transpile: ['vuetify']
+    },
+    vite: {
+        define: {
+            'process.env.DEBUG': 'false',
+        }
     }
-}
+})
+

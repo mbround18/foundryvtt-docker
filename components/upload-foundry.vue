@@ -9,27 +9,38 @@
     <v-col
         cols="24"
     >
+      <label for="download-url">FoundryVTT Timed URL</label>
       <v-text-field
+          id="download-url"
           v-model="foundryDownloadUrl"
-          label="FoundryVTT Timed URL"
+          label=""
           required
           :rules="foundryDownloadUrlRules"
           placeholder="https://foundry"
           width="100%"
-      ></v-text-field>
+      />
+      <v-btn
+          :disabled="disabled"
+          color="success"
+          class="mr-4"
+          @click="sendToExpress"
+      >
+        Submit
+      </v-btn>
     </v-col>
-    <v-btn
-        :disabled="disabled"
-        color="success"
-        class="mr-4"
-        @click="sendToExpress"
-    >
-      Submit
-    </v-btn>
   </v-form>
 </template>
+<style lang="scss">
+#download-url {
+  width: 18em;
+  color: black;
+}
+</style>
 <script>
 import axios from "axios";
+import useAlert, {Status} from "../composables/useAlert";
+
+const alert = useAlert();
 
 export default {
   data: () => ({
@@ -53,7 +64,6 @@ export default {
     async waitForFoundry() {
       await new Promise(resolve => {
         this.waitForFoundryInterval = setInterval(()=> {
-          // deepcode ignore PromiseNotCaughtGeneral: Iz all gucci we dont care if this errors out
           axios.get('/license').then(({statusText}) => {
             if (statusText.toString().toLowerCase() === 'ok') {
               resolve(true)
@@ -64,24 +74,21 @@ export default {
       clearInterval(this.waitForFoundryInterval)
     },
     async sendToExpress () {
-      if (this.$refs.form.validate()) {
         this.disabled = true;
-        this.$store.commit('upload/showAlert', 'pending')
+        alert.show(Status.Waiting)
         const uploadResponse = await axios.post('/uploader', {"foundry": this.foundryDownloadUrl});
         if (uploadResponse.status === 200) {
           await this.killExpressServer();
           await this.waitForFoundry();
-          this.$store.commit('upload/showAlert', 'success')
+          alert.show(Status.Success)
           setTimeout(()=> {
             window.location.href = '/license'
           }, 2000)
         } else {
           this.disabled = false;
-          this.$store.commit('upload/showAlert', 'failure')
+          alert.show(Status.Failure)
         }
-      } else {
         this.disabled = false;
-      }
     },
   },
 }
