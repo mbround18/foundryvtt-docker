@@ -8438,7 +8438,7 @@ __metadata:
     vue-template-compiler: 2.6.12
     vuetify: 2.6.3
     vuex: 3.6.2
-    webpack: 5.65.0
+    webpack: 5.68.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
     webpack-node-externals: 3.0.0
@@ -8863,6 +8863,13 @@ fsevents@^1.2.7:
   version: 4.2.6
   resolution: "graceful-fs@npm:4.2.6"
   checksum: 84d39c7756892553da990a9db7e45f844b3309b37b5a00174cbb4748476f2250c54f24594d4d252f64f085c65c2fdac7c809419bf6d55f0e6e42eb07ac0f5bf2
+  languageName: node
+  linkType: hard
+
+"graceful-fs@npm:^4.2.9":
+  version: 4.2.9
+  resolution: "graceful-fs@npm:4.2.9"
+  checksum: e0382eb1aab9d04d8dbf0faed61987145cf876548138ff660553168b1ff04e6c65ee407aca102a0047bb2144845261c4a8a5f65934842f64acf12d3a8fd711ba
   languageName: node
   linkType: hard
 
@@ -16728,16 +16735,16 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"webpack-sources@npm:^3.2.2":
-  version: 3.2.2
-  resolution: "webpack-sources@npm:3.2.2"
-  checksum: 9bfb5679e0624983c61efcdfd02b64526a7f5bd3287f5ee22ae4b09d2153c310a1869502c44e4af4b6e6aab4c6fe4b71f70469fd5e2b9a7302eed6fed0d77a78
+"webpack-sources@npm:^3.2.3":
+  version: 3.2.3
+  resolution: "webpack-sources@npm:3.2.3"
+  checksum: aac02eb6759647fe681f47cf81056e03cde27440da5c3cef6d67e76eed29c372a02831af6333e9f3ca2fd08914f6e1c123dc2154063f2ac08ee89021ff503f05
   languageName: node
   linkType: hard
 
-"webpack@npm:5.65.0":
-  version: 5.65.0
-  resolution: "webpack@npm:5.65.0"
+"webpack@npm:5.68.0":
+  version: 5.68.0
+  resolution: "webpack@npm:5.68.0"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -16753,7 +16760,7 @@ resolve@~1.7.1:
     eslint-scope: 5.1.1
     events: ^3.2.0
     glob-to-regexp: ^0.4.1
-    graceful-fs: ^4.2.4
+    graceful-fs: ^4.2.9
     json-parse-better-errors: ^1.0.2
     loader-runner: ^4.2.0
     mime-types: ^2.1.27
@@ -16762,13 +16769,13 @@ resolve@~1.7.1:
     tapable: ^2.1.1
     terser-webpack-plugin: ^5.1.3
     watchpack: ^2.3.1
-    webpack-sources: ^3.2.2
+    webpack-sources: ^3.2.3
   peerDependenciesMeta:
     webpack-cli:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 05ac9c09b152d78bcdb466533277bcd42968b33b6ee5059ac789cd359ded5d9c4d6344eb2fcbbc62d3cbaaf36102e74379ec1d1e47a9255a2aa99ca0ea0e6704
+  checksum: b294104234d48225a6acd5c268bf856e30a5f460c52d92883487dacd48d047f1d00d8961094179976bf41fe0a5ae78d1d23db93de901e01b061a674a9214c2e7
   languageName: node
   linkType: hard
 
