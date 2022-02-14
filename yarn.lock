@@ -1194,7 +1194,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:^4.14.178":
+"@types/lodash@npm:4.14.178":
   version: 4.14.178
   resolution: "@types/lodash@npm:4.14.178"
   checksum: a69a04a60bfc5257c3130a554b4efa0c383f0141b7b3db8ab7cf07ad2a46ea085fce66d0242da41da7e5647b133d5dfb2c15add9cbed8d7fef955e4a1e5b3128
@@ -1725,7 +1725,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"assert@npm:^2.0.0":
+"assert@npm:2.0.0":
   version: 2.0.0
   resolution: "assert@npm:2.0.0"
   dependencies:
@@ -1744,7 +1744,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"auto@npm:^10.32.6":
+"auto@npm:10.32.6":
   version: 10.32.6
   resolution: "auto@npm:10.32.6"
   dependencies:
@@ -1765,7 +1765,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.4.2":
+"autoprefixer@npm:10.4.2":
   version: 10.4.2
   resolution: "autoprefixer@npm:10.4.2"
   dependencies:
@@ -1797,7 +1797,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.26.0":
+"axios@npm:0.26.0":
   version: 0.26.0
   resolution: "axios@npm:0.26.0"
   dependencies:
@@ -2460,7 +2460,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"concurrently@npm:^7.0.0":
+"concurrently@npm:7.0.0":
   version: 7.0.0
   resolution: "concurrently@npm:7.0.0"
   dependencies:
@@ -2596,7 +2596,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"crypto-browserify@npm:^3.12.0":
+"crypto-browserify@npm:3.12.0":
   version: 3.12.0
   resolution: "crypto-browserify@npm:3.12.0"
   dependencies:
@@ -3416,7 +3416,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.14.8":
+"follow-redirects@npm:1.14.8, follow-redirects@npm:^1.14.8":
   version: 1.14.8
   resolution: "follow-redirects@npm:1.14.8"
   peerDependenciesMeta:
@@ -3441,31 +3441,31 @@ __metadata:
     "@babel/runtime": 7.17.2
     "@parcel/transformer-sass": 2.3.1
     "@parcel/transformer-vue": 2.3.1
-    "@types/lodash": ^4.14.178
+    "@types/lodash": 4.14.178
     "@yarnpkg/pnpify": 3.1.0
-    assert: ^2.0.0
-    auto: ^10.32.6
-    autoprefixer: ^10.4.2
-    axios: ^0.26.0
-    concurrently: ^7.0.0
-    crypto-browserify: ^3.12.0
-    follow-redirects: ^1.14.8
-    h3: ^0.3.9
-    lodash: ^4.17.21
-    nodemon: ^2.0.15
-    os-browserify: ^0.3.0
-    parcel: ^2.3.1
-    path-browserify: ^1.0.1
-    postcss: ^8.4.6
-    querystring-es3: ^0.2.1
-    rimraf: ^3.0.2
-    sass: ^1.49.7
-    sass-loader: ^12.4.0
-    serve-static: ^1.14.2
-    stream-browserify: ^3.0.0
-    stream-http: ^3.2.0
-    tailwindcss: ^3.0.22
-    url: ^0.11.0
+    assert: 2.0.0
+    auto: 10.32.6
+    autoprefixer: 10.4.2
+    axios: 0.26.0
+    concurrently: 7.0.0
+    crypto-browserify: 3.12.0
+    follow-redirects: 1.14.8
+    h3: 0.3.9
+    lodash: 4.17.21
+    nodemon: 2.0.15
+    os-browserify: 0.3.0
+    parcel: 2.3.1
+    path-browserify: 1.0.1
+    postcss: 8.4.6
+    querystring-es3: 0.2.1
+    rimraf: 3.0.2
+    sass: 1.49.7
+    sass-loader: 12.4.0
+    serve-static: 1.14.2
+    stream-browserify: 3.0.0
+    stream-http: 3.2.0
+    tailwindcss: 3.0.22
+    url: 0.11.0
   languageName: unknown
   linkType: soft
 
@@ -3758,7 +3758,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"h3@npm:^0.3.9":
+"h3@npm:0.3.9":
   version: 0.3.9
   resolution: "h3@npm:0.3.9"
   checksum: da1bf2ffbcc424fb28e474287d64f7d3b506b3341c40f74667fb346bf789ac6bb945798c9d200c6012a07eb0dd91f47ac4bebfc31c1d64aff1c7b2b3a6448db8
@@ -4663,7 +4663,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.15, lodash@npm:^4.17.21":
+"lodash@npm:4.17.21, lodash@npm:^4.17.15, lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -5116,7 +5116,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nodemon@npm:^2.0.15":
+"nodemon@npm:2.0.15":
   version: 2.0.15
   resolution: "nodemon@npm:2.0.15"
   dependencies:
@@ -5337,7 +5337,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"os-browserify@npm:^0.3.0":
+"os-browserify@npm:0.3.0":
   version: 0.3.0
   resolution: "os-browserify@npm:0.3.0"
   checksum: 16e37ba3c0e6a4c63443c7b55799ce4066d59104143cb637ecb9fce586d5da319cdca786ba1c867abbe3890d2cbf37953f2d51eea85e20dd6c4570d6c54bfebf
@@ -5453,7 +5453,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"parcel@npm:^2.3.1":
+"parcel@npm:2.3.1":
   version: 2.3.1
   resolution: "parcel@npm:2.3.1"
   dependencies:
@@ -5553,7 +5553,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"path-browserify@npm:^1.0.1":
+"path-browserify@npm:1.0.1":
   version: 1.0.1
   resolution: "path-browserify@npm:1.0.1"
   checksum: c6d7fa376423fe35b95b2d67990060c3ee304fc815ff0a2dc1c6c3cfaff2bd0d572ee67e18f19d0ea3bbe32e8add2a05021132ac40509416459fffee35200699
@@ -6013,7 +6013,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.1.10, postcss@npm:^8.4.5, postcss@npm:^8.4.6":
+"postcss@npm:8.4.6, postcss@npm:^8.1.10, postcss@npm:^8.4.5, postcss@npm:^8.4.6":
   version: 8.4.6
   resolution: "postcss@npm:8.4.6"
   dependencies:
@@ -6174,7 +6174,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"querystring-es3@npm:^0.2.1":
+"querystring-es3@npm:0.2.1":
   version: 0.2.1
   resolution: "querystring-es3@npm:0.2.1"
   checksum: 691e8d6b8b157e7cd49ae8e83fcf86de39ab3ba948c25abaa94fba84c0986c641aa2f597770848c64abce290ed17a39c9df6df737dfa7e87c3b63acc7d225d61
@@ -6468,7 +6468,7 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"rimraf@npm:^3.0.2":
+"rimraf@npm:3.0.2, rimraf@npm:^3.0.2":
   version: 3.0.2
   resolution: "rimraf@npm:3.0.2"
   dependencies:
@@ -6528,7 +6528,7 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:^12.4.0":
+"sass-loader@npm:12.4.0":
   version: 12.4.0
   resolution: "sass-loader@npm:12.4.0"
   dependencies:
@@ -6550,7 +6550,7 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.38.0, sass@npm:^1.49.7":
+"sass@npm:1.49.7, sass@npm:^1.38.0":
   version: 1.49.7
   resolution: "sass@npm:1.49.7"
   dependencies:
@@ -6622,7 +6622,7 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"serve-static@npm:^1.14.2":
+"serve-static@npm:1.14.2":
   version: 1.14.2
   resolution: "serve-static@npm:1.14.2"
   dependencies:
@@ -6839,7 +6839,7 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"stream-browserify@npm:^3.0.0":
+"stream-browserify@npm:3.0.0":
   version: 3.0.0
   resolution: "stream-browserify@npm:3.0.0"
   dependencies:
@@ -6856,7 +6856,7 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"stream-http@npm:^3.2.0":
+"stream-http@npm:3.2.0":
   version: 3.2.0
   resolution: "stream-http@npm:3.2.0"
   dependencies:
@@ -7131,7 +7131,7 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.0.22":
+"tailwindcss@npm:3.0.22":
   version: 3.0.22
   resolution: "tailwindcss@npm:3.0.22"
   dependencies:
@@ -7493,7 +7493,7 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"url@npm:^0.11.0":
+"url@npm:0.11.0":
   version: 0.11.0
   resolution: "url@npm:0.11.0"
   dependencies:
