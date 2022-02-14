@@ -17,7 +17,7 @@ mkdir -p "${DATA_DIR}"
 
 function launchUploader() {
     echo "Launching the uploader tool..."
-    node /uploader-tool/dist/server/server.js
+    FRONTEND_DIR=/uploader-tool/frontend PORT=4444 node /uploader-tool/backend/index.js
     [[ -f "/tmp/foundryvtt.zip" ]] && 7z x -aoa -O"${APPLICATION_DIR}" /tmp/foundryvtt.zip
     echo "foundry was uploaded recently" >> "${DATA_DIR}/.uploaded"
 }

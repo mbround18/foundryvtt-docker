@@ -10,7 +10,7 @@ WORKDIR /uploader-tool/
 
 COPY . .
 RUN yarn install --immutable           \
-    && yarn build                      \
+    && NODE_ENV=production yarn build                      \
     && rm -rf src/ scripts/ Dockerfile public/
 
 
@@ -27,7 +27,7 @@ RUN apt-get update                     \
     && apt-get install -y p7zip-full        \
     && rm -rf /var/lib/apt/lists/*
 
-COPY --from=Builder /uploader-tool/ /uploader-tool/
+COPY --from=Builder /uploader-tool/dist /uploader-tool/
 
 # CHANGE ME
 ENV APPLICATION_HOST="foundry.vtt"              \
