@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./tailwind.css">
+    <link rel="stylesheet" href="./index.scss">
+    <title>FoundryVTT Installer</title>
+    <script type="module" src="./index.ts"></script>
+</head>
+<body>
+    <div    id="instruction-container"
+            class="flex flex-row">
+        <div class="card">
+            <img src="https://placekitten.com/601/400" height="auto" width="50%" alt="Welcome Image">
+            <div class="center">
+                <h2>Hello and welcome! :) Lets get your Foundry VTT instance online!</h2>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../assets/foundryvtt-click-username.png" height="auto" width="50%" alt="Welcome Image">
+            <div class="center">
+                <h2>First, lets get to your profile.</h2>
+                <ol>
+                    <li>
+                        Open <a target="_blank" href="https://foundryvtt.com/">FoundryVTT</a>
+                    </li>
+                    <li>
+                        Log in with your account.
+                    </li>
+                    <li>
+                        Click the profile link in the upper right hand corner.
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../assets/foundryvtt-click-timed-url.png" height="auto" width="50%" alt="Welcome Image">
+            <div class="center">
+                <h2>Now lets get the timed link!</h2>
+                <ol>
+                    <li>
+                        Once on your profile click Purchased Licenses.
+                    </li>
+                    <li>
+                        (OPTIONAL) Change the version drop down.
+                    </li>
+                    <li>
+                        Select Linux/NodeJS
+                    </li>
+                    <li>
+                        Click Timed URL
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../assets/upload.png" height="auto" width="50%" alt="Welcome Image">
+            <div class="center">
+                <h2>Time to paste the link and click submit!</h2>
+                <div class="pt-4">
+                    <label for="foundry-url">FoundryVTT Url:</label>
+                    <input
+                            placeholder="https://foundry"
+                            type="text" id="foundry-url"
+                            class="boarder rounded m-1 p-2 text-black"
+                            required
+                    >
+                </div>
+                <div id="url-error" class="hidden">
+
+                </div>
+                <div>
+                    <button
+                            id="foundry-url-submit"
+                            class="rounded boarder bg-green-600 p-2 mt-2 w-full">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div    id="success-content"
+            class="flex flex-row justify-center pt-24 hidden">
+        <div>
+            <p>
+                Successfully submitted FoundryVTT url!
+            </p>
+            <p>
+                Downloading now, this could take a few  minutes...
+            </p>
+            <p>
+                Once completed, you will be automatically redirected. <3
+            </p>
+        </div>
+    </div>
+
+</body>

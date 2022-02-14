@@ -5,5 +5,6 @@ services:
     image: mbround18/foundryvtt-docker:latest
     ports:
       - "4444:4444"
+      - "3000:3000"
     volumes:
       - $PWD/tmp:/foundrydata
