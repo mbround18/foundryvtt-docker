@@ -48,7 +48,7 @@
     "@parcel/transformer-sass": "2.3.2",
     "@parcel/transformer-vue": "2.3.2",
     "@types/lodash": "4.14.178",
-    "@yarnpkg/pnpify": "3.1.0",
+    "@yarnpkg/pnpify": "3.1.1",
     "auto": "10.32.6",
     "autoprefixer": "10.4.2",
     "concurrently": "7.0.0",
