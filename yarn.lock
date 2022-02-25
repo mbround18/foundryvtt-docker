@@ -3466,7 +3466,7 @@ __metadata:
     os-browserify: 0.3.0
     parcel: 2.3.2
     path-browserify: 1.0.1
-    postcss: 8.4.6
+    postcss: 8.4.7
     querystring-es3: 0.2.1
     rimraf: 3.0.2
     sass: 1.49.9
@@ -5041,6 +5041,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "nanoid@npm:3.3.1"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 4ef0969e1bbe866fc223eb32276cbccb0961900bfe79104fa5abe34361979dead8d0e061410a5c03bc3d47455685adf32c09d6f27790f4a6898fb51f7df7ec86
+  languageName: node
+  linkType: hard
+
 "neo-async@npm:^2.6.2":
   version: 2.6.2
   resolution: "neo-async@npm:2.6.2"
@@ -5997,7 +6006,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.6, postcss@npm:^8.1.10, postcss@npm:^8.4.5, postcss@npm:^8.4.6":
+"postcss@npm:8.4.7":
+  version: 8.4.7
+  resolution: "postcss@npm:8.4.7"
+  dependencies:
+    nanoid: ^3.3.1
+    picocolors: ^1.0.0
+    source-map-js: ^1.0.2
+  checksum: a515ed36622edbee1d3ba153298d3b62ae9826dfa6de19204c2a6f975c8d3ad36808423b5119a9d82b78efd486de3ce35a1faf882a36ac8aa09492be4fbb7fe1
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.1.10, postcss@npm:^8.4.5, postcss@npm:^8.4.6":
   version: 8.4.6
   resolution: "postcss@npm:8.4.6"
   dependencies:
