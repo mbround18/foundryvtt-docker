@@ -2526,6 +2526,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cookie@npm:^0.4.2":
+  version: 0.4.2
+  resolution: "cookie@npm:0.4.2"
+  checksum: a00833c998bedf8e787b4c342defe5fa419abd96b32f4464f718b91022586b8f1bafbddd499288e75c037642493c83083da426c6a9080d309e3bd90fd11baa9b
+  languageName: node
+  linkType: hard
+
 "core-util-is@npm:~1.0.0":
   version: 1.0.2
   resolution: "core-util-is@npm:1.0.2"
@@ -2894,6 +2901,13 @@ __metadata:
     inherits: ^2.0.1
     minimalistic-assert: ^1.0.0
   checksum: 1ec2eedd7ed6bd61dd5e0519fd4c96124e93bb22de8a9d211b02d63e5dd152824853d919bb2090f965cc0e3eb9c515950a9836b332020d810f9c71feb0fd7df4
+  languageName: node
+  linkType: hard
+
+"destr@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "destr@npm:1.1.0"
+  checksum: 0fafca1cbfbb7b543eef3d66fa83c7580310e091cd11063e04d0cd9ab5fb55122c119c9aebdee394c7e91160ca0e07f5f96b7c6041801a9e9f277dbc818ba377
   languageName: node
   linkType: hard
 
@@ -3471,7 +3485,7 @@ __metadata:
     concurrently: 7.0.0
     crypto-browserify: 3.12.0
     follow-redirects: 1.14.9
-    h3: 0.3.9
+    h3: 0.4.0
     lodash: 4.17.21
     nodemon: 2.0.15
     os-browserify: 0.3.0
@@ -3779,10 +3793,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"h3@npm:0.3.9":
-  version: 0.3.9
-  resolution: "h3@npm:0.3.9"
-  checksum: da1bf2ffbcc424fb28e474287d64f7d3b506b3341c40f74667fb346bf789ac6bb945798c9d200c6012a07eb0dd91f47ac4bebfc31c1d64aff1c7b2b3a6448db8
+"h3@npm:0.4.0":
+  version: 0.4.0
+  resolution: "h3@npm:0.4.0"
+  dependencies:
+    cookie: ^0.4.2
+    destr: ^1.1.0
+    radix3: ^0.1.1
+    ufo: ^0.7.11
+  checksum: 7dbb993bd69009d10ae039256b01697799665a517e1a426a83b03c2004d00d16682f5e1a9aa7fd72f5bc36d6f8e93501e89a3e2bce48858e07cf85703359ed25
   languageName: node
   linkType: hard
 
@@ -6231,6 +6250,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"radix3@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "radix3@npm:0.1.1"
+  checksum: 06ca57c4eea58b82a84a7d4763ce3a904a03f4ae9b59433787411e96bd53186c17a5beca356184ae61ff44aabb97315a5fe0cc09b1cf849f5dc957a4901fba77
+  languageName: node
+  linkType: hard
+
 "randombytes@npm:^2.0.0, randombytes@npm:^2.0.1, randombytes@npm:^2.0.5":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -7444,6 +7470,13 @@ resolve@~1.7.1:
   version: 5.2.0
   resolution: "typical@npm:5.2.0"
   checksum: ccaeb151a9a556291b495571ca44c4660f736fb49c29314bbf773c90fad92e9485d3cc2b074c933866c1595abbbc962f2b8bfc6e0f52a8c6b0cdd205442036ac
+  languageName: node
+  linkType: hard
+
+"ufo@npm:^0.7.11":
+  version: 0.7.11
+  resolution: "ufo@npm:0.7.11"
+  checksum: e5dfaff619e9b6d2e1e205877738f701722c99a0da8eda5e180f72844cdb668488656de47d6777d85c1ca17717d527a45ae8eb3954a0271d7d08e59acc02dd99
   languageName: node
   linkType: hard
 
