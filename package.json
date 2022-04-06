@@ -34,7 +34,7 @@
     ]
   },
   "dependencies": {
-    "@babel/runtime": "7.17.8",
+    "@babel/runtime": "7.17.9",
     "assert": "2.0.0",
     "axios": "0.26.1",
     "follow-redirects": "1.14.9",
