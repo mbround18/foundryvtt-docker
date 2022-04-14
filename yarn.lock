@@ -2934,10 +2934,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"destr@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "destr@npm:1.1.0"
-  checksum: 0fafca1cbfbb7b543eef3d66fa83c7580310e091cd11063e04d0cd9ab5fb55122c119c9aebdee394c7e91160ca0e07f5f96b7c6041801a9e9f277dbc818ba377
+"destr@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "destr@npm:1.1.1"
+  checksum: 334886494cef39d39526061071b83384dee493b531a7a13f6705e92a168ebb072b45be4aba4179aaba88c4a32c3e35d8058d1357871179dbaf74890584199019
   languageName: node
   linkType: hard
 
@@ -3515,7 +3515,7 @@ __metadata:
     concurrently: 7.1.0
     crypto-browserify: 3.12.0
     follow-redirects: 1.14.9
-    h3: 0.7.3
+    h3: 0.7.4
     lodash: 4.17.21
     nodemon: 2.0.15
     os-browserify: 0.3.0
@@ -3823,15 +3823,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"h3@npm:0.7.3":
-  version: 0.7.3
-  resolution: "h3@npm:0.7.3"
+"h3@npm:0.7.4":
+  version: 0.7.4
+  resolution: "h3@npm:0.7.4"
   dependencies:
     cookie-es: ^0.5.0
-    destr: ^1.1.0
+    destr: ^1.1.1
     radix3: ^0.1.1
-    ufo: ^0.7.11
-  checksum: 95944776863ee388f2b01c08bae8d86fdc859d6be66a09ce1c8595f13888560f4ba37c4a83c32c9244733424f862c4fb6bd95ce100fcad75ca07d736131ea94c
+    ufo: ^0.8.3
+  checksum: f95a6a678d5717f78763340e27db693a35a636250be3fe25f3d6d3bf8cea2212a2bdf1d8aa1006783875b08fb46a8d60f08ed560024222225163f535ee2bdfe0
   languageName: node
   linkType: hard
 
@@ -7185,10 +7185,10 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"ufo@npm:^0.7.11":
-  version: 0.7.11
-  resolution: "ufo@npm:0.7.11"
-  checksum: e5dfaff619e9b6d2e1e205877738f701722c99a0da8eda5e180f72844cdb668488656de47d6777d85c1ca17717d527a45ae8eb3954a0271d7d08e59acc02dd99
+"ufo@npm:^0.8.3":
+  version: 0.8.3
+  resolution: "ufo@npm:0.8.3"
+  checksum: 7ea20e9d0fbd92b3310de4b020919f0a0542db60a6787ccecf232285d55795ddc0ea482b04d6c07cac60367a294aee705d888999867a5c3c69e47ed8d0ae3009
   languageName: node
   linkType: hard
 
