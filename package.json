@@ -36,7 +36,7 @@
   "dependencies": {
     "@babel/runtime": "7.17.9",
     "assert": "2.0.0",
-    "axios": "0.27.0",
+    "axios": "0.27.1",
     "follow-redirects": "1.14.9",
     "h3": "^0.7.4",
     "lodash": "^4.17.21",
