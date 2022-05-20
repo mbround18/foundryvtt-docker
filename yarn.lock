@@ -14,13 +14,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@auto-it/bot-list@npm:10.36.5":
-  version: 10.36.5
-  resolution: "@auto-it/bot-list@npm:10.36.5"
-  checksum: eaae806200ab9ba3d2b7e9ac4ae4b072ff193edcf5d335fd75cfd428be7693cb0edde7be2eea8d7ad396edb9421bc5fab35c1ed6467b782b822ce93efee6d6b1
-  languageName: node
-  linkType: hard
-
 "@auto-it/bot-list@npm:10.36.6":
   version: 10.36.6
   resolution: "@auto-it/bot-list@npm:10.36.6"
@@ -28,53 +21,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@auto-it/core@npm:10.36.5":
-  version: 10.36.5
-  resolution: "@auto-it/core@npm:10.36.5"
-  dependencies:
-    "@auto-it/bot-list": 10.36.5
-    "@endemolshinegroup/cosmiconfig-typescript-loader": ^3.0.2
-    "@octokit/plugin-enterprise-compatibility": 1.3.0
-    "@octokit/plugin-retry": ^3.0.9
-    "@octokit/plugin-throttling": ^3.6.2
-    "@octokit/rest": ^18.12.0
-    await-to-js: ^3.0.0
-    chalk: ^4.0.0
-    cosmiconfig: 7.0.0
-    deepmerge: ^4.0.0
-    dotenv: ^8.0.0
-    endent: ^2.1.0
-    enquirer: ^2.3.4
-    env-ci: ^5.0.1
-    fast-glob: ^3.1.1
-    fp-ts: ^2.5.3
-    fromentries: ^1.2.0
-    gitlog: ^4.0.3
-    https-proxy-agent: ^5.0.0
-    import-cwd: ^3.0.0
-    import-from: ^3.0.0
-    io-ts: ^2.1.2
-    lodash.chunk: ^4.2.0
-    log-symbols: ^4.0.0
-    node-fetch: 2.6.7
-    parse-author: ^2.0.0
-    parse-github-url: 1.0.2
-    pretty-ms: ^7.0.0
-    requireg: ^0.2.2
-    semver: ^7.0.0
-    signale: ^1.4.0
-    tapable: ^2.2.0
-    terminal-link: ^2.1.1
-    tinycolor2: ^1.4.1
-    ts-node: ^9.1.1
-    tslib: 2.1.0
-    type-fest: ^0.21.1
-    typescript-memoize: ^1.0.0-alpha.3
-    url-join: ^4.0.0
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: fff46962c6e426bb5bfce32b044672b781488e03af9aaddce40f2f9f24026d8d6fe34c374a0b54ebc8f972ffa846e954fee391153199b8ddffe54f0a39826f2c
+"@auto-it/bot-list@npm:10.37.0":
+  version: 10.37.0
+  resolution: "@auto-it/bot-list@npm:10.37.0"
+  checksum: ca43d14c68bb7031a5bd01afb17db252a62aadb41b54eafcb64615459f5773d8fec30c3c98a4a3d16116e55c32749764bf62e91e25b022244ab5a61a5ddfdd86
   languageName: node
   linkType: hard
 
@@ -125,6 +75,56 @@ __metadata:
     typescript:
       optional: true
   checksum: e986242a2c0d96dfbedc92589d7dbfed63a6861975b8d56ea15d828a3a5b9fefc24b23c1ff026ecf39849d9442d2f02e8eee47007484fc8682e461ac79e5bc1a
+  languageName: node
+  linkType: hard
+
+"@auto-it/core@npm:10.37.0":
+  version: 10.37.0
+  resolution: "@auto-it/core@npm:10.37.0"
+  dependencies:
+    "@auto-it/bot-list": 10.37.0
+    "@endemolshinegroup/cosmiconfig-typescript-loader": ^3.0.2
+    "@octokit/plugin-enterprise-compatibility": 1.3.0
+    "@octokit/plugin-retry": ^3.0.9
+    "@octokit/plugin-throttling": ^3.6.2
+    "@octokit/rest": ^18.12.0
+    await-to-js: ^3.0.0
+    chalk: ^4.0.0
+    cosmiconfig: 7.0.0
+    deepmerge: ^4.0.0
+    dotenv: ^8.0.0
+    endent: ^2.1.0
+    enquirer: ^2.3.4
+    env-ci: ^5.0.1
+    fast-glob: ^3.1.1
+    fp-ts: ^2.5.3
+    fromentries: ^1.2.0
+    gitlog: ^4.0.3
+    https-proxy-agent: ^5.0.0
+    import-cwd: ^3.0.0
+    import-from: ^3.0.0
+    io-ts: ^2.1.2
+    lodash.chunk: ^4.2.0
+    log-symbols: ^4.0.0
+    node-fetch: 2.6.7
+    parse-author: ^2.0.0
+    parse-github-url: 1.0.2
+    pretty-ms: ^7.0.0
+    requireg: ^0.2.2
+    semver: ^7.0.0
+    signale: ^1.4.0
+    tapable: ^2.2.0
+    terminal-link: ^2.1.1
+    tinycolor2: ^1.4.1
+    ts-node: ^9.1.1
+    tslib: 2.1.0
+    type-fest: ^0.21.1
+    typescript-memoize: ^1.0.0-alpha.3
+    url-join: ^4.0.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 12012cc6f20f8bff20cf45cead71539f15426a210f64ffab574a6cc38e682f82489367d69cc7a22bdc2e8d4db7a93f12c23266de24c84d94098173511691d8a2
   languageName: node
   linkType: hard
 
@@ -3942,7 +3942,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "foundryvtt-docker@workspace:."
   dependencies:
-    "@auto-it/core": 10.36.5
+    "@auto-it/core": 10.37.0
     "@babel/runtime": 7.18.0
     "@parcel/transformer-sass": 2.5.0
     "@parcel/transformer-vue": 2.5.0
