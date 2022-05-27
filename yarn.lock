@@ -4067,13 +4067,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:1.15.0":
-  version: 1.15.0
-  resolution: "follow-redirects@npm:1.15.0"
+"follow-redirects@npm:1.15.1":
+  version: 1.15.1
+  resolution: "follow-redirects@npm:1.15.1"
   peerDependenciesMeta:
     debug:
       optional: true
-  checksum: eaec81c3e0ae57aae2422e38ad3539d0e7279b3a63f9681eeea319bb683dea67502c4e097136b8ce9721542b4e236e092b6b49e34e326cdd7733c274f0a3f378
+  checksum: 6aa4e3e3cdfa3b9314801a1cd192ba756a53479d9d8cca65bf4db3a3e8834e62139245cd2f9566147c8dfe2efff1700d3e6aefd103de4004a7b99985e71dd533
   languageName: node
   linkType: hard
 
@@ -4121,7 +4121,7 @@ __metadata:
     axios: 0.27.2
     concurrently: 7.2.1
     crypto-browserify: 3.12.0
-    follow-redirects: 1.15.0
+    follow-redirects: 1.15.1
     h3: 0.7.8
     lodash: 4.17.21
     nodemon: 2.0.16

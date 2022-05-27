@@ -37,7 +37,7 @@
     "@babel/runtime": "7.18.3",
     "assert": "2.0.0",
     "axios": "0.27.2",
-    "follow-redirects": "1.15.0",
+    "follow-redirects": "1.15.1",
     "h3": "0.7.8",
     "lodash": "4.17.21",
     "serve-static": "1.15.0",
