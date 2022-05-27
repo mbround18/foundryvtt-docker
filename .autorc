@@ -1,6 +1,6 @@
 {
   "plugins": [
-    ".auto/plugins/release.js"
+    "git-tag"
   ],
   "owner": "mbround18",
   "repo": "foundryvtt-docker",
