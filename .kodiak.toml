@@ -1,3 +1,4 @@
 version = 1
 
-merge.require_automerge_label = false
+[merge]
+require_automerge_label = false
