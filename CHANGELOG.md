@@ -1,3 +1,53 @@
+# v1.1.2 (Fri May 27 2022)
+
+#### 🐛 Bug Fix
+
+- Kodiak config fix [#381](https://github.com/mbround18/foundryvtt-docker/pull/381) ([@mbround18](https://github.com/mbround18))
+- Upgrade Deps and Workflows [#380](https://github.com/mbround18/foundryvtt-docker/pull/380) ([@mbround18](https://github.com/mbround18))
+- Update dependency follow-redirects to v1.15.1 [#379](https://github.com/mbround18/foundryvtt-docker/pull/379) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency auto to v10.37.1 [#378](https://github.com/mbround18/foundryvtt-docker/pull/378) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @auto-it/core to v10.37.1 [#377](https://github.com/mbround18/foundryvtt-docker/pull/377) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @babel/runtime to v7.18.3 [#376](https://github.com/mbround18/foundryvtt-docker/pull/376) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Pin dependency lodash to 4.17.21 [#375](https://github.com/mbround18/foundryvtt-docker/pull/375) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update parcel monorepo to v2.6.0 [#374](https://github.com/mbround18/foundryvtt-docker/pull/374) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @babel/runtime to v7.18.2 [#373](https://github.com/mbround18/foundryvtt-docker/pull/373) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency concurrently to v7.2.1 [#372](https://github.com/mbround18/foundryvtt-docker/pull/372) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency auto to v10.37.0 [#371](https://github.com/mbround18/foundryvtt-docker/pull/371) ([@renovate-bot](https://github.com/renovate-bot) [@kodiakhq[bot]](https://github.com/kodiakhq[bot]) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency sass to v1.52.1 [#370](https://github.com/mbround18/foundryvtt-docker/pull/370) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @auto-it/core to v10.37.0 [#369](https://github.com/mbround18/foundryvtt-docker/pull/369) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency auto to v10.36.6 [#368](https://github.com/mbround18/foundryvtt-docker/pull/368) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency sass to v1.52.0 [#367](https://github.com/mbround18/foundryvtt-docker/pull/367) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @babel/runtime to v7.18.0 [#366](https://github.com/mbround18/foundryvtt-docker/pull/366) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency sass-loader to v13 [#365](https://github.com/mbround18/foundryvtt-docker/pull/365) ([@renovate-bot](https://github.com/renovate-bot) [@kodiakhq[bot]](https://github.com/kodiakhq[bot]) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency postcss to v8.4.14 [#364](https://github.com/mbround18/foundryvtt-docker/pull/364) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency concurrently to v7.2.0 [#363](https://github.com/mbround18/foundryvtt-docker/pull/363) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @yarnpkg/pnpify to v3.1.3 [#362](https://github.com/mbround18/foundryvtt-docker/pull/362) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @yarnpkg/pnpify to v3.1.2 [#361](https://github.com/mbround18/foundryvtt-docker/pull/361) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update docker/login-action action to v2 [#360](https://github.com/mbround18/foundryvtt-docker/pull/360) ([@renovate-bot](https://github.com/renovate-bot) [@kodiakhq[bot]](https://github.com/kodiakhq[bot]) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update docker/build-push-action action to v3 [#359](https://github.com/mbround18/foundryvtt-docker/pull/359) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update docker/setup-buildx-action action to v2 [#358](https://github.com/mbround18/foundryvtt-docker/pull/358) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update crazy-max/ghaction-docker-meta action to v4 [#357](https://github.com/mbround18/foundryvtt-docker/pull/357) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency h3 to v0.7.8 [#356](https://github.com/mbround18/foundryvtt-docker/pull/356) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency h3 to v0.7.7 [#355](https://github.com/mbround18/foundryvtt-docker/pull/355) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency follow-redirects to v1.15.0 [#354](https://github.com/mbround18/foundryvtt-docker/pull/354) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency autoprefixer to v10.4.7 [#353](https://github.com/mbround18/foundryvtt-docker/pull/353) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency autoprefixer to v10.4.6 [#352](https://github.com/mbround18/foundryvtt-docker/pull/352) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency postcss to v8.4.13 [#351](https://github.com/mbround18/foundryvtt-docker/pull/351) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency nodemon to v2.0.16 [#350](https://github.com/mbround18/foundryvtt-docker/pull/350) ([@renovate-bot](https://github.com/renovate-bot) [@kodiakhq[bot]](https://github.com/kodiakhq[bot]) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency h3 to v0.7.6 [#349](https://github.com/mbround18/foundryvtt-docker/pull/349) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency h3 to v0.7.5 [#348](https://github.com/mbround18/foundryvtt-docker/pull/348) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency axios to v0.27.2 [#347](https://github.com/mbround18/foundryvtt-docker/pull/347) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency axios to v0.27.1 [#346](https://github.com/mbround18/foundryvtt-docker/pull/346) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 4
+
+- [@kodiakhq[bot]](https://github.com/kodiakhq[bot])
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Michael ([@mbround18](https://github.com/mbround18))
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v1.1.1 (Tue Apr 26 2022)
 
 #### 🐛 Bug Fix
