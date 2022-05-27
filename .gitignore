@@ -10,7 +10,7 @@ dist/
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
-
+.parcel-cache/
 
 # Created by https://www.toptal.com/developers/gitignore/api/nuxt,nuxtjs,visualstudiocode,intellij+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=nuxt,nuxtjs,visualstudiocode,intellij+all
