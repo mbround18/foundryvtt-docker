@@ -4140,7 +4140,7 @@ __metadata:
     concurrently: ^7.2.1
     crypto-browserify: ^3.12.0
     follow-redirects: ^1.15.1
-    h3: ^0.7.8
+    h3: 0.7.9
     lodash: ^4.17.21
     nodemon: ^2.0.16
     os-browserify: ^0.3.0
@@ -4462,15 +4462,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"h3@npm:^0.7.8":
-  version: 0.7.8
-  resolution: "h3@npm:0.7.8"
+"h3@npm:0.7.9":
+  version: 0.7.9
+  resolution: "h3@npm:0.7.9"
   dependencies:
     cookie-es: ^0.5.0
     destr: ^1.1.1
     radix3: ^0.1.2
-    ufo: ^0.8.3
-  checksum: eb8cf97376102b1b246eaabca40c1a6e71f97d3e407c94d5e243f354b68bab527147f9d05fb384277d31255b741f9bbcaded2f86ee8f1c569a8505dfc5ee0530
+    ufo: ^0.8.4
+  checksum: 0b73231e23f95583c17cfb3ef5e66ca451c1eda903cfaf5b2f7ab0c3ec0a69d2fe209a8bd97e85f2df38a663550f489d4de3debf0f43d197517fb0a23a50c481
   languageName: node
   linkType: hard
 
@@ -8098,10 +8098,10 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"ufo@npm:^0.8.3":
-  version: 0.8.3
-  resolution: "ufo@npm:0.8.3"
-  checksum: 7ea20e9d0fbd92b3310de4b020919f0a0542db60a6787ccecf232285d55795ddc0ea482b04d6c07cac60367a294aee705d888999867a5c3c69e47ed8d0ae3009
+"ufo@npm:^0.8.4":
+  version: 0.8.4
+  resolution: "ufo@npm:0.8.4"
+  checksum: a2ebef6f64b9cc4114fc65405837eeb83eb8975edd6d54c7f37abb6905da6fd1f63524e4a02c8b087e7b0b3db6e6f4f798a3d86a96500410ff590b405f807dc9
   languageName: node
   linkType: hard
 
