@@ -4154,7 +4154,7 @@ __metadata:
     serve-static: ^1.15.0
     stream-browserify: ^3.0.0
     stream-http: ^3.2.0
-    tailwindcss: 3.1.1
+    tailwindcss: 3.1.2
     url: ^0.11.0
   languageName: unknown
   linkType: soft
@@ -7763,9 +7763,9 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:3.1.1":
-  version: 3.1.1
-  resolution: "tailwindcss@npm:3.1.1"
+"tailwindcss@npm:3.1.2":
+  version: 3.1.2
+  resolution: "tailwindcss@npm:3.1.2"
   dependencies:
     arg: ^5.0.1
     chokidar: ^3.5.3
@@ -7794,7 +7794,7 @@ resolve@~1.7.1:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: f805c024fed8ff4faff3c05f8e42709ce8c1b6d6a51303d924fa06c836b026f3051a53e61f7760d3a93cfa09898df5230e1182599bfe242498ea672b437cc43c
+  checksum: 0c097830374640de83ff4bbed06a891eb74f40cdafdcbfaf69faf65219a6e1b0fadd0cac1da8c70c9633742938e0818c2ba551f9ce47b8051c4e11adebdac8c6
   languageName: node
   linkType: hard
 
