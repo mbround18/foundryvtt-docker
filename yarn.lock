@@ -4193,7 +4193,7 @@ __metadata:
     querystring-es3: ^0.2.1
     rimraf: ^3.0.2
     sass: 1.53.0
-    sass-loader: 13.0.1
+    sass-loader: 13.0.2
     serve-static: ^1.15.0
     stream-browserify: ^3.0.0
     stream-http: ^3.2.0
@@ -7129,9 +7129,9 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:13.0.1":
-  version: 13.0.1
-  resolution: "sass-loader@npm:13.0.1"
+"sass-loader@npm:13.0.2":
+  version: 13.0.2
+  resolution: "sass-loader@npm:13.0.2"
   dependencies:
     klona: ^2.0.4
     neo-async: ^2.6.2
@@ -7150,7 +7150,7 @@ resolve@~1.7.1:
       optional: true
     sass-embedded:
       optional: true
-  checksum: 21a4e59947c4a0dd851a7f3e5079ca4cdb0af17cc603862318585f5f72683a0c72926ef73e65a249b5210347894e47df38bfa5fee91132c9f2d29393c7d82b57
+  checksum: 6306712cc75bd4b4260ce67178778c92110089485f358b5956b6b12aba15a55e5c7287154daaf8b32678891df915b7bcda7356991afe8bf08ca7356ed30eb448
   languageName: node
   linkType: hard
 
