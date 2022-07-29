@@ -50,7 +50,7 @@
     "@types/lodash": "4.14.182",
     "@yarnpkg/pnpify": "3.1.4",
     "auto": "10.37.4",
-    "autoprefixer": "^10.4.7",
+    "autoprefixer": "10.4.8",
     "buffer": "^6.0.3",
     "concurrently": "7.3.0",
     "crypto-browserify": "^3.12.0",
