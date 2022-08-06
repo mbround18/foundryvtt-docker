@@ -4147,7 +4147,7 @@ __metadata:
     os-browserify: ^0.3.0
     parcel: 2.7.0
     path-browserify: ^1.0.1
-    postcss: 8.4.15
+    postcss: 8.4.16
     querystring-es3: ^0.2.1
     rimraf: ^3.0.2
     sass: 1.54.3
@@ -6387,14 +6387,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.15":
-  version: 8.4.15
-  resolution: "postcss@npm:8.4.15"
+"postcss@npm:8.4.16":
+  version: 8.4.16
+  resolution: "postcss@npm:8.4.16"
   dependencies:
     nanoid: ^3.3.4
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
-  checksum: 664932392e30e99fcce7e70848701cdd0fe08c334c8612a62ceec22037c05ddb9a0b6c886abaf27ebd8aeb4acc66779b55e3dca9238ee9f8c2936bbbbf89d796
+  checksum: 10eee25efd77868036403858577da0cefaf2e0905feeaba5770d5438ccdddba3d01cba8063e96b8aac4c6daa0ed413dd5ae0554a433a3c4db38df1d134cffc1f
   languageName: node
   linkType: hard
 
