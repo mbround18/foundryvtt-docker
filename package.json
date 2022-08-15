@@ -35,13 +35,13 @@
   },
   "dependencies": {
     "@babel/runtime": "7.18.9",
-    "assert": "^2.0.0",
-    "axios": "^0.27.2",
-    "follow-redirects": "^1.15.1",
+    "assert": "2.0.0",
+    "axios": "0.27.2",
+    "follow-redirects": "1.15.1",
     "h3": "0.7.15",
-    "lodash": "^4.17.21",
-    "serve-static": "^1.15.0",
-    "url": "^0.11.0"
+    "lodash": "4.17.21",
+    "serve-static": "1.15.0",
+    "url": "0.11.0"
   },
   "devDependencies": {
     "@auto-it/core": "10.37.4",
@@ -51,20 +51,20 @@
     "@yarnpkg/pnpify": "3.1.4",
     "auto": "10.37.4",
     "autoprefixer": "10.4.8",
-    "buffer": "^6.0.3",
+    "buffer": "6.0.3",
     "concurrently": "7.3.0",
-    "crypto-browserify": "^3.12.0",
+    "crypto-browserify": "3.12.0",
     "nodemon": "2.0.19",
-    "os-browserify": "^0.3.0",
+    "os-browserify": "0.3.0",
     "parcel": "2.7.0",
-    "path-browserify": "^1.0.1",
+    "path-browserify": "1.0.1",
     "postcss": "8.4.16",
-    "querystring-es3": "^0.2.1",
-    "rimraf": "^3.0.2",
+    "querystring-es3": "0.2.1",
+    "rimraf": "3.0.2",
     "sass": "1.54.4",
     "sass-loader": "13.0.2",
-    "stream-browserify": "^3.0.0",
-    "stream-http": "^3.2.0",
+    "stream-browserify": "3.0.0",
+    "stream-http": "3.2.0",
     "tailwindcss": "3.1.8"
   }
 }
