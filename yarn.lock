@@ -4161,7 +4161,7 @@ __metadata:
     postcss: 8.4.16
     querystring-es3: 0.2.1
     rimraf: 3.0.2
-    sass: 1.54.7
+    sass: 1.54.8
     sass-loader: 13.0.2
     serve-static: 1.15.0
     stream-browserify: 3.0.0
@@ -6975,16 +6975,16 @@ resolve@~1.7.1:
   languageName: node
   linkType: hard
 
-"sass@npm:1.54.7":
-  version: 1.54.7
-  resolution: "sass@npm:1.54.7"
+"sass@npm:1.54.8":
+  version: 1.54.8
+  resolution: "sass@npm:1.54.8"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 4b6a10e93387e65dcbad2683d46b4249453ab8777c1bafab7a73ac3900a21fa91fa31d68df7a1b982c7e332a99b5574b1adc6168eb1ac6d7ebb28e18a65c4198
+  checksum: 72893b2dc6284a6194fc560a578da57ab0082130ee558a96bcb9893cc7b517b836dac6e17b3a52b040975e70b4cdefb1268907df955a706b5bf70e3860afcfba
   languageName: node
   linkType: hard
 
