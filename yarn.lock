@@ -4152,7 +4152,7 @@ __metadata:
     concurrently: 7.3.0
     crypto-browserify: 3.12.0
     follow-redirects: 1.15.1
-    h3: 0.7.17
+    h3: 0.7.19
     lodash: 4.17.21
     nodemon: 2.0.19
     os-browserify: 0.3.0
@@ -4437,15 +4437,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"h3@npm:0.7.17":
-  version: 0.7.17
-  resolution: "h3@npm:0.7.17"
+"h3@npm:0.7.19":
+  version: 0.7.19
+  resolution: "h3@npm:0.7.19"
   dependencies:
     cookie-es: ^0.5.0
     destr: ^1.1.1
     radix3: ^0.1.2
     ufo: ^0.8.5
-  checksum: ae444f90e71914abfd95beaa6fe7c67bcde05b12fa6a952e65f5b0fbc1f4e5851a7f9a89182bbe5a1e35da0e8dcd1f77668a9634aabe5f4c37cdab4d2e0a661e
+  checksum: 94bf7019ee23bfb7371b17c0b6d464889c4e3d8f2194ae46a14342a05711847e4768b0550e73630f33f6d89c8c2913559c2dfa52480290ea129a142f744e65d1
   languageName: node
   linkType: hard
 
