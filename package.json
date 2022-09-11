@@ -47,7 +47,7 @@
     "@auto-it/core": "10.37.4",
     "@parcel/transformer-sass": "2.7.0",
     "@parcel/transformer-vue": "2.7.0",
-    "@types/lodash": "4.14.184",
+    "@types/lodash": "4.14.185",
     "@yarnpkg/pnpify": "3.1.5",
     "auto": "10.37.4",
     "autoprefixer": "10.4.8",
