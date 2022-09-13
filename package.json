@@ -44,7 +44,7 @@
     "url": "0.11.0"
   },
   "devDependencies": {
-    "@auto-it/core": "10.37.4",
+    "@auto-it/core": "10.37.5",
     "@parcel/transformer-sass": "2.7.0",
     "@parcel/transformer-vue": "2.7.0",
     "@types/lodash": "4.14.185",
