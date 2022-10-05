@@ -2033,18 +2033,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/core@npm:^3.2.4":
-  version: 3.2.4
-  resolution: "@yarnpkg/core@npm:3.2.4"
+"@yarnpkg/core@npm:^3.2.5":
+  version: 3.2.5
+  resolution: "@yarnpkg/core@npm:3.2.5"
   dependencies:
     "@arcanis/slice-ansi": ^1.1.1
     "@types/semver": ^7.1.0
     "@types/treeify": ^1.0.0
-    "@yarnpkg/fslib": ^2.7.1
+    "@yarnpkg/fslib": ^2.8.0
     "@yarnpkg/json-proxy": ^2.1.1
     "@yarnpkg/libzip": ^2.2.4
     "@yarnpkg/parsers": ^2.5.1
-    "@yarnpkg/pnp": ^3.2.3
+    "@yarnpkg/pnp": ^3.2.4
     "@yarnpkg/shell": ^3.2.4
     camelcase: ^5.3.1
     chalk: ^3.0.0
@@ -2069,7 +2069,7 @@ __metadata:
     treeify: ^1.1.0
     tslib: ^1.13.0
     tunnel: ^0.0.6
-  checksum: 572aaaff198cb59ba9f27b2a964743e8d72572526a87f8a99a29e14a70e4c13917795edeec360f502b342c7641e32fde70dbe9297ccb8b57d152cd20a970df5e
+  checksum: 0fa78ff373b4f6f6819f87a75b0687b81357b7c5751b720e412044155a26d32ee0f8f8ee1086d37322ecb2e50d287e2446f9ec7be402abb1b436ec09f10e5882
   languageName: node
   linkType: hard
 
@@ -2100,6 +2100,16 @@ __metadata:
     "@yarnpkg/libzip": ^2.2.4
     tslib: ^1.13.0
   checksum: 91ff9c52008175a1ce0227328fe56ed6255695353dc5cfb472f7b113e4a133b7722db2208959bb41c91fc23318bac28fedfa6879db5f1f645d1fcbff3b3c0185
+  languageName: node
+  linkType: hard
+
+"@yarnpkg/fslib@npm:^2.8.0":
+  version: 2.8.0
+  resolution: "@yarnpkg/fslib@npm:2.8.0"
+  dependencies:
+    "@yarnpkg/libzip": ^2.2.4
+    tslib: ^1.13.0
+  checksum: ab7fcdba0224fc3a8b76b717b57179c728462caa7c309fe72387790f8d8627395e30006dc6f8ffe2e863df5cc6a006abc72ec11a3639861f2c2c0e193a3ac213
   languageName: node
   linkType: hard
 
@@ -2163,29 +2173,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/pnp@npm:^3.2.3":
-  version: 3.2.3
-  resolution: "@yarnpkg/pnp@npm:3.2.3"
+"@yarnpkg/pnp@npm:^3.2.4":
+  version: 3.2.4
+  resolution: "@yarnpkg/pnp@npm:3.2.4"
   dependencies:
     "@types/node": ^13.7.0
-    "@yarnpkg/fslib": ^2.7.1
-  checksum: 54c10ba9370b7003121bbf670d84afb867bb6b5528e40753e8307a9c0927e42c543dad75e663466a8cd4ec15c28b8d760a23ce655327e5f9198451b342a13911
+    "@yarnpkg/fslib": ^2.8.0
+  checksum: ec74532fa03856cc44e56a4cf3c52ed2e467dd478303a2fe8d39708771a8f5af6f167d4b38f7d4a59edfe78c9f823c3bfa0a92aa4bdc665c71943cbbde98b983
   languageName: node
   linkType: hard
 
-"@yarnpkg/pnpify@npm:3.1.5":
-  version: 3.1.5
-  resolution: "@yarnpkg/pnpify@npm:3.1.5"
+"@yarnpkg/pnpify@npm:3.1.6":
+  version: 3.1.6
+  resolution: "@yarnpkg/pnpify@npm:3.1.6"
   dependencies:
-    "@yarnpkg/core": ^3.2.4
-    "@yarnpkg/fslib": ^2.7.1
+    "@yarnpkg/core": ^3.2.5
+    "@yarnpkg/fslib": ^2.8.0
     "@yarnpkg/nm": ^3.0.3
     clipanion: 3.2.0-rc.4
     cross-spawn: 7.0.3
     tslib: ^1.13.0
   bin:
     pnpify: ./lib/cli.js
-  checksum: ea501dd30bf626eb1f58868d0395a8afa024e25d280607b9076e3e6df89461d71b268783ecac9b06d60db784e16856e23e52a5527da9ee8800302e58d4e9281f
+  checksum: 7f1d9f9b2c7a55f8831a2144d622df393479fc3b832e4e4b46f9ce74374487aed51231c43e4844b318e45001f6a7ba0578104b1930b552476bc1b1cb43062529
   languageName: node
   linkType: hard
 
@@ -4212,7 +4222,7 @@ __metadata:
     "@parcel/transformer-sass": 2.7.0
     "@parcel/transformer-vue": 2.7.0
     "@types/lodash": 4.14.186
-    "@yarnpkg/pnpify": 3.1.5
+    "@yarnpkg/pnpify": 3.1.6
     assert: 2.0.0
     auto: 10.37.6
     autoprefixer: 10.4.12
