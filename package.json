@@ -44,12 +44,9 @@
     "url": "0.11.0"
   },
   "devDependencies": {
-    "@auto-it/core": "10.37.6",
     "@parcel/transformer-sass": "2.7.0",
     "@parcel/transformer-vue": "2.7.0",
     "@types/lodash": "4.14.186",
-    "@yarnpkg/pnpify": "3.1.5",
-    "auto": "10.37.6",
     "autoprefixer": "10.4.12",
     "buffer": "6.0.3",
     "concurrently": "7.4.0",
