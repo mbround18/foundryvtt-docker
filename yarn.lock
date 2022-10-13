@@ -2940,7 +2940,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "foundryvtt-docker@workspace:."
   dependencies:
-    "@babel/runtime": 7.19.0
+    "@babel/runtime": 7.19.4
     "@parcel/transformer-sass": 2.7.0
     "@parcel/transformer-vue": 2.7.0
     "@types/lodash": 4.14.186
