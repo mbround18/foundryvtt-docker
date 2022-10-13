@@ -1,16 +1,14 @@
 FROM node:lts as Builder
 
-# Install and run the uploader tool
-RUN mkdir -p /uploader-tool /uploader-tool/dist
-COPY package.json yarn.lock .yarnclean .yarnrc.yml /uploader-tool/
-COPY ./.yarn/releases /uploader-tool/.yarn/releases
-COPY ./.yarn/sdks /uploader-tool/.yarn/sdks
-
 WORKDIR /uploader-tool/
 
+COPY package.json yarn.lock .yarnclean .yarnrc.yml /uploader-tool/
+COPY ./.yarn/ /uploader-tool/.yarn
+RUN yarn install --immutable
+
+
 COPY . .
-RUN yarn install --immutable           \
-    && NODE_ENV=production yarn build                      \
+RUN NODE_ENV=production yarn build        \
     && rm -rf src/ scripts/ Dockerfile public/
 
 

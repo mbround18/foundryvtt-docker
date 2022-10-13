@@ -1,9 +1,9 @@
-tmp/
-.env
-.github/
-*.log*
-node_modules/
+# IDEs
+.idea
 .vscode/
+
+# Node
+node_modules/
 dist/
 .yarn/*
 !.yarn/patches
@@ -12,3 +12,11 @@ dist/
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+.parcel-cache
+
+# Other
+tmp/
+.env
+.github/
+*.log*
+
