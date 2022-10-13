@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 5
+  version: 6
   cacheKey: 8
 
 "@arcanis/slice-ansi@npm:^1.1.1":
@@ -753,28 +753,28 @@ __metadata:
 "@parcel/css-linux-arm64-gnu@npm:1.12.2":
   version: 1.12.2
   resolution: "@parcel/css-linux-arm64-gnu@npm:1.12.2"
-  conditions: os=linux & cpu=arm64
+  conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
 "@parcel/css-linux-arm64-musl@npm:1.12.2":
   version: 1.12.2
   resolution: "@parcel/css-linux-arm64-musl@npm:1.12.2"
-  conditions: os=linux & cpu=arm64
+  conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
 "@parcel/css-linux-x64-gnu@npm:1.12.2":
   version: 1.12.2
   resolution: "@parcel/css-linux-x64-gnu@npm:1.12.2"
-  conditions: os=linux & cpu=x64
+  conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
 "@parcel/css-linux-x64-musl@npm:1.12.2":
   version: 1.12.2
   resolution: "@parcel/css-linux-x64-musl@npm:1.12.2"
-  conditions: os=linux & cpu=x64
+  conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
@@ -2924,24 +2924,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001286":
-  version: 1.0.30001311
-  resolution: "caniuse-lite@npm:1.0.30001311"
-  checksum: a96a2724db91f7d820d7c83d98d6d80f71f4ef5542fd9af49478e6f5057a92d61fbb6c2a2c151e13323c760c7d9f046f422a9b1ac77ab08dc2cacc62bd22f941
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001332":
-  version: 1.0.30001332
-  resolution: "caniuse-lite@npm:1.0.30001332"
-  checksum: e54182ea42ab3d2ff1440f9a6480292f7ab23c00c188df7ad65586312e4da567e8bedd5cb5fb8f0ff4193dc027a54e17e0b3c0b6db5d5a3fb61c7726ff9c45b3
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001400, caniuse-lite@npm:^1.0.30001407":
-  version: 1.0.30001407
-  resolution: "caniuse-lite@npm:1.0.30001407"
-  checksum: e1c449d22f120a708accc956c1780f1da01af6c226cb6a324e531dc9f26f53075bff98e6c9cfce806157cdeede459aa8de03a3407b05f71d292a57b2910018b1
+"caniuse-lite@npm:^1.0.30001286, caniuse-lite@npm:^1.0.30001332, caniuse-lite@npm:^1.0.30001400, caniuse-lite@npm:^1.0.30001407":
+  version: 1.0.30001419
+  resolution: "caniuse-lite@npm:1.0.30001419"
+  checksum: 7a4dc2794a6773574b5aebcd1c9c0d56159654821714152d8a0b04e261e1522bfd3d86589b8406ce81c7bf5b706118b73b2cb85d577ae433e303dd48ac9ff65f
   languageName: node
   linkType: hard
 
