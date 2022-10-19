@@ -2468,10 +2468,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"destr@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "destr@npm:1.1.1"
-  checksum: 334886494cef39d39526061071b83384dee493b531a7a13f6705e92a168ebb072b45be4aba4179aaba88c4a32c3e35d8058d1357871179dbaf74890584199019
+"destr@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "destr@npm:1.2.0"
+  checksum: b8617f2aba0fc2eee3d77e696d16d50cd5a116af9c9b3149be5d90ff55c4aa4bce197eae75dd1776f054361cbb25ec1b69bab014808ab78fc5e6a5d14866d7e7
   languageName: node
   linkType: hard
 
@@ -2951,7 +2951,7 @@ __metadata:
     concurrently: 7.4.0
     crypto-browserify: 3.12.0
     follow-redirects: 1.15.2
-    h3: 0.8.4
+    h3: 0.8.5
     lodash: 4.17.21
     nodemon: 2.0.20
     os-browserify: 0.3.0
@@ -3139,15 +3139,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"h3@npm:0.8.4":
-  version: 0.8.4
-  resolution: "h3@npm:0.8.4"
+"h3@npm:0.8.5":
+  version: 0.8.5
+  resolution: "h3@npm:0.8.5"
   dependencies:
     cookie-es: ^0.5.0
-    destr: ^1.1.1
+    destr: ^1.2.0
     radix3: ^0.2.1
     ufo: ^0.8.6
-  checksum: 3d27df96a6cfb2d1f878aaa135c53eef6e573c144768110c53d4db11d872d6e5a540c4fb63699d2d42ec70f042abb02591361bfdc909e61e7c50386b006dd8e6
+  checksum: 30af2a6e2e5c021a7e081979881f7abec1b5fa8fd09bed2c18ca6676f420a99246f2edd8cf5eaf7080f39daded2c66a71c9a4e9bee151007da0fe33177102cab
   languageName: node
   linkType: hard
 
