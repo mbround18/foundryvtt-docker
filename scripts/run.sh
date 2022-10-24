@@ -22,8 +22,6 @@ function launchUploader() {
     echo "foundry was uploaded recently" >> "${DATA_DIR}/.uploaded"
 }
 
-
-
 # EXPIRES=$(date +%s)
 
 # echo -e "Downloading ${VTT_VERION}..."
@@ -34,7 +32,7 @@ fi
 
 echo "Checking for application executable..."
 if [[ ! -f "${APPLICATION_DIR}/resources/app/main.js" ]]; then
-    echo "Woahhhhhh!!! Something isnt right! I couldn't find the main.js file in ${APPLICATION_DIR}/resources/app/"
+    echo "Woahhh!!! Something isnt right! I couldn't find the main.js file in ${APPLICATION_DIR}/resources/app/"
     launchUploader
 fi
 

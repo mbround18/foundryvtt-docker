@@ -1,23 +1,15 @@
-import { IncomingMessage, ServerResponse } from 'http'
-import { useBody, send, appendHeader } from 'h3'
-import { downloadTimedUrl } from "../utils/downloadTimedUrl.mjs";
-import { FOUNDRY_VTT_ZIP_PATH } from "../utils/dirs.mjs"
-import json from "../utils/json.mjs";
+import {Request, Response} from 'express';
+import { downloadTimedUrl } from "../utils/downloadTimedUrl";
+import { FOUNDRY_VTT_ZIP_PATH } from "../utils/dirs"
 
 const timedLinkRegex = /https\W+foundryvtt.+releases.+AWSAccessKeyId.+Signature.+Expires.+/;
 
-/**
- *
- * @param {IncomingMessage} req
- * @param {ServerResponse} res
- * @returns {Promise<void>}
- */
-export default async (req, res) => {
-    const body = await useBody(req);
+export default async (req: Request, response: Response) => {
+    console.log(req)
+    const body = req.body
     const timedLink = body["foundry"];
     console.log('Timed link received : ', { timedLink })
-
-    await json(res, {
+    response.status(200).send({
         message: 'success'
     })
     console.log("Post Processing");

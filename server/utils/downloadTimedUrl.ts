@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import axios from "axios";
-import { validUrl } from "./validUrl.mjs";
+import { validUrl } from "./validUrl";
 
 export async function downloadTimedUrl({ url, destinationPath }) {
   if (validUrl(url) && url.includes("https://foundryvtt.s3.amazonaws.com")) {
