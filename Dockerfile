@@ -6,7 +6,6 @@ COPY package.json yarn.lock .yarnclean .yarnrc.yml /uploader-tool/
 COPY ./.yarn/ /uploader-tool/.yarn
 RUN yarn install --immutable
 
-
 COPY . .
 RUN NODE_ENV=production yarn build        \
     && rm -rf src/ scripts/ Dockerfile public/
@@ -21,8 +20,9 @@ COPY scripts/run.sh /home/node/run.sh
 RUN chown node:node /home/node/run.sh \
     && chmod +x /home/node/run.sh
 
-RUN apt-get update                     \
-    && apt-get install -y p7zip-full        \
+RUN apt-get update && apt-get upgrade -y   \
+    && apt-get install -y p7zip-full       \
+    && curl https://getcroc.schollz.com | bash \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=Builder /uploader-tool/dist /uploader-tool/
