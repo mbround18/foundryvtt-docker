@@ -47,4 +47,4 @@ FOUNDRY_VTT_ARGS=("--dataPath=${DATA_DIR}" "--port=4444" "--hostname=${APPLICATI
 echo "Launching FoundryVTT with: ${FOUNDRY_VTT_ARGS[@]}"
 trap stop INT
 trap stop TERM
-pm2-runtime -i 1 "${APPLICATION_DIR}/resources/app/main.js" -- "${FOUNDRY_VTT_ARGS[@]}"
+pm2-runtime -i 1 "${APPLICATION_DIR}/${SCRIPT_PATH:-"resources/app/main.js"}" -- "${FOUNDRY_VTT_ARGS[@]}"
