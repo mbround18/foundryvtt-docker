@@ -22,8 +22,6 @@ function launchUploader() {
     echo "foundry was uploaded recently" >> "${DATA_DIR}/.uploaded"
 }
 
-
-
 # EXPIRES=$(date +%s)
 
 # echo -e "Downloading ${VTT_VERION}..."
@@ -34,7 +32,7 @@ fi
 
 echo "Checking for application executable..."
 if [[ ! -f "${APPLICATION_DIR}/resources/app/main.js" ]]; then
-    echo "Woahhhhhh!!! Something isnt right! I couldn't find the main.js file in ${APPLICATION_DIR}/resources/app/"
+    echo "Woahhh!!! Something isnt right! I couldn't find the main.js file in ${APPLICATION_DIR}/resources/app/"
     launchUploader
 fi
 
@@ -47,4 +45,4 @@ FOUNDRY_VTT_ARGS=("--dataPath=${DATA_DIR}" "--port=4444" "--hostname=${APPLICATI
 echo "Launching FoundryVTT with: ${FOUNDRY_VTT_ARGS[@]}"
 trap stop INT
 trap stop TERM
-pm2-runtime -i 1 "${APPLICATION_DIR}/resources/app/main.js" -- "${FOUNDRY_VTT_ARGS[@]}"
+pm2-runtime -i 1 "${APPLICATION_DIR}/${SCRIPT_PATH:-"resources/app/main.js"}" -- "${FOUNDRY_VTT_ARGS[@]}"

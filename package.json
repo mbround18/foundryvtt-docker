@@ -11,7 +11,7 @@
     },
     "backend": {
       "context": "node",
-      "source": "server/index.mjs",
+      "source": "server/index.ts",
       "includeNodeModules": true
     }
   },
@@ -22,7 +22,7 @@
     "clean": "rimraf -rf ./dist ./server/dist",
     "build": "parcel build --dist-dir ./dist",
     "start:frontend": "parcel watch --dist-dir ./server/dist --target frontend",
-    "start:backend": "node ./server/index.mjs",
+    "start:backend": "node server/index.ts",
     "start": "concurrently --colors green,blue \"npm:start:*\"",
     "release": "auto shipit"
   },
@@ -37,10 +37,9 @@
     "@babel/runtime": "7.19.4",
     "assert": "2.0.0",
     "axios": "0.27.2",
+    "express": "^4.18.2",
     "follow-redirects": "1.15.2",
-    "h3": "0.8.5",
     "lodash": "4.17.21",
-    "serve-static": "1.15.0",
     "url": "0.11.0"
   },
   "devDependencies": {
