@@ -45,7 +45,7 @@
   "devDependencies": {
     "@parcel/transformer-sass": "2.7.0",
     "@parcel/transformer-vue": "2.7.0",
-    "@types/lodash": "4.14.186",
+    "@types/lodash": "4.14.187",
     "autoprefixer": "10.4.13",
     "buffer": "6.0.3",
     "concurrently": "7.5.0",
