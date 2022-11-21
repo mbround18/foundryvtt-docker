@@ -48,7 +48,7 @@
     "@types/lodash": "4.14.189",
     "autoprefixer": "10.4.13",
     "buffer": "6.0.3",
-    "concurrently": "7.5.0",
+    "concurrently": "7.6.0",
     "crypto-browserify": "3.12.0",
     "nodemon": "2.0.20",
     "os-browserify": "0.3.0",
