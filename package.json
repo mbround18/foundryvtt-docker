@@ -43,8 +43,8 @@
     "url": "0.11.0"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.8.2",
-    "@parcel/transformer-vue": "2.8.2",
+    "@parcel/transformer-sass": "2.8.3",
+    "@parcel/transformer-vue": "2.8.3",
     "@types/lodash": "4.14.191",
     "autoprefixer": "10.4.13",
     "buffer": "6.0.3",
@@ -52,7 +52,7 @@
     "crypto-browserify": "3.12.0",
     "nodemon": "2.0.20",
     "os-browserify": "0.3.0",
-    "parcel": "2.8.2",
+    "parcel": "2.8.3",
     "path-browserify": "1.0.1",
     "postcss": "8.4.21",
     "querystring-es3": "0.2.1",
