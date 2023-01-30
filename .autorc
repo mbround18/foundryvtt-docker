@@ -1,6 +1,7 @@
 {
   "plugins": [
-    "git-tag"
+    "git-tag",
+    ["docker", { "registry": "docker.io/mbround18/foundryvtt-docker", "tagLatest": true }]
   ],
   "owner": "mbround18",
   "repo": "foundryvtt-docker",
