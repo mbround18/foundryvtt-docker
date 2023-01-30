@@ -26,6 +26,8 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Create Release
+        env:
+          IMAGE: mbround18/foundryvtt-docker
         uses: mbround18/auto@mbruno-kr/with-version-output
         with:
           token: ${{ secrets.GH_TOKEN }}
