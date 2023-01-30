@@ -21,6 +21,7 @@
   "scripts": {
     "clean": "rimraf -rf ./dist ./server/dist",
     "build": "parcel build --dist-dir ./dist",
+    "compile": "yarn dlx pkg --target node18-linux-x64 dist/backend/index.js --out-path dist/bin",
     "start:frontend": "parcel watch --dist-dir ./server/dist --target frontend",
     "start:backend": "node server/index.ts",
     "start": "concurrently --colors green,blue \"npm:start:*\"",

@@ -1,22 +1,13 @@
-FROM node:lts as Builder
-
-WORKDIR /uploader-tool/
-
-COPY package.json yarn.lock .yarnclean .yarnrc.yml /uploader-tool/
-COPY ./.yarn/ /uploader-tool/.yarn
-RUN yarn install --immutable
-
-COPY . .
-RUN NODE_ENV=production yarn build        \
-    && rm -rf src/ scripts/ Dockerfile public/
-
-
 FROM node:lts as Runtime
 
 # Back to node directory
 WORKDIR /home/node/
-RUN mkdir -p /scripts
+RUN mkdir -p /scripts \
+    && mkdir -p /uploader-tool/bin \
+    && mkdir -p /uploader-tool/frontend
+
 COPY scripts/run.sh /home/node/run.sh
+
 RUN chown node:node /home/node/run.sh \
     && chmod +x /home/node/run.sh
 
@@ -25,7 +16,8 @@ RUN apt-get update && apt-get upgrade -y   \
     && curl https://getcroc.schollz.com | bash \
     && rm -rf /var/lib/apt/lists/*
 
-COPY --from=Builder /uploader-tool/dist /uploader-tool/
+COPY ./dist/bin/index /uploader-tool/uploader
+COPY ./dist/frontend /uploader-tool/frontend
 
 # CHANGE ME
 ENV APPLICATION_HOST="foundry.vtt"              \

@@ -10,9 +10,9 @@
 
 - [You can obtain a license from here](https://foundryvtt.com/purchase/)
 
-While there are many docker containers which can serve up FoundryVTT, this container was created with simplicity in mind. 
-There are no additional credentials you need to supply, web driver, or web automation required. The installation process is simplified 
-by presenting you with an easy-to-use web interface to install the application by using a timed url provided by Foundry. 
+While there are many docker containers which can serve up FoundryVTT, this container was created with simplicity in mind.
+There are no additional credentials you need to supply, web driver, or web automation required. The installation process is simplified
+by presenting you with an easy-to-use web interface to install the application by using a timed url provided by Foundry.
 
 ## Installation Locally
 
@@ -37,4 +37,3 @@ docker run --rm -it \
 5. Paste the timed url into the input field.
 6. Click the submit button on the page and watch the logs.
 7. If all goes well, navigate to the base url `http://localhost:4444/` and you should be greeted with the FoundryVTT setup screen :)
-
