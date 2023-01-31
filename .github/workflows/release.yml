@@ -53,13 +53,15 @@ jobs:
           username: mbround18
           password: ${{ secrets.DOCKER_TOKEN }}
 
-      - name: Build FoundryVTT Docker
-        id: docker_build
-        uses: docker/build-push-action@v3
-        with:
-          file: ./Dockerfile
-          push: false
-          tags: mbround18/foundryvtt-docker:latest
+      # - name: Build FoundryVTT Docker
+      #   id: docker_build
+      #   uses: docker/build-push-action@v3
+      #   with:
+      #     file: ./Dockerfile
+      #     push: false
+      #     tags: mbround18/foundryvtt-docker:latest
+
+      - run: docker compose build
 
       - name: Create Release
         env:
