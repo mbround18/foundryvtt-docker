@@ -17,7 +17,11 @@ mkdir -p "${DATA_DIR}"
 
 function launchUploader() {
     echo "Launching the uploader tool..."
-    FRONTEND_DIR=/uploader-tool/frontend PORT=4444 node /uploader-tool/backend/index.js
+    export FRONTEND_DIR=/uploader-tool/frontend
+    export PORT=4444
+
+    /uploader-tool/uploader
+
     [[ -f "/tmp/foundryvtt.zip" ]] && 7z x -aoa -O"${APPLICATION_DIR}" /tmp/foundryvtt.zip
     echo "foundry was uploaded recently" >> "${DATA_DIR}/.uploaded"
 }
@@ -45,4 +49,5 @@ FOUNDRY_VTT_ARGS=("--dataPath=${DATA_DIR}" "--port=4444" "--hostname=${APPLICATI
 echo "Launching FoundryVTT with: ${FOUNDRY_VTT_ARGS[@]}"
 trap stop INT
 trap stop TERM
+
 pm2-runtime -i 1 "${APPLICATION_DIR}/${SCRIPT_PATH:-"resources/app/main.js"}" -- "${FOUNDRY_VTT_ARGS[@]}"

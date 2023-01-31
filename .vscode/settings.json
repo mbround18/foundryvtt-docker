@@ -1,6 +1,6 @@
 {
-    "files.trimTrailingWhitespace": true,
-    "files.autoSave": "onFocusChange",
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true
 }

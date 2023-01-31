@@ -1,10 +1,16 @@
+# Repo Specific
+dist/backend
+assets/
+client/
+server/
+docs/
+
 # IDEs
 .idea
 .vscode/
 
 # Node
 node_modules/
-dist/
 .yarn/*
 !.yarn/patches
 !.yarn/releases
