@@ -35,6 +35,12 @@ jobs:
     name: Release Train
     needs: [build]
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+      statuses: write
+
     steps:
       - uses: actions/checkout@v3
         with:
@@ -53,14 +59,6 @@ jobs:
           username: mbround18
           password: ${{ secrets.DOCKER_TOKEN }}
 
-      # - name: Build FoundryVTT Docker
-      #   id: docker_build
-      #   uses: docker/build-push-action@v3
-      #   with:
-      #     file: ./Dockerfile
-      #     push: false
-      #     tags: mbround18/foundryvtt-docker:latest
-
       - run: docker compose build
 
       - name: Create Release
@@ -68,4 +66,4 @@ jobs:
           IMAGE: mbround18/foundryvtt-docker
         uses: mbround18/auto@v1.4.0
         with:
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ github.token }}
