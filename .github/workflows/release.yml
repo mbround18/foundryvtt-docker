@@ -2,8 +2,8 @@ name: Release
 
 on: [push]
 
-env:
-  GH_TOKEN: "${{ secrets.GH_TOKEN }}"
+# env:
+#   GH_TOKEN: "${{ secrets.GH_TOKEN }}"
 
 jobs:
   build:
@@ -45,8 +45,9 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          token: ${{ github.token }}
 
-      - run: git fetch --tags
+      - run: git pull && git fetch --tags
 
       - uses: actions/download-artifact@v3
         with:
