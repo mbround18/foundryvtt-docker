@@ -1217,13 +1217,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide@file:./oxide-node-api-shim::locator=tailwindcss%40npm%3A3.2.5":
-  version: 0.0.0
-  resolution: "@tailwindcss/oxide@file:./oxide-node-api-shim#./oxide-node-api-shim::hash=fe0508&locator=tailwindcss%40npm%3A3.2.5"
-  checksum: b16ff92cdad305f7dd6a972b97f5518b078c2466834f423b82e246b1e0a236b876bdf3c73d250406cb79120d7b81dbbd2fe748671293c614e66116057000d2ce
-  languageName: node
-  linkType: hard
-
 "@tootallnate/once@npm:2":
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
@@ -2971,7 +2964,7 @@ __metadata:
     sass-loader: 13.2.0
     stream-browserify: 3.0.0
     stream-http: 3.2.0
-    tailwindcss: 3.2.5
+    tailwindcss: 3.2.6
     url: 0.11.0
   languageName: unknown
   linkType: soft
@@ -5321,11 +5314,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:3.2.5":
-  version: 3.2.5
-  resolution: "tailwindcss@npm:3.2.5"
+"tailwindcss@npm:3.2.6":
+  version: 3.2.6
+  resolution: "tailwindcss@npm:3.2.6"
   dependencies:
-    "@tailwindcss/oxide": "file:./oxide-node-api-shim"
     arg: ^5.0.2
     chokidar: ^3.5.3
     color-name: ^1.1.4
@@ -5354,7 +5346,7 @@ __metadata:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: 715610888c2e28586ade448ebae1632ba5fd1d2051e56568d950eb175c614dc3e12df0f4d4b47b85a28e4b53c91aa0e12d06a964729a450212597cfbe7a9977d
+  checksum: 908451ff7b334b2aec2a0ba5bf426a786a3f190b440a1f8ede206d889448ffda3b77349829f06dc297336fd0b5edc696ae5f23b808d6444bb5c689f218e95323
   languageName: node
   linkType: hard
 
