@@ -1217,6 +1217,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tailwindcss/oxide@file:./oxide-node-api-shim::locator=tailwindcss%40npm%3A3.2.5":
+  version: 0.0.0
+  resolution: "@tailwindcss/oxide@file:./oxide-node-api-shim#./oxide-node-api-shim::hash=fe0508&locator=tailwindcss%40npm%3A3.2.5"
+  checksum: b16ff92cdad305f7dd6a972b97f5518b078c2466834f423b82e246b1e0a236b876bdf3c73d250406cb79120d7b81dbbd2fe748671293c614e66116057000d2ce
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:2":
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
@@ -2964,7 +2971,7 @@ __metadata:
     sass-loader: 13.2.0
     stream-browserify: 3.0.0
     stream-http: 3.2.0
-    tailwindcss: 3.2.4
+    tailwindcss: 3.2.5
     url: 0.11.0
   languageName: unknown
   linkType: soft
@@ -4548,7 +4555,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-selector-parser@npm:^6.0.10":
+"postcss-selector-parser@npm:^6.0.10, postcss-selector-parser@npm:^6.0.11":
   version: 6.0.11
   resolution: "postcss-selector-parser@npm:6.0.11"
   dependencies:
@@ -4565,7 +4572,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.21, postcss@npm:^8.1.10, postcss@npm:^8.4.18":
+"postcss@npm:8.4.21, postcss@npm:^8.0.9, postcss@npm:^8.1.10":
   version: 8.4.21
   resolution: "postcss@npm:8.4.21"
   dependencies:
@@ -5314,10 +5321,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:3.2.4":
-  version: 3.2.4
-  resolution: "tailwindcss@npm:3.2.4"
+"tailwindcss@npm:3.2.5":
+  version: 3.2.5
+  resolution: "tailwindcss@npm:3.2.5"
   dependencies:
+    "@tailwindcss/oxide": "file:./oxide-node-api-shim"
     arg: ^5.0.2
     chokidar: ^3.5.3
     color-name: ^1.1.4
@@ -5332,12 +5340,12 @@ __metadata:
     normalize-path: ^3.0.0
     object-hash: ^3.0.0
     picocolors: ^1.0.0
-    postcss: ^8.4.18
+    postcss: ^8.0.9
     postcss-import: ^14.1.0
     postcss-js: ^4.0.0
     postcss-load-config: ^3.1.4
     postcss-nested: 6.0.0
-    postcss-selector-parser: ^6.0.10
+    postcss-selector-parser: ^6.0.11
     postcss-value-parser: ^4.2.0
     quick-lru: ^5.1.1
     resolve: ^1.22.1
@@ -5346,7 +5354,7 @@ __metadata:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: ec187d180c722ec4f57537f2216c7b21269b525f12aaf353cea464d939c3e6286a1221eb3e1206e45d1f015f296171309ad4d9952899b0245cd07d9500a9401f
+  checksum: 715610888c2e28586ade448ebae1632ba5fd1d2051e56568d950eb175c614dc3e12df0f4d4b47b85a28e4b53c91aa0e12d06a964729a450212597cfbe7a9977d
   languageName: node
   linkType: hard
 
