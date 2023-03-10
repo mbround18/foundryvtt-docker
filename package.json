@@ -47,7 +47,7 @@
     "@parcel/transformer-sass": "2.8.3",
     "@parcel/transformer-vue": "2.8.3",
     "@types/lodash": "4.14.191",
-    "autoprefixer": "10.4.13",
+    "autoprefixer": "10.4.14",
     "buffer": "6.0.3",
     "concurrently": "7.6.0",
     "crypto-browserify": "3.12.0",
