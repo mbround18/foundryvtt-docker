@@ -55,7 +55,7 @@
     "os-browserify": "0.3.0",
     "parcel": "2.8.3",
     "path-browserify": "1.0.1",
-    "postcss": "8.4.21",
+    "postcss": "8.4.23",
     "querystring-es3": "0.2.1",
     "rimraf": "4.4.1",
     "sass": "1.62.0",
