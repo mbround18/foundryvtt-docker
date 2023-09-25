@@ -57,7 +57,7 @@
     "path-browserify": "1.0.1",
     "postcss": "8.4.30",
     "querystring-es3": "0.2.1",
-    "rimraf": "5.0.1",
+    "rimraf": "5.0.2",
     "sass": "1.68.0",
     "sass-loader": "13.3.2",
     "stream-browserify": "3.0.0",
