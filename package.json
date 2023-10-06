@@ -58,7 +58,7 @@
     "postcss": "8.4.31",
     "querystring-es3": "0.2.1",
     "rimraf": "5.0.5",
-    "sass": "1.68.0",
+    "sass": "1.69.0",
     "sass-loader": "13.3.2",
     "stream-browserify": "3.0.0",
     "stream-http": "3.2.0",
