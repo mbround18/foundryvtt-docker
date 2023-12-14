@@ -49,7 +49,7 @@ jobs:
 
       - run: git pull && git fetch --tags
 
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist
