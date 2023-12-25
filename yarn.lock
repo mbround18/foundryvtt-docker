@@ -3231,7 +3231,7 @@ __metadata:
     querystring-es3: "npm:0.2.1"
     rimraf: "npm:5.0.5"
     sass: "npm:1.69.5"
-    sass-loader: "npm:13.3.2"
+    sass-loader: "npm:13.3.3"
     stream-browserify: "npm:3.0.0"
     stream-http: "npm:3.2.0"
     tailwindcss: "npm:3.4.0"
@@ -5487,9 +5487,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:13.3.2":
-  version: 13.3.2
-  resolution: "sass-loader@npm:13.3.2"
+"sass-loader@npm:13.3.3":
+  version: 13.3.3
+  resolution: "sass-loader@npm:13.3.3"
   dependencies:
     neo-async: "npm:^2.6.2"
   peerDependencies:
@@ -5507,7 +5507,7 @@ __metadata:
       optional: true
     sass-embedded:
       optional: true
-  checksum: 8/7394a8d1b818a289b9caabd979543c907b83e28ae08bc80ccb836e0ccabc4ae574c077ab2fa520ba5fb8abb2ec3e7c9822a1cbd8c58a28ff30018be9d1dc6c27
+  checksum: 5e955a4ffce35ee0a46fce677ce51eaa69587fb5371978588c83af00f49e7edc36dcf3bb559cbae27681c5e24a71284463ebe03a1fb65e6ecafa1db0620e3fc8
   languageName: node
   linkType: hard
 
