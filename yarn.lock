@@ -3117,7 +3117,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:1.15.4, follow-redirects@npm:^1.15.4":
+"follow-redirects@npm:1.15.5":
+  version: 1.15.5
+  resolution: "follow-redirects@npm:1.15.5"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 418d71688ceaf109dfd6f85f747a0c75de30afe43a294caa211def77f02ef19865b547dfb73fde82b751e1cc507c06c754120b848fe5a7400b0a669766df7615
+  languageName: node
+  linkType: hard
+
+"follow-redirects@npm:^1.15.4":
   version: 1.15.4
   resolution: "follow-redirects@npm:1.15.4"
   peerDependenciesMeta:
@@ -3179,7 +3189,7 @@ __metadata:
     concurrently: "npm:8.2.2"
     crypto-browserify: "npm:3.12.0"
     express: "npm:^4.18.2"
-    follow-redirects: "npm:1.15.4"
+    follow-redirects: "npm:1.15.5"
     lodash: "npm:4.17.21"
     nodemon: "npm:3.0.2"
     os-browserify: "npm:0.3.0"
