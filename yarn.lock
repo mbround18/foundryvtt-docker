@@ -3184,7 +3184,7 @@ __metadata:
     express: "npm:^4.18.2"
     follow-redirects: "npm:1.15.5"
     lodash: "npm:4.17.21"
-    nodemon: "npm:3.0.3"
+    nodemon: "npm:3.1.0"
     os-browserify: "npm:0.3.0"
     parcel: "npm:2.11.0"
     path-browserify: "npm:1.0.1"
@@ -4573,9 +4573,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nodemon@npm:3.0.3":
-  version: 3.0.3
-  resolution: "nodemon@npm:3.0.3"
+"nodemon@npm:3.1.0":
+  version: 3.1.0
+  resolution: "nodemon@npm:3.1.0"
   dependencies:
     chokidar: "npm:^3.5.2"
     debug: "npm:^4"
@@ -4589,7 +4589,7 @@ __metadata:
     undefsafe: "npm:^2.0.5"
   bin:
     nodemon: bin/nodemon.js
-  checksum: 10c0/6e393534d5ec0077be13ad285e28bd1509298806f874cd24b0e4621b5624238685d893843b4554474569894fc97be259346e1aba14f249056602554133a5cc55
+  checksum: 10c0/3aeb50105ecae31ce4d0a5cd464011d4aa0dc15419e39ac0fd203d784e38940e1436f4ed96adbaa0f9614ee0644f91e3cf38f2afae8d3918ae7afc51c7e2116b
   languageName: node
   linkType: hard
 
