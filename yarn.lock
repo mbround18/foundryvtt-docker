@@ -48,12 +48,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.24.1":
-  version: 7.24.1
-  resolution: "@babel/runtime@npm:7.24.1"
+"@babel/runtime@npm:7.24.4":
+  version: 7.24.4
+  resolution: "@babel/runtime@npm:7.24.4"
   dependencies:
     regenerator-runtime: "npm:^0.14.0"
-  checksum: 10c0/500c6a99ddd84f37c7bc5dbc84777af47b1372b20e879941670451d55484faf18a673c5ebee9ca2b0f36208a729417873b35b1b92e76f811620f6adf7b8cb0f1
+  checksum: 10c0/785aff96a3aa8ff97f90958e1e8a7b1d47f793b204b47c6455eaadc3f694f48c97cd5c0a921fe3596d818e71f18106610a164fb0f1c71fd68c622a58269d537c
   languageName: node
   linkType: hard
 
@@ -3160,7 +3160,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "foundryvtt-docker@workspace:."
   dependencies:
-    "@babel/runtime": "npm:7.24.1"
+    "@babel/runtime": "npm:7.24.4"
     "@parcel/transformer-sass": "npm:2.12.0"
     "@parcel/transformer-vue": "npm:2.12.0"
     "@types/lodash": "npm:4.17.0"
