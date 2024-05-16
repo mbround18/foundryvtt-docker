@@ -1447,10 +1447,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:4.17.1":
-  version: 4.17.1
-  resolution: "@types/lodash@npm:4.17.1"
-  checksum: 10c0/af2ad8a3c8d7deb170a7ec6e18afc5ae8980576e5f7fe798d8a95a1df7222c15bdf967a25a35879f575a3b64743de00145710ee461a0051e055e94e4fe253f45
+"@types/lodash@npm:4.17.2":
+  version: 4.17.2
+  resolution: "@types/lodash@npm:4.17.2"
+  checksum: 10c0/58ba57f03b17d7b46026e203ca6293fb6f6b3d6b091a78ee3f04d47d3bad2540a5a936f4052fcab438893dc8b391f835fb6340c23513337faac212e2437f6257
   languageName: node
   linkType: hard
 
@@ -3163,7 +3163,7 @@ __metadata:
     "@babel/runtime": "npm:7.24.5"
     "@parcel/transformer-sass": "npm:2.12.0"
     "@parcel/transformer-vue": "npm:2.12.0"
-    "@types/lodash": "npm:4.17.1"
+    "@types/lodash": "npm:4.17.2"
     assert: "npm:2.1.0"
     autoprefixer: "npm:10.4.19"
     axios: "npm:1.6.8"
