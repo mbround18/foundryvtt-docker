@@ -1,38 +1,45 @@
-FROM node:lts as Runtime
+FROM rust:latest as builder
 
-# Back to node directory
-WORKDIR /home/node/
-RUN mkdir -p /scripts \
-    && mkdir -p /uploader-tool/bin \
-    && mkdir -p /uploader-tool/frontend
+WORKDIR /application
 
-COPY scripts/run.sh /home/node/run.sh
+COPY ./Cargo.toml ./Cargo.toml ./
+RUN cargo new --bin server
+COPY ./server/Cargo.toml ./server/Cargo.toml
 
-RUN chown node:node /home/node/run.sh \
-    && chmod +x /home/node/run.sh
+RUN cargo build --release
 
-RUN apt-get update && apt-get upgrade -y   \
-    && apt-get install -y p7zip-full       \
-    && curl https://getcroc.schollz.com | bash \
-    && rm -rf /var/lib/apt/lists/*
+COPY ./server/src ./server/src
+COPY ./server/static ./server/static
 
-COPY ./dist/bin/index /uploader-tool/uploader
-COPY ./dist/frontend /uploader-tool/frontend
+RUN --mount=type=cache,target=/usr/local/cargo/registry <<EOF
+  set -e
+  touch ./server/src/main.rs
+  cargo build --release
+EOF
 
-# CHANGE ME
-ENV APPLICATION_HOST="foundry.vtt"              \
-    APPLICATION_PORT="4444"                     \
-    # Whether or not you are putting this behind SSL.
-    SSL_PROXY="true"                            \
-    # Directory setup
-    APPLICATION_DIR="/foundryvtt"               \
-    DATA_DIR="/foundrydata"                     \
-    FOUNDRYVTT_TMP_PATH="/tmp/foundryvtt.zip"
+
+FROM node:lts as runtime
+ARG CROC_VERSION=10.04
+ADD https://github.com/schollz/croc/releases/download/v${CROC_VERSION}/croc_v${CROC_VERSION}_Linux-64bit.tar.gz /tmp/croc.tar.gz
+
+RUN tar -czvf /tmp/croc.tar.gz /usr/local/bin/
+
+COPY --from=builder /application/target/release/rocket_server /usr/local/bin/rocket_server
+
+ENV APPLICATION_HOST="foundry.vtt" \
+    APPLICATION_PORT="4444" \
+    SSL_PROXY="true"
+
+ENV APPLICATION_DIR="/foundryvtt"
+ENV DATA_DIR="/foundrydata"
 
 EXPOSE ${APPLICATION_PORT}
 
 WORKDIR ${DATA_DIR}
+COPY scripts/run.sh /home/node/run.sh
+COPY ./server/static /uploader-tool/frontend
+RUN chown node:node /home/node/run.sh \
+    && chmod +x /home/node/run.sh
 
-# Install pm2 for later use.
-RUN yarn global add pm2 --prefix /usr/local
+# Set the entrypoint to run the Rust application
 ENTRYPOINT ["/home/node/run.sh"]

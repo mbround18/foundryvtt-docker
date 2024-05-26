@@ -139,4 +139,6 @@ npm-debug.log
 .history
 .ionide
 
+target
+
 # End of https://www.toptal.com/developers/gitignore/api/nuxt,nuxtjs,visualstudiocode,intellij+all
