@@ -8,7 +8,6 @@ on: [push]
 jobs:
   release:
     name: Release Train
-    needs: [build]
     runs-on: ubuntu-latest
 
     permissions:
