@@ -4,22 +4,25 @@ document
     const url = document.getElementById("url-input").value;
     if (url) {
       // Show waiting symbol
-      showWaitingSymbol(true);
+      toggleWaitingSymbol(true);
 
-      await fetch("/download", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ url }),
-      })
-        .catch(monitorConnection)
-        .then(monitorConnection);
-
-      showToast(
-        "Download initiated. The server will exit once the download and extraction are complete.",
-        "green",
-      );
+      try {
+        await fetch("/download", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ url }),
+        });
+        monitorConnection();
+        showToast(
+          "Download initiated. The server will exit once the download and extraction are complete.",
+          "green",
+        );
+      } catch (error) {
+        console.error("Error initiating download:", error);
+        showToast("Failed to initiate download. Please try again.", "red");
+      }
     } else {
       showToast("Please enter a URL.", "red");
     }
@@ -35,27 +38,23 @@ function showToast(message, color) {
   }, 3000);
 }
 
-function showWaitingSymbol(show) {
-  const waitingSymbol = document.getElementById("waiting-symbol");
-  if (show) {
-    waitingSymbol.style.display = "block";
-  } else {
-    waitingSymbol.style.display = "none";
-  }
+function toggleWaitingSymbol(show) {
+  document.getElementById("waiting-symbol").style.display = show
+    ? "block"
+    : "none";
 }
 
 async function monitorConnection() {
   const interval = 5000; // 5 seconds
   while (true) {
     try {
-      console.log("Checking connection...");
       const response = await fetch("/license");
       if (response.ok) {
         window.location.href = "/";
         break;
       }
     } catch (error) {
-      // Handle connection error
+      console.warn("Connection check failed. Retrying...");
     }
     await new Promise((resolve) => setTimeout(resolve, interval));
   }

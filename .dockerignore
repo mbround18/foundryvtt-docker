@@ -15,4 +15,6 @@ tmp/
 .github/
 *.log*
 
+node_modules/
 target/
+

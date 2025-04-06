@@ -1,17 +1,28 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #e9ecef;
+  color: #333;
+}
+
+.header {
+  background-color: #2196f3;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .container {
-  max-width: 800px;
+  max-width: 600px;
   margin: 50px auto;
   padding: 20px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 h1 {
@@ -24,11 +35,17 @@ h1 {
 }
 
 .instructions h5 {
-  color: #333;
+  color: #555;
+  font-weight: 500;
 }
 
 .instructions ol {
   padding-left: 20px;
+  color: #666;
+}
+
+.instructions ol li {
+  margin-bottom: 10px;
 }
 
 .input-field {
@@ -43,46 +60,60 @@ h1 {
 
 .input-field input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 .btn {
   display: inline-block;
-  padding: 10px 20px;
+  width: 100%;
+  padding: 12px;
   color: #fff;
-  background-color: #2196f3;
+  background-color: #28a745;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
   text-align: center;
   text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .btn:hover {
-  background-color: #1976d2;
+  background-color: #218838;
+  transform: scale(1.02);
 }
 
 .toast {
   visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
+  min-width: 300px;
+  margin-left: -150px;
   background-color: #333;
   color: #fff;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 6px;
   padding: 16px;
   position: fixed;
   z-index: 1;
   left: 50%;
   bottom: 30px;
-  font-size: 17px;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition:
+    opacity 0.5s ease,
+    bottom 0.5s ease;
 }
 
 .toast.show {
   visibility: visible;
+  opacity: 1;
   -webkit-animation:
     fadein 0.5s,
     fadeout 0.5s 2.5s;
@@ -138,6 +169,7 @@ h1 {
 .waiting-symbol {
   text-align: center;
   font-size: 18px;
-  color: #333;
+  color: #555;
   margin-top: 20px;
+  font-style: italic;
 }

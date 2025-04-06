@@ -6,10 +6,16 @@
     <meta name="description" content="Foundry VTT Content Downloader" />
     <title>Foundry VTT Installer</title>
     <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
   </head>
   <body>
-    <div class="container">
+    <header class="header">
       <h1>Foundry VTT Installer</h1>
+    </header>
+    <div class="container">
       <div class="instructions">
         <h5>Instructions</h5>
         <ol>
@@ -34,7 +40,7 @@
         <label for="url-input">Paste URL here</label>
         <input id="url-input" type="text" class="validate" />
       </div>
-      <button id="download-button" class="btn">Download</button>
+      <button id="download-button" class="btn">🚀 Download</button>
       <div id="toast" class="toast"></div>
       <div id="waiting-symbol" class="waiting-symbol" style="display: none">
         ⏳ Waiting for server to start...

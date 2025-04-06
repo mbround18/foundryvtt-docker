@@ -1,76 +1,87 @@
 #!/usr/bin/env bash
-export TERM=linux
+set -Eeuo pipefail
 
-: "${APPLICATION_DIR?"APPLICATION_DIR is a required environment variable!"}"
-: "${DATA_DIR?"DATA_DIR is a required environment variable!"}"
-: "${APPLICATION_HOST?"APPLICATION_HOST is a required environment variable!"}"
+echo "──────────────────────────────────────────────────────────"
+echo "🎲 FoundryVTT - $(date)"
+echo "──────────────────────────────────────────────────────────"
 
-# If Application dir and data dir are the same exit
+# System Info
+echo "🔹 Hostname: $(hostname)"
+echo "🔹 Kernel: $(uname -r)"
+echo "🔹 OS: $(grep PRETTY_NAME /etc/os-release | cut -d= -f2 | tr -d '\"')"
+echo "🔹 CPU: $(lscpu | grep 'Model name' | cut -d: -f2 | sed 's/^ *//')"
+echo "🔹 Memory: $(free -h | awk '/^Mem:/ {print $2}')"
+echo "🔹 Disk Space: $(df -h / | awk 'NR==2 {print $4}')"
+echo "──────────────────────────────────────────────────────────"
+
+# Required env
+: "${APPLICATION_DIR?"APPLICATION_DIR is required!"}"
+: "${DATA_DIR?"DATA_DIR is required!"}"
+: "${APPLICATION_HOST?"APPLICATION_HOST is required!"}"
+
+# Sanity Check
 if [[ "${APPLICATION_DIR}" == "${DATA_DIR}" ]]; then
-    echo "APPLICATION_DIR and DATA_DIR cannot be the same!"
-    echo "Application dir: ${APPLICATION_DIR}"
-    echo "Data dir: ${DATA_DIR}"
+    echo "❌ APPLICATION_DIR and DATA_DIR cannot be the same!"
+    echo "   Application: ${APPLICATION_DIR}"
+    echo "   Data: ${DATA_DIR}"
     exit 1
 fi
 
-echo "###########################################################################"
-echo "# FoundryVTT -  $(date)"
-echo "###########################################################################"
+# Ownership & permissions
+echo "🔄 Ensuring ${DATA_DIR} and ${APPLICATION_DIR} exist and are writable..."
+mkdir -p "${DATA_DIR}" "${APPLICATION_DIR}"
+echo "👤 Running as: $(whoami) (UID: $(id -u), GID: $(id -g))"
+echo "👥 Groups: $(id -Gn)"
 
+echo "🔍 Permissions check:"
+ls -ld "${DATA_DIR}" "${APPLICATION_DIR}" || true
 
-# Change working directory to ${DATA_DIR} to allow relative path
-mkdir -p "${APPLICATION_DIR}"
-mkdir -p "${DATA_DIR}"
+echo "🔧 Fixing ownership..."
+chown -R "$(id -u):$(id -g)" "${DATA_DIR}" "${APPLICATION_DIR}" 2>/dev/null || true
 
-
+# Upload fallback
 function launchUploader() {
-    echo "Launching the uploader tool..."
-    if [[ -f /usr/local/bin/rocket_server ]]; then
-        echo "Launching Rocket server..."
+    echo "🚀 Launching upload helper..."
+    if [[ -f /usr/local/bin/uploading-tool ]]; then
         STATIC_FILES_DIR=/uploader-tool/frontend \
-        ROCKET_PORT=4444 \
-        ROCKET_ADDRESS=0.0.0.0 \
+        SERVER_PORT=${APPLICATION_PORT:-4444} \
+        SERVER_HOST=0.0.0.0 \
         TARGET_DIR=$APPLICATION_DIR \
-        /usr/local/bin/rocket_server
+        /usr/local/bin/uploading-tool
+        echo "✅ Upload complete." >> "${DATA_DIR}/.uploaded"
     else
-      echo "Rocket server not found!"
-      exit 1
+        echo "❌ Uploader not found!"
+        exit 1
     fi
-
-
-    echo "foundry was uploaded recently" >> "${DATA_DIR}/.uploaded"
 }
 
-# EXPIRES=$(date +%s)
+# Uploader if missing
+[[ ! -f "${DATA_DIR}/.uploaded" ]] && launchUploader
 
-# echo -e "Downloading ${VTT_VERION}..."
-# wget "https://foundryvtt.s3.amazonaws.com/releases/${VTT_VERSION}/foundryvtt-${VTT_VERSION}.zip?&AWSAccessKeyId=${AWS_ACCESS_KEY_ID}&Signature=${AWS_SIGNATURE}&Expires=${EXPIRES}" -O /tmp/foundryvtt.zip
-if [[ ! -f "${DATA_DIR}/.uploaded" ]]; then
-    launchUploader
-fi
-
-echo "Checking for application executable..."
+# Ensure main.js exists
 if [[ ! -f "${APPLICATION_DIR}/resources/app/main.js" ]]; then
-    echo "Woahhh!!! Something isnt right! I couldn't find the main.js file in ${APPLICATION_DIR}/resources/app/"
+    echo "❌ main.js not found, re-running uploader."
     launchUploader
 fi
 
-echo "Building arguments..."
-FOUNDRY_VTT_ARGS=("--dataPath=${DATA_DIR}" "--port=4444" "--hostname=${APPLICATION_HOST}" "--noupnp")
-# shellcheck disable=SC2154
-[[ "${SSL_PROXY,,}" -eq "true" ]] && FOUNDRY_VTT_ARGS+=("--proxySSL")
+# Start Foundry
+echo "🛠 Building FoundryVTT args..."
+FOUNDRY_VTT_ARGS=(
+  "--dataPath=${DATA_DIR}"
+  "--port=4444"
+  "--hostname=${APPLICATION_HOST}"
+  "--noupnp"
+)
+[[ "${SSL_PROXY,,}" == "true" ]] && FOUNDRY_VTT_ARGS+=("--proxySSL")
 
-# shellcheck disable=SC2145
-echo "Launching FoundryVTT with: ${FOUNDRY_VTT_ARGS[@]}"
-trap stop INT
-trap stop TERM
+echo "🚀 Launching FoundryVTT with: ${FOUNDRY_VTT_ARGS[*]}"
+trap 'echo "🧼 Caught signal, cleaning up..."; exit 0' SIGINT SIGTERM
 
-run_file="${APPLICATION_DIR}/${SCRIPT_PATH:-"resources/app/main.js"}"
-if [[ -f "${run_file}" ]]; then
-    echo "Running ${run_file}"
-    echo "{ \"watch\": false }" > nodemon.json
-    npx -y nodemon -C "${run_file}" -- "${FOUNDRY_VTT_ARGS[@]}"
+RUN_FILE="${APPLICATION_DIR}/${SCRIPT_PATH:-resources/app/main.js}"
+if [[ -f "${RUN_FILE}" ]]; then
+    echo "{ \"watch\": false }" > nodemon.json || echo "⚠️ Failed to write nodemon.json"
+    npx -y nodemon -C "${RUN_FILE}" -- "${FOUNDRY_VTT_ARGS[@]}"
 else
-    echo "File not found: ${run_file}"
+    echo "❌ File not found: ${RUN_FILE}"
     exit 1
 fi

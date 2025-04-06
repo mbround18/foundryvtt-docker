@@ -1,30 +1,32 @@
-FROM rust:latest as builder
+FROM rust:latest AS builder
 
 WORKDIR /application
 
-COPY ./Cargo.toml ./Cargo.toml ./
-RUN cargo new --bin server
-COPY ./server/Cargo.toml ./server/Cargo.toml
+COPY . .
 
-RUN cargo build --release
-
-COPY ./server/src ./server/src
-COPY ./server/static ./server/static
-
-RUN --mount=type=cache,target=/usr/local/cargo/registry <<EOF
-  set -e
-  touch ./server/src/main.rs
-  cargo build --release
-EOF
+RUN --mount=type=cache,target=/usr/local/cargo/registry \
+    cargo build --release
 
 
-FROM node:lts as runtime
-ARG CROC_VERSION=10.04
-ADD https://github.com/schollz/croc/releases/download/v${CROC_VERSION}/croc_v${CROC_VERSION}_Linux-64bit.tar.gz /tmp/croc.tar.gz
+FROM node:lts AS runtime
 
-RUN tar -czvf /tmp/croc.tar.gz /usr/local/bin/
+ARG CROC_VERSION=10.2.2
+RUN --mount=type=cache,target=/var/cache/apt \
+    --mount=type=cache,target=/var/lib/apt \
+    apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends curl sudo \
+    && curl -L https://github.com/schollz/croc/releases/download/v${CROC_VERSION}/croc_v${CROC_VERSION}_Linux-64bit.tar.gz \
+    | tar -xz -C /usr/local/bin/ \
+    # Remove existing UID 1000 or GID 1000 if they exist
+    && if getent passwd 1000 > /dev/null; then userdel -f $(getent passwd 1000 | cut -d: -f1); fi \
+    && if getent group 1000 > /dev/null; then groupdel $(getent group 1000 | cut -d: -f1); fi \
+    # Create node user and group with UID:GID 1000:1000
+    && groupadd -g 1000 node \
+    && useradd -m -u 1000 -g 1000 -s /bin/bash node \
+    && usermod -aG sudo node \
+    && echo "node ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-COPY --from=builder /application/target/release/rocket_server /usr/local/bin/rocket_server
+COPY --from=builder /application/target/release/server /usr/local/bin/uploading-tool
 
 ENV APPLICATION_HOST="foundry.vtt" \
     APPLICATION_PORT="4444" \
@@ -38,8 +40,19 @@ EXPOSE ${APPLICATION_PORT}
 WORKDIR ${DATA_DIR}
 COPY scripts/run.sh /home/node/run.sh
 COPY ./server/static /uploader-tool/frontend
-RUN chown node:node /home/node/run.sh \
-    && chmod +x /home/node/run.sh
+RUN mkdir -p /foundryvtt /foundrydata /uploader-tool/frontend \
+    && chown node:node /home/node/run.sh \
+    && chmod +x /home/node/run.sh \
+    && chown -R node:node /uploader-tool/frontend \
+    && chmod -R 755 /uploader-tool/frontend \
+    && chown -R node:node /foundryvtt \
+    && chmod -R 755 /foundryvtt \
+    && chown -R node:node /foundrydata \
+    && chmod -R 755 /foundrydata
+
+
+
+USER node
 
 # Set the entrypoint to run the Rust application
 ENTRYPOINT ["/home/node/run.sh"]
