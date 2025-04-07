@@ -13,7 +13,11 @@ FROM node:lts AS runtime
 ARG CROC_VERSION=10.2.2
 RUN --mount=type=cache,target=/var/cache/apt \
     --mount=type=cache,target=/var/lib/apt \
-    apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends curl sudo \
+    apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
+    curl \
+    sudo \
+    iproute2 \
+    net-tools \
     && curl -L https://github.com/schollz/croc/releases/download/v${CROC_VERSION}/croc_v${CROC_VERSION}_Linux-64bit.tar.gz \
     | tar -xz -C /usr/local/bin/ \
     # Remove existing UID 1000 or GID 1000 if they exist
@@ -26,7 +30,7 @@ RUN --mount=type=cache,target=/var/cache/apt \
     && echo "node ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-COPY --from=builder /application/target/release/server /usr/local/bin/uploading-tool
+COPY --from=builder /application/target/release/server /usr/local/bin/foundry-watcher
 
 ENV APPLICATION_HOST="foundry.vtt" \
     APPLICATION_PORT="4444" \
@@ -39,18 +43,17 @@ EXPOSE ${APPLICATION_PORT}
 
 WORKDIR ${DATA_DIR}
 COPY scripts/run.sh /home/node/run.sh
-COPY ./server/static /uploader-tool/frontend
-RUN mkdir -p /foundryvtt /foundrydata /uploader-tool/frontend \
+COPY ./server/static /foundry-watcher/frontend
+RUN mkdir -p /foundryvtt /foundrydata /foundry-watcher/frontend \
     && chown node:node /home/node/run.sh \
     && chmod +x /home/node/run.sh \
-    && chown -R node:node /uploader-tool/frontend \
-    && chmod -R 755 /uploader-tool/frontend \
+    && chown -R node:node /foundry-watcher/frontend \
+    && chmod -R 755 /foundry-watcher/frontend \
     && chown -R node:node /foundryvtt \
     && chmod -R 755 /foundryvtt \
     && chown -R node:node /foundrydata \
-    && chmod -R 755 /foundrydata
-
-
+    && chmod -R 755 /foundrydata \
+    && npm install -g npm
 
 USER node
 

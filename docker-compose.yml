@@ -1,5 +1,5 @@
 services:
-  foundryvtt:
+  foundry:
     container_name: foundryvtt
     build:
       context: .
@@ -8,17 +8,26 @@ services:
     user: "1000:1000"
     ports:
       - "4444:4444"
+      - "3000:3000"
     volumes:
-      - "./tmp/data:/foundrydata"
-      - "./tmp/app:/foundryvtt"
+      - foundryvtt_data:/foundrydata
+      - foundryvtt_app:/foundryvtt
     environment:
       APPLICATION_DIR: /foundryvtt
       DATA_DIR: /foundrydata
       APPLICATION_HOST: foundry.vtt
       SSL_PROXY: "true"
+      RUST_LOG: "debug"
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:4444"]
       interval: 30s
       timeout: 10s
       retries: 5
+
+# Define named volumes for persistence
+volumes:
+  foundryvtt_data:
+    driver: local
+  foundryvtt_app:
+    driver: local
