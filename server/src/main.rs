@@ -1,5 +1,6 @@
 mod config;
 mod downloader;
+mod events;
 mod extractor;
 mod handlers;
 mod initialization;

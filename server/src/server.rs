@@ -1,15 +1,20 @@
 use crate::config::AppConfig;
+use crate::events::{self, ProgressEvent};
 use crate::handlers;
 use actix_files::Files;
-use actix_web::{App, HttpServer, web};
+use actix_web::dev::ServiceResponse;
+use actix_web::http::{StatusCode, header};
+use actix_web::middleware::{ErrorHandlerResponse, ErrorHandlers};
+use actix_web::{App, HttpResponse, HttpServer, Result, web};
 use std::sync::{Arc, Mutex};
-use tokio::sync::oneshot;
+use tokio::sync::{broadcast, oneshot};
 use tokio::task::JoinHandle;
 use tracing::{debug, info};
 use tracing_actix_web::TracingLogger;
 
 pub struct AppState {
     pub shutdown_sender: Arc<Mutex<Option<oneshot::Sender<()>>>>,
+    pub event_channel: broadcast::Sender<ProgressEvent>,
 }
 
 pub async fn start_server(config: &AppConfig) -> std::io::Result<JoinHandle<std::io::Result<()>>> {
@@ -19,8 +24,12 @@ pub async fn start_server(config: &AppConfig) -> std::io::Result<JoinHandle<std:
     // Wrap the Sender in Arc<Mutex<Option<...>>> so it can be shared and taken
     let shared_tx = Arc::new(Mutex::new(Some(tx)));
 
+    // Create a broadcast channel for SSE events
+    let (event_tx, _) = broadcast::channel::<ProgressEvent>(100);
+
     let app_state = web::Data::new(AppState {
         shutdown_sender: Arc::clone(&shared_tx),
+        event_channel: event_tx,
     });
 
     info!(
@@ -39,10 +48,14 @@ pub async fn start_server(config: &AppConfig) -> std::io::Result<JoinHandle<std:
         App::new()
             // Logging for Actix with more details
             .wrap(TracingLogger::default())
+            // Add error handlers for 404 Not Found errors to redirect to root
+            .wrap(ErrorHandlers::new().handler(StatusCode::NOT_FOUND, redirect_to_root))
             // Store the app state
             .app_data(app_state.clone())
             // Serve the download endpoint and static files
             .route("/download", web::post().to(handlers::download_and_extract))
+            .route("/upload", web::post().to(handlers::upload_and_extract))
+            .route("/events", web::get().to(events::sse_events))
             .service(Files::new("/", &static_files_dir).index_file("index.html"))
     })
     .bind((server_host, server_port))?
@@ -64,6 +77,16 @@ pub async fn start_server(config: &AppConfig) -> std::io::Result<JoinHandle<std:
     setup_signal_handlers();
 
     Ok(tokio::spawn(server))
+}
+
+// Function to redirect 404 responses to the root path
+fn redirect_to_root<B>(res: ServiceResponse<B>) -> Result<ErrorHandlerResponse<B>> {
+    let response = HttpResponse::Found()
+        .insert_header((header::LOCATION, "/"))
+        .finish()
+        .map_into_right_body();
+
+    Ok(ErrorHandlerResponse::Response(res.into_response(response)))
 }
 
 fn setup_signal_handlers() {

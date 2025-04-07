@@ -10,14 +10,15 @@ services:
       - "4444:4444"
       - "3000:3000"
     volumes:
-      - data:/foundrydata:delegated
-      - app:/foundryvtt:delegated
+      - data:/foundrydata
+      - app:/foundryvtt
     environment:
       APPLICATION_DIR: /foundryvtt
       DATA_DIR: /foundrydata
       APPLICATION_HOST: foundry.vtt
       SSL_PROXY: "true"
       RUST_LOG: "debug"
+      EMPTY_APP_DIR_ON_START: "true"
     restart: no
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:4444"]
@@ -39,4 +40,3 @@ volumes:
       type: none
       o: bind
       device: ${FOUNDRY_APP_PATH:-./tmp/app}
-

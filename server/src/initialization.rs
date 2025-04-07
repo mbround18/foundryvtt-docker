@@ -31,6 +31,10 @@ pub fn initialize(app_config: &AppConfig) -> Result<()> {
         "  - Port: {}",
         env::var("APPLICATION_PORT").unwrap_or_else(|_| "4444".to_string())
     );
+    info!(
+        "  - Empty App Dir On Start: {}",
+        env::var("EMPTY_APP_DIR_ON_START").unwrap_or_else(|_| "false".to_string())
+    );
 
     info!("──────────────────────────────────────────────────────────");
     Ok(())
@@ -148,6 +152,32 @@ fn ensure_directories() -> Result<()> {
 
     let app_dir = &*paths::APPLICATION_DIR;
     let data_dir = &*paths::DATA_DIR;
+
+    // Check if we should empty the application directory
+    let empty_app_dir = env::var("EMPTY_APP_DIR_ON_START")
+        .unwrap_or_else(|_| "false".to_string())
+        .to_lowercase()
+        == "true";
+
+    if empty_app_dir {
+        let path = Path::new(app_dir);
+        if path.exists() {
+            info!("EMPTY_APP_DIR_ON_START is set to true, emptying application directory");
+            for entry in fs::read_dir(path)? {
+                let entry = entry?;
+                let path = entry.path();
+
+                if path.is_dir() {
+                    debug!("Removing directory: {:?}", path);
+                    fs::remove_dir_all(&path)?;
+                } else {
+                    debug!("Removing file: {:?}", path);
+                    fs::remove_file(&path)?;
+                }
+            }
+            info!("Application directory emptied successfully");
+        }
+    }
 
     for dir in &[app_dir, data_dir] {
         let path = Path::new(dir);
