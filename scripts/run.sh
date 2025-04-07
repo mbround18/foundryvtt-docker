@@ -91,12 +91,16 @@ if [[ ! "${APPLICATION_PORT}" =~ ^[0-9]+$ ]]; then
     exit 1
 fi
 
-# Directory creation and permission check
+# Directory creation and permission check - IMPORTANT: only create if they don't exist
 log_info "🔄 Ensuring directories exist and are writable..."
 for dir in "${DATA_DIR}" "${APPLICATION_DIR}"; do
     if [[ ! -d "$dir" ]]; then
-        log_info "Creating directory: $dir"
+        log_info "Creating directory: $dir (directory does not exist yet)"
         mkdir -p "$dir" || { log_error "Failed to create $dir"; exit 1; }
+    else
+        log_info "Directory already exists: $dir (preserving content)"
+        # List what's in the directory to help with debugging
+        log_debug "Contents of $dir: $(ls -la "$dir" | wc -l) files/directories"
     fi
     
     if [[ ! -w "$dir" ]]; then
@@ -105,6 +109,8 @@ for dir in "${DATA_DIR}" "${APPLICATION_DIR}"; do
             log_warn "Could not change ownership of $dir. This might cause issues."
         chmod -R u+w "$dir" 2>/dev/null || 
             log_warn "Could not change permissions of $dir. This might cause issues."
+    else
+        log_debug "Directory $dir is writable. Current permissions: $(ls -ld "$dir" | awk '{print $1}')"
     fi
 done
 
@@ -116,6 +122,17 @@ for dir in "${DATA_DIR}" "${APPLICATION_DIR}"; do
     log_debug "Directory: $dir"
     log_debug "$(ls -ld "$dir" || echo "Could not check $dir")"
     log_debug "Free space: $(df -h "$dir" | awk 'NR==2 {print $4}')"
+    
+    # Count files in directory for debugging
+    if [[ -d "$dir" ]]; then
+        file_count=$(find "$dir" -type f | wc -l)
+        dir_count=$(find "$dir" -type d | wc -l)
+        log_debug "Contents: $file_count files, $dir_count directories"
+        
+        # List top-level contents for debugging
+        log_debug "Top-level contents of $dir:"
+        ls -la "$dir" | head -n 20
+    fi
 done
 
 # Check if foundry-watcher exists

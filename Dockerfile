@@ -11,9 +11,7 @@ RUN --mount=type=cache,target=/usr/local/cargo/registry \
 FROM node:lts AS runtime
 
 ARG CROC_VERSION=10.2.2
-RUN --mount=type=cache,target=/var/cache/apt \
-    --mount=type=cache,target=/var/lib/apt \
-    apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
     curl \
     sudo \
     iproute2 \

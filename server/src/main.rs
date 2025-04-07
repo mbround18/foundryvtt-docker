@@ -184,6 +184,14 @@ async fn main() -> std::io::Result<()> {
         .unwrap_or(4444);
     let server_host = env::var("SERVER_HOST").unwrap_or_else(|_| "0.0.0.0".to_string());
 
+    let foundry_script_path = Path::new("/foundryvtt/resources/app/main.js");
+    if foundry_script_path.exists() {
+        info!("Foundry main.js detected, skipping Actix server and launching Foundry directly");
+        launch_foundry_process(None).await;
+        return Ok(());
+    }
+
+
     info!("Serving static files from: {}", static_files_dir);
     info!("Downloading files to: {}", get_target_directory());
 
