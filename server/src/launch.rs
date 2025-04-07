@@ -1,10 +1,21 @@
-// launch.rs
+use crate::config::AppConfig;
 use std::path::Path;
 use std::process::Stdio;
 use tokio::process::Command;
 use tokio::sync::oneshot;
 use tokio::time::{Duration, sleep};
 use tracing::{debug, error, info, warn};
+
+pub async fn launch_foundry_process(
+    shutdown_rx: Option<oneshot::Receiver<()>>,
+    config: &AppConfig,
+) {
+    // Convert string args to &str for the launch_foundry function
+    let args: Vec<&str> = config.foundry_args.iter().map(|s| s.as_str()).collect();
+
+    // Launch Foundry in the same task, passing the shutdown channel
+    launch_foundry(&args, &config.foundry_script, shutdown_rx).await;
+}
 
 pub async fn launch_foundry(
     args: &[&str],

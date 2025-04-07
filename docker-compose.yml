@@ -10,15 +10,15 @@ services:
       - "4444:4444"
       - "3000:3000"
     volumes:
-      - foundryvtt_data:/foundrydata:delegated
-      - foundryvtt_app:/foundryvtt:delegated
+      - data:/foundrydata:delegated
+      - app:/foundryvtt:delegated
     environment:
       APPLICATION_DIR: /foundryvtt
       DATA_DIR: /foundrydata
       APPLICATION_HOST: foundry.vtt
       SSL_PROXY: "true"
       RUST_LOG: "debug"
-    restart: unless-stopped
+    restart: no
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:4444"]
       interval: 30s
@@ -27,13 +27,13 @@ services:
 
 # Define named volumes for persistence
 volumes:
-  foundryvtt_data:
+  data:
     driver: local
     driver_opts:
       type: none
       o: bind
       device: ${FOUNDRY_DATA_PATH:-./tmp/data}
-  foundryvtt_app:
+  app:
     driver: local
     driver_opts:
       type: none
