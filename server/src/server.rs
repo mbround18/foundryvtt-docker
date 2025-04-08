@@ -56,6 +56,7 @@ pub async fn start_server(config: &AppConfig) -> std::io::Result<JoinHandle<std:
             .route("/download", web::post().to(handlers::download_and_extract))
             .route("/upload", web::post().to(handlers::upload_and_extract))
             .route("/events", web::get().to(events::sse_events))
+            .route("/dev-info", web::get().to(handlers::info))
             .service(Files::new("/", &static_files_dir).index_file("index.html"))
     })
     .bind((server_host, server_port))?

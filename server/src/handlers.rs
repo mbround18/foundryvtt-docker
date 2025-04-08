@@ -27,6 +27,13 @@ pub struct ErrorResponse {
     error: String,
 }
 
+pub async fn info() -> impl Responder {
+    // This endpoint can be used to check the server status or provide information
+    HttpResponse::Ok().json(SuccessResponse {
+        message: "Server is running".to_string(),
+    })
+}
+
 // Helper functions to reduce code duplication
 
 /// Ensures the target directory exists and returns its path
