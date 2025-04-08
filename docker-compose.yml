@@ -1,10 +1,42 @@
 services:
-  foundryvtt:
-    build: .
+  foundry:
+    container_name: foundryvtt
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: mbround18/foundryvtt-docker:latest
+    user: "1000:1000"
     ports:
       - "4444:4444"
       - "3000:3000"
     volumes:
-      - $PWD/tmp/data:/foundrydata
-      - $PWD/tmp/app:/foundryvtt
+      - data:/foundrydata
+      - app:/foundryvtt
+    environment:
+      APPLICATION_DIR: /foundryvtt
+      DATA_DIR: /foundrydata
+      APPLICATION_HOST: foundry.vtt
+      SSL_PROXY: "true"
+      RUST_LOG: "debug"
+      EMPTY_APP_DIR_ON_START: "true"
+    restart: no
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4444"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+# Define named volumes for persistence
+volumes:
+  data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${FOUNDRY_DATA_PATH:-./tmp/data}
+  app:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${FOUNDRY_APP_PATH:-./tmp/app}

@@ -6,12 +6,19 @@
     <meta name="description" content="Foundry VTT Content Downloader" />
     <title>Foundry VTT Installer</title>
     <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
   </head>
   <body>
-    <div class="container">
+    <header class="header">
       <h1>Foundry VTT Installer</h1>
+    </header>
+    <div class="container">
       <div class="instructions">
         <h5>Instructions</h5>
+        <p>Option 1: Download using URL</p>
         <ol>
           <li>
             Log into Foundry VTT at
@@ -29,15 +36,58 @@
           <li>Click time URL</li>
           <li>Paste it into the input field below</li>
         </ol>
+        <p>Option 2: Upload ZIP file directly</p>
+        <ol>
+          <li>Select the Foundry VTT ZIP file from your device</li>
+          <li>Or drag and drop the file into the upload area</li>
+        </ol>
       </div>
-      <div class="input-field">
-        <label for="url-input">Paste URL here</label>
-        <input id="url-input" type="text" class="validate" />
+
+      <div class="installation-methods">
+        <nav class="method-tabs">
+          <button id="url-tab" class="tab-button active">URL Download</button>
+          <button id="file-tab" class="tab-button">File Upload</button>
+        </nav>
+
+        <div id="url-method" class="method-content">
+          <div class="input-field">
+            <label for="url-input">Paste URL here</label>
+            <input
+              id="url-input"
+              type="text"
+              placeholder="https://foundryvtt.com/releases/download?version=..."
+            />
+          </div>
+          <button id="download-button" class="btn">🚀 Download</button>
+        </div>
+
+        <div id="file-method" class="method-content" style="display: none">
+          <div id="drop-area" class="drop-area">
+            <p>Drag & drop your Foundry VTT zip file here</p>
+            <p>or</p>
+            <input
+              type="file"
+              id="file-input"
+              accept=".zip"
+              style="display: none"
+            />
+            <button id="file-select-button" class="btn">Choose File</button>
+            <p id="file-name" class="file-name"></p>
+          </div>
+          <button id="upload-button" class="btn" disabled>📤 Upload</button>
+        </div>
       </div>
-      <button id="download-button" class="btn">Download</button>
+
       <div id="toast" class="toast"></div>
-      <div id="waiting-symbol" class="waiting-symbol" style="display: none">
-        ⏳ Waiting for server to start...
+      <div
+        id="progress-container"
+        class="progress-container"
+        style="display: none"
+      >
+        <div class="progress-bar-wrapper">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <div id="progress-message" class="progress-message"></div>
       </div>
     </div>
     <script src="index.js"></script>

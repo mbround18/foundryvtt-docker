@@ -1,88 +1,64 @@
-#[macro_use]
-extern crate rocket;
+mod config;
+mod downloader;
+mod events;
+mod extractor;
+mod handlers;
+mod initialization;
+mod launch;
+mod server;
+mod utils;
 
-use reqwest::Client;
-use rocket::fs::{ FileServer};
-use rocket::serde::json::Json;
-use serde::{Deserialize, Serialize};
-use std::env;
-use std::fs::{self, File};
-use std::io::copy;
-use std::path::Path;
-use tokio::task;
-use zip::read::ZipArchive;
+use crate::utils::paths;
+use tokio::sync::oneshot;
+use tracing::{Level, error, info};
 
-#[derive(Deserialize)]
-struct UrlPayload {
-    url: String,
-}
+#[actix_web::main]
+async fn main() -> std::io::Result<()> {
+    // Initialize tracing with a more verbose default level
+    tracing_subscriber::fmt()
+        .with_max_level(Level::DEBUG)
+        .with_env_filter(tracing_subscriber::EnvFilter::from_default_env())
+        .with_writer(std::io::stdout)
+        .init();
 
-#[derive(Serialize)]
-#[serde(crate = "rocket::serde")]
-struct SuccessResponse {
-    message: String,
-}
+    info!("Logging initialized at DEBUG level");
 
-fn get_target_directory() -> String {
-    env::var("APPLICATION_DIR").unwrap_or_else(|_| {
-        let mut dir = env::current_dir().expect("Failed to get current directory");
-        dir.push("tmp");
-        dir.to_str().unwrap().to_string()
-    })
-}
+    // Load application configuration
+    let app_config = config::AppConfig::from_env();
 
-#[post("/download", format = "json", data = "<url_payload>")]
-async fn download(url_payload: Json<UrlPayload>) -> Json<SuccessResponse> {
-    let url = url_payload.url.clone();
-
-    // Perform the download in an asynchronous context
-    let response_bytes = Client::new()
-        .get(&url)
-        .send()
-        .await
-        .expect("Failed to send request")
-        .bytes()
-        .await
-        .expect("Failed to get response bytes");
-
-    // Determine the target directory
-    let target_directory = get_target_directory();
-
-    // Create the target directory if it doesn't exist
-    if !Path::new(&target_directory).exists() {
-        fs::create_dir_all(&target_directory).expect("Failed to create target directory");
+    // Run initialization checks and setup from the old run.sh
+    if let Err(e) = initialization::initialize(&app_config) {
+        error!("Initialization failed: {}", e);
+        return Err(std::io::Error::new(
+            std::io::ErrorKind::Other,
+            e.to_string(),
+        ));
     }
 
-    // Perform the file operations and extraction in a blocking task
-    task::spawn_blocking(move || {
-        let archive_path = format!("{}/archive.zip", target_directory);
-        let mut dest = File::create(&archive_path).expect("Failed to create file");
-        copy(&mut response_bytes.as_ref(), &mut dest).expect("Failed to copy content");
+    // Check if we should directly launch Foundry
+    if paths::FOUNDRY_SCRIPT_PATH.exists() {
+        info!("Foundry main.js detected, skipping Actix server and launching Foundry directly");
+        launch::launch_foundry_process(None, &app_config).await;
+        return Ok(());
+    }
 
-        // Unzip the file
-        let file = File::open(&archive_path).expect("Failed to open file");
-        let mut archive = ZipArchive::new(file).expect("Failed to read zip archive");
-        archive
-            .extract(&target_directory)
-            .expect("Failed to extract zip archive");
+    // Log configuration settings
+    info!("Serving static files from: {}", app_config.static_files_dir);
+    info!("Downloading files to: {}", app_config.target_dir);
 
-        // Exit the process
-        std::process::exit(0);
-    })
-    .await
-    .expect("The blocking task panicked");
+    // Create a channel for shutting down Foundry when needed
+    let (_foundry_tx, foundry_rx) = oneshot::channel::<()>();
 
-    Json(SuccessResponse {
-        message: format!("Downloaded and extracted the content from: {}", url),
-    })
-}
+    // Start the HTTP server
+    let server_handle = server::start_server(&app_config).await?;
 
-#[launch]
-fn rocket() -> _ {
-    let static_files_dir = env::var("STATIC_FILES_DIR").unwrap_or_else(|_| "static".to_string());
-    println!("Serving static files from: {}", static_files_dir);
-    println!("Downloading files to: {}", get_target_directory());
-    rocket::build()
-        .mount("/", FileServer::from(static_files_dir))
-        .mount("/", routes![download])
+    // Wait for the server to complete (after receiving shutdown signal)
+    // Fix: Explicitly acknowledge the Result with let _
+    let _ = server_handle.await?;
+    info!("Actix server has terminated, launching Foundry VTT");
+
+    // After server stops, launch Foundry directly with the shutdown channel
+    launch::launch_foundry_process(Some(foundry_rx), &app_config).await;
+
+    Ok(())
 }
