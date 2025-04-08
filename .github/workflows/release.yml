@@ -4,14 +4,12 @@ on:
   push:
     branches:
       - main
-    tags:
-      - "v*.*.*"
   pull_request:
     branches:
       - main
 
 jobs:
-  release:
+  docker-release:
     name: Release Train
     uses: mbround18/gh-reusable/.github/workflows/docker-release.yaml@main
     with:
@@ -19,3 +17,10 @@ jobs:
       compose: false
       platforms: linux/amd64
     secrets: inherit
+
+  git-release:
+    if: ${{ github.ref_name == 'main' }}
+    needs: docker-release
+    uses: mbround18/gh-reusable/.github/workflows/tagger.yaml@main
+    secrets: inherit
+    
