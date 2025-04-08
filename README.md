@@ -1,22 +1,29 @@
 <img width="500" src="https://repository-images.githubusercontent.com/261890725/ef8c0180-be60-11eb-987b-2e45ff426696" />
 
-<!-- Rebuild, commenting for release due to CI issue, remove me later -->
-
 # FoundryVTT Docker
 
-<a href="https://hub.docker.com/r/mbround18/foundryvtt-docker"><img src="https://img.shields.io/docker/pulls/mbround18/foundryvtt-docker?style=for-the-badge" alt=""></a>
+<div align="center">
+  <a href="https://hub.docker.com/r/mbround18/foundryvtt-docker"><img src="https://img.shields.io/docker/pulls/mbround18/foundryvtt-docker?style=for-the-badge" alt="Docker Pulls"></a>
+  <a href="https://github.com/mbround18/foundryvtt-docker/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/mbround18/foundryvtt-docker?style=for-the-badge" alt="License"></a>
+  <a href="https://github.com/mbround18/foundryvtt-docker/stargazers"><img src="https://img.shields.io/github/stars/mbround18/foundryvtt-docker?style=for-the-badge" alt="GitHub Stars"></a>
+</div>
 
-**This docker container requires an active license.**
+## Overview
 
-- [You can obtain a license from here](https://foundryvtt.com/purchase/)
+**⚠️ This docker container requires an active Foundry VTT license. [Purchase one here](https://foundryvtt.com/purchase/).**
 
-While there are many docker containers which can serve up FoundryVTT, this container was created with simplicity in mind.
-There are no additional credentials you need to supply, web driver, or web automation required. The installation process is simplified
-by presenting you with an easy-to-use web interface to install the application by using a timed url provided by Foundry.
+A streamlined Docker container for Foundry Virtual Tabletop with an Actix-powered web uploader. This container was designed with simplicity in mind - no credentials to supply, no web driver configurations, and no web automation required.
 
-## Installation Locally
+### Key Features
 
-### Running locally
+- 🚀 **Simple Installation** - Easy-to-use web interface for installation
+- 🔒 **Secure** - No credentials stored in the container
+- 🔄 **Persistent Storage** - Mount volumes for data and application
+- 🌐 **Flexible Networking** - Configurable hostname and SSL options
+
+## Quick Start
+
+### Running with Docker
 
 ```sh
 docker run --rm -it \
@@ -28,12 +35,71 @@ docker run --rm -it \
   mbround18/foundryvtt-docker:latest
 ```
 
-## Post Installation (Docker)
+### Running with Docker Compose
 
-1. Navigate to your URL [localhost:4444](http://localhost:4444/)
-2. In another tab open up your Purchased Licenses page on [foundryvtt.com](https://foundryvtt.com/)
-3. Now click the link icon to get a timed link.
-4. Tab back over to [localhost:4444](http://localhost:4444/)
-5. Paste the timed url into the input field.
-6. Click the submit button on the page and watch the logs.
-7. If all goes well, navigate to the base url `http://localhost:4444/` and you should be greeted with the FoundryVTT setup screen :)
+Create a `docker-compose.yml` file:
+
+```yaml
+version: "3"
+services:
+  foundry:
+    image: mbround18/foundryvtt-docker:latest
+    ports:
+      - "4444:4444"
+    environment:
+      - HOSTNAME=127.0.0.1
+      - SSL_PROXY=false
+    volumes:
+      - ./foundry/data:/foundrydata
+      - ./foundry/app:/foundryvtt
+    restart: unless-stopped
+```
+
+Then run:
+
+```sh
+docker-compose up -d
+```
+
+## Installation Process
+
+1. Launch the container using one of the methods above
+2. Navigate to your installation URL: [http://localhost:4444](http://localhost:4444/)
+3. In another tab, open your Purchased Licenses page on [foundryvtt.com](https://foundryvtt.com/)
+4. Click the link icon to generate a timed download link
+5. Return to [http://localhost:4444](http://localhost:4444/) and paste the timed URL
+6. Click the submit button and monitor the logs
+7. When complete, navigate to [http://localhost:4444/](http://localhost:4444/) to access the Foundry VTT setup screen
+
+## Environment Variables
+
+| Variable              | Description                             | Default   |
+| --------------------- | --------------------------------------- | --------- |
+| `HOSTNAME`            | The hostname for the server             | `0.0.0.0` |
+| `SSL_PROXY`           | Whether SSL is being handled by a proxy | `false`   |
+| `APPLICATION_PORT`    | The port the application runs on        | `4444`    |
+| `ADMIN_KEY`           | Admin password for Foundry              | _(empty)_ |
+| `MINIFY_STATIC_FILES` | Whether to minify static files          | `true`    |
+
+## Volumes
+
+| Path           | Description                            |
+| -------------- | -------------------------------------- |
+| `/foundrydata` | Foundry user data, worlds, and modules |
+| `/foundryvtt`  | Foundry application files              |
+
+## Troubleshooting
+
+### Common Issues
+
+- **Port already in use**: Change the port mapping in your docker run command (e.g., `-p 8080:4444`)
+- **Permissions errors**: Ensure your mounted volumes have the correct permissions
+- **Download failures**: Verify your Foundry license and that the timed URL is still valid
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## License
+
+This project is licensed under the [BSD 3-Clause License](LICENSE.md).
