@@ -16,7 +16,6 @@ jobs:
     uses: mbround18/gh-reusable/.github/workflows/docker-release.yaml@main
     with:
       image: "mbround18/foundryvtt-docker"
-      compose: false
       platforms: linux/amd64
     secrets: inherit
 
