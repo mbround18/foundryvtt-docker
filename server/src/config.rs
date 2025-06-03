@@ -25,10 +25,13 @@ impl AppConfig {
 
         let target_dir = get_target_directory();
 
+        let foundry_host =
+            env::var("APPLICATION_HOST").unwrap_or("foundry.vtt".to_string());
+
         let foundry_args = vec![
             format!("--dataPath={}", *paths::DATA_DIR),
-            "--port=4444".to_string(),
-            "--hostname=foundry.vtt".to_string(),
+            format!("--port={}", server_port),
+            format!("--hostname={}", foundry_host),
             "--noupnp".to_string(),
             "--proxySSL".to_string(),
         ];
