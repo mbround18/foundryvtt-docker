@@ -20,8 +20,6 @@ pub mod paths {
         /// Path to the main Foundry script
         pub static ref FOUNDRY_SCRIPT_PATH: PathBuf = {
             let mut path = PathBuf::from(&*APPLICATION_DIR);
-            path.push("resources");
-            path.push("app");
             path.push("main.js");
             path
         };
