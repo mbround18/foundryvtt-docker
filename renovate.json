@@ -1,4 +1,12 @@
 {
   "extends": ["config:base"],
-  "labels": ["dependencies", "automerge"]
+  "labels": ["dependencies", "automerge"],
+  "rebaseWhen": "conflicted",
+  "prConcurrentLimit": 3,
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "groupName": "non-major dependencies"
+    }
+  ]
 }
