@@ -12,7 +12,7 @@ actix-web = "4"
 actix-files = "0.7"
 reqwest = { version = "0.13", default-features = false, features = ["json", "blocking", "stream", "rustls"] }
 tokio = { version = "1", features = ["full"] }
-zip = "8"
+zip = "9"
 serde = { version = "1", features = ["derive"] }
 tracing = "0.1"
 tracing-actix-web = "0.7"
